@@ -1,0 +1,17 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.yarn": true,
+        "**/.husky": true,
+        "**/.next": true,
+        "**/dist": true
+    },
+    "typescript.preferences.importModuleSpecifier": "relative"
+}
