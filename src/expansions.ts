@@ -1,3 +1,5 @@
+import sample from 'lodash/sample'
+
 export const EXPANSIONS: string[] = [
   'Artificially Indestructible',
   'Artificially Intensified',
@@ -31,3 +33,5 @@ export const EXPANSIONS: string[] = [
   'Alarmingly Impulsive',
   'Absurdly Imaginative',
 ]
+
+export const getRandomExpansion = () => sample(EXPANSIONS)

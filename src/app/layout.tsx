@@ -1,13 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Audiowide } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
+import AppProviders from './providers'
+
+const font = Audiowide({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'RODAI',
+  title: 'ROD.AI (RODAI)',
   description:
-    'The mighty, long and powerful ROD token. Only possible on Solana.',
+    'The mighty, long and powerful RODAI token. Only possible on Solana.',
 }
 
 export default function RootLayout({
@@ -17,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   )
 }
