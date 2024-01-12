@@ -42,7 +42,7 @@ export default function Home() {
               <p className="text-xl text-orange-300">COMING SOON</p>
 
               <p className="text-lg text-[#e57a76]">
-                Get yourself some COQ in the mean time 😏
+                Get yourself some COQ in the meantime 😏
               </p>
 
               <a
