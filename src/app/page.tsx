@@ -36,8 +36,28 @@ export default function Home() {
               <h1 className="text-6xl font-bold text-center">
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
-              <p className="text-orange-300">COMING SOON</p>
-              <p className="hidden text-orange-300">{getRandomExpansion()}</p>
+              <p className="hidden text-xl text-orange-300">
+                {getRandomExpansion()}
+              </p>
+              <p className="text-xl text-orange-300">COMING SOON</p>
+
+              <p className="text-lg text-[#e57a76]">
+                Get yourself some COQ in the mean time 😏
+              </p>
+
+              <a
+                className="coq-btn coq-btn-0 flex items-center gap-2"
+                href="https://www.coqinu.com/"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/coqinu.png"
+                  alt="solscan"
+                  className="w-10"
+                />
+                BUY NOW
+              </a>
             </div>
 
             <div className="hidden border-none bg-white/10 max-w-[610px] rounded-lg p-4">
@@ -49,7 +69,7 @@ export default function Home() {
                     target="_blank"
                     className="text-xl text-pink-500"
                   >
-                    😱 Worried about a rug pull?
+                    😱 Worried about a rug pull? Don&lsquo;t be.
                   </Link>
                 </div>
                 <div>
@@ -65,11 +85,21 @@ export default function Home() {
                   <div className="tokenomics-value">NONE YET</div>
                 </div>
                 <div className="text-large">
-                  Every token has been allocated to the Liquidity Pool (LP), and
-                  all associated LP tokens have been burned 🔥, guaranteeing
+                  Mint authority{' '}
+                  <Link
+                    href="https://solscan.io/tx/58PnHQgTaigkjtjYBxBAP6i3JfXZgKvnTu7uA4suyJKikjKCxobq9N7VTfWW6VTnsXpDSGx12zCjZGa7Qi8EysB5"
+                    target="_blank"
+                    className="text-pink-500"
+                  >
+                    has been revoked
+                  </Link>
+                  . Every token has been allocated to the Liquidity Pool (LP),
+                  and all associated LP tokens have been burned 🔥, guaranteeing
                   equity and safety. This project is{' '}
-                  <em className="underline">wholly owned by the community</em>,
-                  functioning in a decentralized manner with no governing
+                  <em className="underline text-orange-300">
+                    wholly owned by the community
+                  </em>
+                  , functioning in a decentralized manner with no governing
                   central authority.
                 </div>
               </div>
