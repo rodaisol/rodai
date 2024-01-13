@@ -13,7 +13,7 @@ export default function Home() {
             href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
             as={Link}
             size="lg"
-            className="hidden absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
+            className="absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
           >
             <div className="flex items-center">
               <img
@@ -25,6 +25,21 @@ export default function Home() {
               <span>Buy Now</span>
             </div>
           </Button>
+          <div className="absolute top-20 right-4">
+            <a
+              className="coq-btn coq-btn-0 flex items-center gap-2"
+              href="https://www.coqinu.com/"
+              target="_blank"
+            >
+              <img
+                draggable={false}
+                src="/coqinu.png"
+                alt="solscan"
+                className="w-10"
+              />
+              BUY COQ
+            </a>
+          </div>
           <div className="flex flex-col gap-4 items-center justify-center">
             <div className="flex flex-col gap-2 justify-center items-center">
               <img
@@ -36,31 +51,10 @@ export default function Home() {
               <h1 className="text-6xl font-bold text-center">
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
-              <p className="hidden text-xl text-orange-300">
-                {getRandomExpansion()}
-              </p>
-              <p className="text-xl text-orange-300">COMING SOON</p>
-
-              <p className="text-lg text-[#e57a76]">
-                Get yourself some COQ in the meantime 😏
-              </p>
-
-              <a
-                className="coq-btn coq-btn-0 flex items-center gap-2"
-                href="https://www.coqinu.com/"
-                target="_blank"
-              >
-                <img
-                  draggable={false}
-                  src="/coqinu.png"
-                  alt="solscan"
-                  className="w-10"
-                />
-                BUY NOW
-              </a>
+              <p className="text-xl text-orange-300">{getRandomExpansion()}</p>
             </div>
 
-            <div className="hidden border-none bg-white/10 max-w-[610px] rounded-lg p-4">
+            <div className="border-none bg-white/10 max-w-[610px] rounded-lg p-4">
               <div className="flex flex-col gap-4 items-center justify-center text-center">
                 <div className="text-5xl">Tokenomics</div>
                 <div>
@@ -93,9 +87,8 @@ export default function Home() {
                   >
                     has been revoked
                   </Link>
-                  . Every token has been allocated to the Liquidity Pool (LP),
-                  and all associated LP tokens have been burned 🔥, guaranteeing
-                  equity and safety. This project is{' '}
+                  . Every token has been allocated to the Liquidity Pool (LP).
+                  This project is{' '}
                   <em className="underline text-orange-300">
                     wholly owned by the community
                   </em>
