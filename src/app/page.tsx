@@ -14,7 +14,7 @@ export default function Home() {
               href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
               as={Link}
               size="lg"
-              className="absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
+              className="p-8 text-lg absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
             >
               <div className="flex items-center">
                 <img
@@ -23,10 +23,10 @@ export default function Home() {
                   alt="solscan"
                   className="hidden w-12"
                 />
-                <span>Buy Now</span>
+                <span>Buy RODAI</span>
               </div>
             </Button>
-            <div className="absolute top-20 right-4">
+            <div className="absolute top-24 right-4">
               <a
                 className="coq-btn coq-btn-0 flex items-center gap-2"
                 href="https://www.coqinu.com/"
@@ -59,7 +59,7 @@ export default function Home() {
                   href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
                   as={Link}
                   size="lg"
-                  className="bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
+                  className="p-8 text-lg bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
                 >
                   <div className="flex items-center">
                     <img
@@ -68,7 +68,7 @@ export default function Home() {
                       alt="solscan"
                       className="hidden w-12"
                     />
-                    <span>Buy Now</span>
+                    <span>Buy RODAI</span>
                   </div>
                 </Button>
                 <a
@@ -91,12 +91,13 @@ export default function Home() {
               <div className="flex flex-col gap-4 items-center justify-center text-center">
                 <div className="text-5xl">Tokenomics</div>
                 <div>
+                  😱 Worried about a rug pull?{' '}
                   <Link
                     href="https://rugcheck.xyz/tokens/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
                     target="_blank"
                     className="text-xl text-pink-500"
                   >
-                    😱 Worried about a rug pull?
+                    Don&rsquo;t be...
                   </Link>
                 </div>
                 <div>
@@ -112,8 +113,16 @@ export default function Home() {
                   >
                     has been revoked
                   </Link>
-                  . Every token has been allocated to the Liquidity Pool (LP).
-                  This project is{' '}
+                  . Every token has been allocated to the Liquidity Pool (LP)
+                  and all associated{' '}
+                  <Link
+                    href="https://app.streamflow.finance/contract/solana/mainnet/9w5wppbSzicVjie4oyg7tMPAYgxeBoiDcRBugpuvBrvG"
+                    target="_blank"
+                    className="text-pink-500"
+                  >
+                    LP tokens have been locked 🔒
+                  </Link>
+                  , guaranteeing equity and safety. This project is{' '}
                   <em className="underline text-orange-300">
                     wholly owned by the community
                   </em>
