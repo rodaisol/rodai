@@ -9,36 +9,38 @@ export default function Home() {
       <ParticlesComponent />
       <div className="flex flex-col min-h-screen relative z-10 p-8">
         <main className="flex flex-col flex-col items-center justify-center">
-          <Button
-            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
-            as={Link}
-            size="lg"
-            className="absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
-          >
-            <div className="flex items-center">
-              <img
-                draggable={false}
-                src="/raydium.png"
-                alt="solscan"
-                className="w-12"
-              />
-              <span>Buy Now</span>
-            </div>
-          </Button>
-          <div className="absolute top-20 right-4">
-            <a
-              className="coq-btn coq-btn-0 flex items-center gap-2"
-              href="https://www.coqinu.com/"
-              target="_blank"
+          <div className="hidden sm:block">
+            <Button
+              href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
+              as={Link}
+              size="lg"
+              className="absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
             >
-              <img
-                draggable={false}
-                src="/coqinu.png"
-                alt="solscan"
-                className="w-10"
-              />
-              BUY COQ
-            </a>
+              <div className="flex items-center">
+                <img
+                  draggable={false}
+                  src="/raydium.png"
+                  alt="solscan"
+                  className="hidden w-12"
+                />
+                <span>Buy Now</span>
+              </div>
+            </Button>
+            <div className="absolute top-20 right-4">
+              <a
+                className="coq-btn coq-btn-0 flex items-center gap-2"
+                href="https://www.coqinu.com/"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/coqinu.png"
+                  alt="solscan"
+                  className="w-10"
+                />
+                BUY COQ
+              </a>
+            </div>
           </div>
           <div className="flex flex-col gap-4 items-center justify-center">
             <div className="flex flex-col gap-2 justify-center items-center">
@@ -52,6 +54,37 @@ export default function Home() {
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
               <p className="text-xl text-orange-300">{getRandomExpansion()}</p>
+              <div className="sm:hidden flex flex-col gap-3">
+                <Button
+                  href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
+                  as={Link}
+                  size="lg"
+                  className="bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
+                >
+                  <div className="flex items-center">
+                    <img
+                      draggable={false}
+                      src="/raydium.png"
+                      alt="solscan"
+                      className="hidden w-12"
+                    />
+                    <span>Buy Now</span>
+                  </div>
+                </Button>
+                <a
+                  className="coq-btn coq-btn-0 flex items-center gap-2"
+                  href="https://www.coqinu.com/"
+                  target="_blank"
+                >
+                  <img
+                    draggable={false}
+                    src="/coqinu.png"
+                    alt="solscan"
+                    className="w-10"
+                  />
+                  BUY COQ
+                </a>
+              </div>
             </div>
 
             <div className="border-none bg-white/10 max-w-[610px] rounded-lg p-4">
@@ -63,20 +96,12 @@ export default function Home() {
                     target="_blank"
                     className="text-xl text-pink-500"
                   >
-                    😱 Worried about a rug pull? Don&lsquo;t be.
+                    😱 Worried about a rug pull?
                   </Link>
                 </div>
                 <div>
-                  <div className="tokenomics-label">Total Supply:</div>
+                  <div className="tokenomics-label">Total and Max Supply:</div>
                   <div className="tokenomics-value">69.42 T RODAI</div>
-                </div>
-                <div>
-                  <div className="tokenomics-label">Max Supply:</div>
-                  <div className="tokenomics-value">69.42 T RODAI</div>
-                </div>
-                <div>
-                  <div className="tokenomics-label">Circulating Supply:</div>
-                  <div className="tokenomics-value">NONE YET</div>
                 </div>
                 <div className="text-large">
                   Mint authority{' '}
