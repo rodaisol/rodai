@@ -87,6 +87,46 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="flex gap-4">
+              <Link
+                href="https://solscan.io/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/solscan.webp"
+                  alt="solscan"
+                  className="w-12"
+                />
+              </Link>
+              <Link href="https://discord.gg/9yDQJKUK" target="_blank">
+                <img
+                  draggable={false}
+                  src="/discord.png"
+                  alt="discord"
+                  className="w-12"
+                />
+              </Link>
+              <Link href="https://twitter.com/RodAISol" target="_blank">
+                <img
+                  draggable={false}
+                  src="/x.png"
+                  alt="twitter"
+                  className="w-12"
+                />
+              </Link>
+              <Link
+                href="https://birdeye.so/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/birdeye.png"
+                  alt="birdeye"
+                  className="w-16 relative -left-2"
+                />
+              </Link>
+            </div>
             <div className="border-none bg-white/10 max-w-[610px] rounded-lg p-4">
               <div className="flex flex-col gap-4 items-center justify-center text-center">
                 <div className="text-5xl">Tokenomics</div>
@@ -97,8 +137,9 @@ export default function Home() {
                     target="_blank"
                     className="text-xl text-pink-500"
                   >
-                    Don&rsquo;t be...
-                  </Link>
+                    Rugcheck
+                  </Link>{' '}
+                  before buying.
                 </div>
                 <div>
                   <div className="tokenomics-label">Total and Max Supply:</div>
@@ -130,38 +171,6 @@ export default function Home() {
                   central authority.
                 </div>
               </div>
-            </div>
-
-            <div className="flex gap-4">
-              <Link
-                href="https://solscan.io/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
-                target="_blank"
-              >
-                <img
-                  draggable={false}
-                  src="/solscan.webp"
-                  alt="solscan"
-                  className="w-12"
-                />
-              </Link>
-
-              <Link href="https://discord.gg/9yDQJKUK" target="_blank">
-                <img
-                  draggable={false}
-                  src="/discord.png"
-                  alt="discord"
-                  className="w-12"
-                />
-              </Link>
-
-              <Link href="https://twitter.com/RodAISol" target="_blank">
-                <img
-                  draggable={false}
-                  src="/x.png"
-                  alt="twitter"
-                  className="w-12"
-                />
-              </Link>
             </div>
           </div>
         </main>
