@@ -123,7 +123,29 @@ export default function Home() {
                   draggable={false}
                   src="/birdeye.png"
                   alt="birdeye"
-                  className="w-16 relative -left-2"
+                  className="w-14"
+                />
+              </Link>
+              <Link
+                href="https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/jupiter.png"
+                  alt="jupiter"
+                  className="w-12"
+                />
+              </Link>
+              <Link
+                href="https://www.dextools.io/app/en/solana/pair-explorer/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/dextools.png"
+                  alt="dextools"
+                  className="w-12"
                 />
               </Link>
             </div>
