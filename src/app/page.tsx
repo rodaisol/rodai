@@ -11,7 +11,7 @@ export default function Home() {
         <main className="flex flex-col flex-col items-center justify-center">
           <div className="hidden sm:block">
             <Button
-              href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
+              href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in"
               as={Link}
               size="lg"
               className="p-8 text-lg absolute top-4 right-4 bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
