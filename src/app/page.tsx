@@ -50,6 +50,12 @@ export default function Home() {
                 className="w-64 animate-levitate"
                 draggable="false"
               />
+              <img
+                draggable={false}
+                src="/built-on-solana.svg"
+                alt="built on solana"
+                className="w-64"
+              />
               <h1 className="text-6xl font-bold text-center">
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
