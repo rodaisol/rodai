@@ -21,7 +21,7 @@ export default function Home() {
                   draggable={false}
                   src="/raydium.png"
                   alt="solscan"
-                  className="hidden w-12"
+                  className="w-12"
                 />
                 <span>Buy RODAI</span>
               </div>
@@ -47,7 +47,7 @@ export default function Home() {
               <img
                 src="/logo.png"
                 alt="logo"
-                className="w-64 animate-levitate"
+                className="w-64 animate-levitate z-10"
                 draggable="false"
               />
               <img
@@ -72,7 +72,7 @@ export default function Home() {
                       draggable={false}
                       src="/raydium.png"
                       alt="solscan"
-                      className="hidden w-12"
+                      className="w-12"
                     />
                     <span>Buy RODAI</span>
                   </div>
