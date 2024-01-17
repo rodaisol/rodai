@@ -107,6 +107,14 @@ export default function Home() {
                   className="w-12"
                 />
               </Link>
+              <Link href="https://t.me/+TJO0mAxxOLg1Mzc5" target="_blank">
+                <img
+                  draggable={false}
+                  src="/telegram.png"
+                  alt="telegram"
+                  className="w-12"
+                />
+              </Link>
               <Link href="https://twitter.com/RodAISol" target="_blank">
                 <img
                   draggable={false}
