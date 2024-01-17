@@ -124,17 +124,6 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href="https://birdeye.so/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
-                target="_blank"
-              >
-                <img
-                  draggable={false}
-                  src="/birdeye.png"
-                  alt="birdeye"
-                  className="w-14"
-                />
-              </Link>
-              <Link
                 href="https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
                 target="_blank"
               >
@@ -153,6 +142,28 @@ export default function Home() {
                   draggable={false}
                   src="/dextools.png"
                   alt="dextools"
+                  className="w-12"
+                />
+              </Link>
+              <Link
+                href="https://birdeye.so/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/birdeye.png"
+                  alt="birdeye"
+                  className="w-14"
+                />
+              </Link>
+              <Link
+                href="https://www.geckoterminal.com/solana/pools/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/geckoterminal.png"
+                  alt="geckoterminal"
                   className="w-12"
                 />
               </Link>
