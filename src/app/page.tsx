@@ -87,7 +87,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-wrap justify-center text-center gap-4">
               <Link
                 href="https://solscan.io/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
                 target="_blank"

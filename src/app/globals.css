@@ -4,6 +4,7 @@
 
 body {
   background-color: #6610F2;
+  @apply p-4;
 }
 
 .tokenomics-label {
