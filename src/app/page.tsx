@@ -28,7 +28,7 @@ export default function Home() {
             </Button>
             <div className="absolute top-24 right-4">
               <a
-                className="coq-btn coq-btn-0 flex items-center gap-2"
+                className="hidden coq-btn coq-btn-0 flex items-center gap-2"
                 href="https://www.coqinu.com/"
                 target="_blank"
               >
@@ -78,7 +78,7 @@ export default function Home() {
                   </div>
                 </Button>
                 <a
-                  className="coq-btn coq-btn-0 flex items-center gap-2"
+                  className="hidden coq-btn coq-btn-0 flex items-center gap-2"
                   href="https://www.coqinu.com/"
                   target="_blank"
                 >
@@ -105,7 +105,7 @@ export default function Home() {
                   className="w-12"
                 />
               </Link>
-              <Link href="https://discord.gg/9yDQJKUK" target="_blank">
+              <Link href="https://discord.gg/BsKmXyFJvE" target="_blank">
                 <img
                   draggable={false}
                   src="/discord.png"
