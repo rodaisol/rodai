@@ -105,7 +105,11 @@ export default function Home() {
                   className="w-12"
                 />
               </Link>
-              <Link href="https://discord.gg/BsKmXyFJvE" target="_blank">
+              <Link
+                href="https://discord.gg/BsKmXyFJvE"
+                target="_blank"
+                className="hidden"
+              >
                 <img
                   draggable={false}
                   src="/discord.png"
@@ -182,7 +186,7 @@ export default function Home() {
                   <Link
                     href="https://rugcheck.xyz/tokens/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
                     target="_blank"
-                    className="text-xl text-pink-500"
+                    className="text-xl text-teal-400"
                   >
                     Rugcheck
                   </Link>{' '}
@@ -197,7 +201,7 @@ export default function Home() {
                   <Link
                     href="https://solscan.io/tx/58PnHQgTaigkjtjYBxBAP6i3JfXZgKvnTu7uA4suyJKikjKCxobq9N7VTfWW6VTnsXpDSGx12zCjZGa7Qi8EysB5"
                     target="_blank"
-                    className="text-pink-500"
+                    className="text-teal-400"
                   >
                     has been revoked
                   </Link>
@@ -206,7 +210,7 @@ export default function Home() {
                   <Link
                     href="https://app.streamflow.finance/contract/solana/mainnet/9w5wppbSzicVjie4oyg7tMPAYgxeBoiDcRBugpuvBrvG"
                     target="_blank"
-                    className="text-pink-500"
+                    className="text-teal-400"
                   >
                     LP tokens have been locked 🔒
                   </Link>
