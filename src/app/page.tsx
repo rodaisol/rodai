@@ -20,27 +20,12 @@ export default function Home() {
                 <img
                   draggable={false}
                   src="/raydium.png"
-                  alt="solscan"
+                  alt="raydium"
                   className="w-12"
                 />
                 <span>Buy RODAI</span>
               </div>
             </Button>
-            <div className="absolute top-24 right-4">
-              <a
-                className="hidden coq-btn coq-btn-0 flex items-center gap-2"
-                href="https://www.coqinu.com/"
-                target="_blank"
-              >
-                <img
-                  draggable={false}
-                  src="/coqinu.png"
-                  alt="solscan"
-                  className="w-10"
-                />
-                BUY COQ
-              </a>
-            </div>
           </div>
           <div className="flex flex-col gap-4 items-center justify-center">
             <div className="flex flex-col gap-2 justify-center items-center">
@@ -71,25 +56,12 @@ export default function Home() {
                     <img
                       draggable={false}
                       src="/raydium.png"
-                      alt="solscan"
+                      alt="raydium"
                       className="w-12"
                     />
                     <span>Buy RODAI</span>
                   </div>
                 </Button>
-                <a
-                  className="hidden coq-btn coq-btn-0 flex items-center gap-2"
-                  href="https://www.coqinu.com/"
-                  target="_blank"
-                >
-                  <img
-                    draggable={false}
-                    src="/coqinu.png"
-                    alt="solscan"
-                    className="w-10"
-                  />
-                  BUY COQ
-                </a>
               </div>
             </div>
 
@@ -175,6 +147,17 @@ export default function Home() {
                   src="/geckoterminal.png"
                   alt="geckoterminal"
                   className="w-12"
+                />
+              </Link>
+              <Link
+                href="https://coinmarketcap.com/dexscan/solana/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/coinmarketcap.png"
+                  alt="coinmarketcap"
+                  className="w-14 rounded-3xl"
                 />
               </Link>
             </div>
