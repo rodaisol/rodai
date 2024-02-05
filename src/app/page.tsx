@@ -1,4 +1,4 @@
-import { Button, Link } from '@nextui-org/react'
+import { Button, Code, Link } from '@nextui-org/react'
 
 import { ParticlesComponent } from '../components/Particles'
 import { getRandomExpansion } from '../expansions'
@@ -45,6 +45,13 @@ export default function Home() {
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
               <p className="text-xl text-orange-300">{getRandomExpansion()}</p>
+              <div className="flex items-center gap-2">
+                <span className="text-lg">Token Address:</span>
+                <Code color="success">
+                  GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC
+                </Code>
+              </div>
+
               <div className="sm:hidden flex flex-col gap-3">
                 <Button
                   href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
