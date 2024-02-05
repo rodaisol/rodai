@@ -84,11 +84,7 @@ export default function Home() {
                   className="w-12"
                 />
               </Link>
-              <Link
-                href="https://discord.gg/BsKmXyFJvE"
-                target="_blank"
-                className="hidden"
-              >
+              <Link href="https://discord.gg/BsKmXyFJvE" target="_blank">
                 <img
                   draggable={false}
                   src="/discord.png"
