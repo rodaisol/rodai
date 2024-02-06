@@ -131,6 +131,17 @@ export default function Home() {
                 />
               </Link>
               <Link
+                href="https://dexscreener.com/solana/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8"
+                target="_blank"
+              >
+                <img
+                  draggable={false}
+                  src="/dexscreener.webp"
+                  alt="dexscreener"
+                  className="w-14 rounded-full"
+                />
+              </Link>
+              <Link
                 href="https://birdeye.so/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC"
                 target="_blank"
               >
@@ -160,7 +171,7 @@ export default function Home() {
                   draggable={false}
                   src="/coinmarketcap.png"
                   alt="coinmarketcap"
-                  className="w-14 rounded-3xl"
+                  className="w-14 rounded-full"
                 />
               </Link>
             </div>
