@@ -54,7 +54,7 @@ export default function Home() {
 
               <div className="sm:hidden flex flex-col gap-3">
                 <Button
-                  href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&outputSymbol=RODAI"
+                  href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in"
                   as={Link}
                   size="lg"
                   className="p-8 text-lg bg-gradient-to-l from-[#9945FF] to-[#14F195] text-white shadow-lg"
