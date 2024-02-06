@@ -45,9 +45,9 @@ export default function Home() {
                 ROD.<span className="text-orange-300">AI</span>
               </h1>
               <p className="text-xl text-orange-300">{getRandomExpansion()}</p>
-              <div className="flex justify-center items-center gap-2 flex-wrap">
+              <div className="flex flex-col justify-center items-center gap-2 flex-wrap">
                 <span className="text-lg">Token Address:</span>
-                <Code color="success" className="text-lg bg-black">
+                <Code color="success" className="text-xs sm:text-lg bg-black">
                   GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC
                 </Code>
               </div>
