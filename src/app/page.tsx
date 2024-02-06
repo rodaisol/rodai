@@ -164,7 +164,7 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href="https://coinmarketcap.com/dexscan/solana/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8"
+                href="https://coinmarketcap.com/currencies/rod-ai/"
                 target="_blank"
               >
                 <img
