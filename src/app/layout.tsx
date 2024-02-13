@@ -1,15 +1,15 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
-import { Audiowide } from 'next/font/google'
+import { Geologica } from 'next/font/google'
 
 import './globals.css'
 import AppProviders from './providers'
 
-const font = Audiowide({ subsets: ['latin'], weight: '400' })
+const font = Geologica({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'ROD.AI (RODAI)',
+  title: 'RODAI (RODAI)',
   description:
     'The mighty, long and powerful RODAI token. Only possible on Solana.',
 }
