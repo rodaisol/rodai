@@ -1,13 +1,13 @@
 ## What Is RODAI?
 
-RODAI is an innovative, community-driven, and meme-based cryptocurrency that captures the essence of digital culture while offering significant growth potential within the decentralized finance ecosystem. It distinguishes itself by blending meme culture's viral appeal with the robust functionality and inclusivity of blockchain technology, creating a unique space for users to engage, invest, and grow together.
+RODAI is an innovative, community-driven, and meme-based cryptocurrency that captures the essence of digital culture while offering significant growth potential within the defi ecosystem. It distinguishes itself by blending meme culture's viral appeal with the robust functionality and inclusivity of blockchain technology, creating a unique space for users to engage, invest, and grow together.
 
 ### Key Features of RODAI:
 
 - **Community-Driven Initiative**: At its core, RODAI is built on the principle of community governance, allowing its users to have a say in key decisions and directions of the project through a democratic process.
 - **Meme-Based Marketing**: Utilizing the universal language of memes, RODAI connects with its audience, fostering a fun and engaging atmosphere that drives viral marketing and community growth.
 - **Innovative Tokenomics**: Designed with a focus on sustainability and growth, RODAI's tokenomics encourage both short-term engagement and long-term investment, with a clear structure that benefits all participants.
-- **Rewards and Engagement**: The project offers various incentives, including staking rewards, to motivate community participation and investment, ensuring an active and thriving ecosystem.
+- **Rewards and Engagement**: The project offers various incentives, including on-chain rewards, to motivate community participation and investment, ensuring an active and thriving ecosystem.
 - **Accessibility and Usability**: RODAI prioritizes a frictionless user experience, making it easy for anyone to buy, hold, and use the tokens, thereby lowering the entry barrier to the cryptocurrency market.
 
 ### Token Supply Details:
