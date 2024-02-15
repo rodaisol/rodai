@@ -9,7 +9,7 @@ import AppProviders from './providers'
 const font = Geologica({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'RODAI (RODAI)',
+  title: 'RODAI',
   description:
     'The mighty, long and powerful RODAI token. Only possible on Solana.',
 }
