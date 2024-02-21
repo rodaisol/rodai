@@ -12,8 +12,16 @@ export const faqData = [
       'Yes, we will eventually get RODAI listed on several centralized exchanges.',
   },
   {
-    question: 'Is there a RODAI whitepaper / roadmap?',
-    answer: 'Not at the moment but we are working on one.',
+    question: 'Is there a RODAI whitepaper?',
+    answer: (
+      <p>
+        Yes! Please see our whitepaper{' '}
+        <Link href="/whitepaper.pdf" target="_blank" className="underline">
+          here
+        </Link>
+        .
+      </p>
+    ),
   },
   {
     question: 'Worried about a rug pull?',

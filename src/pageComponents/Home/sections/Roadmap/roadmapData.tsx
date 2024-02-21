@@ -11,7 +11,7 @@ export const roadmapData = [
       { task: 'Lock liquidity', completed: true },
       { task: 'Reach 3,000 social media followers', completed: true },
       { task: 'Reach 100k market cap', completed: true },
-      { task: 'Reach 500 token holders', completed: false },
+      { task: 'Reach 500 token holders', completed: true },
     ],
   },
   {

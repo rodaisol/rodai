@@ -6,6 +6,7 @@ import {
   NavbarItem,
 } from '@nextui-org/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FC } from 'react'
 
 import { BuyDropdown } from '../BuyDropdown'
@@ -60,6 +61,14 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           className="cursor-pointer"
         >
           Roadmap
+        </NavbarItem>
+        <NavbarItem
+          as={Link}
+          href="/whitepaper.pdf"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          Whitepaper
         </NavbarItem>
         <NavbarItem
           onClick={() => scrollToSection('why-invest')}

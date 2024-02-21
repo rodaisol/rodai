@@ -19,7 +19,7 @@ export const AboutSection = () => {
       </div>
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <img
-          src="/img/rod/about_rod.png"
+          src="/img/rod/about_rod.gif"
           className="max-w-full h-auto"
           alt="The Rod to Rule Them All"
         />
