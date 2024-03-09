@@ -51,7 +51,7 @@ export const roadmapData: RoadmapPhase[] = [
         completed: true,
         major: true,
       },
-      { task: 'Reach 3,000 token holders', completed: false },
+      { task: 'Reach 3,000 token holders', completed: false, major: true },
     ],
   },
   {
