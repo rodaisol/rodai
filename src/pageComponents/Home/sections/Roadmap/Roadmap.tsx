@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 import React from 'react'
 
 import { roadmapData } from './roadmapData'
@@ -50,7 +51,28 @@ export const RoadmapSection = () => {
                     ) : (
                       <div className="w-6 h-6"></div>
                     )}
-                    <span>{item.task}</span>
+                    {item.completed && item.major ? (
+                      <span
+                        style={{
+                          color: 'gold',
+                          display: 'flex',
+                          alignItems: 'center',
+                        }}
+                        title="Major Milestone"
+                      >
+                        <Image
+                          src="/img/icons/milestone.svg"
+                          alt="Milestone"
+                          width={20}
+                          height={20}
+                        />
+                        <strong style={{ marginLeft: '5px' }}>
+                          {item.task}
+                        </strong>
+                      </span>
+                    ) : (
+                      <span>{item.task}</span>
+                    )}
                   </li>
                 ))}
               </ul>
