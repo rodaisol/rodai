@@ -1,9 +1,9 @@
-import { TOTAL_EXISTING_SUPPLY } from '../../../constants'
+import { CIRCULATING_SUPPLY } from '../../../constants'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
-  return new Response(TOTAL_EXISTING_SUPPLY, {
+  return new Response(CIRCULATING_SUPPLY, {
     status: 200,
   })
 }
