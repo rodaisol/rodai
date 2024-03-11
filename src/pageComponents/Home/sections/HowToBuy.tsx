@@ -13,6 +13,7 @@ import ReactPlayer from 'react-player/youtube'
 import { useMedia } from 'react-use'
 
 import { BuyDropdown } from '../../../components/BuyDropdown'
+import { HOW_TO_BUY_YOUTUBE_URL } from '../../../constants'
 
 export const HowToBuySection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -21,7 +22,7 @@ export const HowToBuySection = () => {
 
   const handleOpenVideo = () => {
     if (isMobile) {
-      window.open('https://www.youtube.com/shorts/e3yYFG01N2I', '_blank')
+      window.open(HOW_TO_BUY_YOUTUBE_URL, '_blank')
     } else {
       onOpen()
     }
