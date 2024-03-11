@@ -44,14 +44,33 @@ To buy RODAI, use a Phantom wallet app and swap your existing tokens for RODAI t
 - **Raydium**: [Buy RODAI on Raydium](https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in)
 - **Jupiter**: [Buy RODAI on Jupiter](https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC)
 
-## RODKit™
+## About RODKit
 
-The RODKit™ is under development, designed exclusively for RODAI holders. It aims to streamline the launch and maintenance of community tokens on the Solana blockchain.
+RODKit is an innovative platform under development, designed to empower the Solana blockchain community. It serves as a foundational tool for creating and maintaining community tokens, providing a comprehensive suite of features not just for token creation but also for fostering and sustaining vibrant communities.
+
+### Payment Flexibility
+
+Users will have the flexibility to access RODKit services using $RODAI, SOL, and stablecoins. This inclusive approach ensures that a wide range of users can engage with our platform, leveraging the payment method that best suits their needs:
+
+- **$RODAI Payments:** Transactions with $RODAI will directly support the ecosystem. A portion of these transactions will be allocated to the treasury to help cover operation costs and sustain and expand our platform. Additionally, a part will also be burned, contributing to the reduction of the $RODAI supply and enhancing its value.
+
+- **SOL and Stablecoin Payments:** Transactions using SOL or stablecoins will involve swapping these into $RODAI first. A percentage of the swapped $RODAI will be sent to our treasury to cover operation costs, with the remainder being burned. This process contributes to the reduction of the $RODAI supply and enhances its value.
+
+### Exclusive Features for $RODAI Holders
+
+$RODAI holders will also benefit from exclusive features within RODKit, designed to enhance their experience and provide them with additional value. These features are a testament to our commitment to the $RODAI community and aim to offer unique benefits to our investors.
+
+### Community Benefits
+
+The use of RODKit will positively impact the $RODAI ecosystem, irrespective of the payment method chosen. Through our support for the treasury and the implementation of a token burn strategy for all transactions, we are committed to ensuring that the platform not only meets the needs of our users but also contributes to the overall health and growth of the community.
+
+As RODKit is still under development, we are dedicated to creating a seamless, inclusive, and beneficial experience for all involved. By embracing a wide array of payment options and providing exclusive benefits to $RODAI holders, our goal is to build a robust and thriving ecosystem on the Solana blockchain.
 
 ## Contact and Social Media
 
-- Telegram: [Follow us on Telegram](https://t.me/rodaisol)
-- Twitter: [Follow us on Twitter](https://twitter.com/RodAISol)
+- Telegram: [Join us on Telegram](https://t.me/rodaisol)
+- X: [Follow us on X](https://twitter.com/RodAISol)
+- YouTube: [Subscribe on YouTube](https://youtube.com/@RodAISol)
 
 ## Worried about a rug pull?
 
