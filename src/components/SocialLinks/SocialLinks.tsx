@@ -39,6 +39,13 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
           className="w-12 md:w-16 cursor-pointer"
         />
       </Link>
+      <Link href="https://youtube.com/@RodAISol" target="_blank">
+        <img
+          src="/img/social/youtube.png"
+          alt="youtube"
+          className="w-12 md:w-16 cursor-pointer"
+        />
+      </Link>
     </div>
   )
 }
