@@ -10,11 +10,22 @@ import {
 import Image from 'next/image'
 import React from 'react'
 import ReactPlayer from 'react-player/youtube'
+import { useMedia } from 'react-use'
 
 import { BuyDropdown } from '../../../components/BuyDropdown'
 
 export const HowToBuySection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const isMobile = useMedia('(max-width: 768px)')
+
+  const handleOpenVideo = () => {
+    if (isMobile) {
+      window.open('https://www.youtube.com/shorts/e3yYFG01N2I', '_blank')
+    } else {
+      onOpen()
+    }
+  }
 
   return (
     <section
@@ -35,7 +46,7 @@ export const HowToBuySection = () => {
         <div className="w-full flex justify-center md:justify-start gap-4">
           <BuyDropdown variant="bordered" className="border-white text-white" />
           <Button
-            onClick={onOpen}
+            onClick={handleOpenVideo}
             variant="shadow"
             color="secondary"
             className="border-white"
@@ -47,7 +58,7 @@ export const HowToBuySection = () => {
         </div>
       </div>
       <div className="md:flex-1 flex justify-center items-center relative group cursor-pointer">
-        <div onClick={onOpen}>
+        <div onClick={handleOpenVideo}>
           <Image
             src="/img/how-to-buy.png"
             alt="How to buy RODAI"
