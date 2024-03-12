@@ -74,8 +74,6 @@ export const roadmapData: RoadmapPhase[] = [
       },
       { task: 'Reach 25 million market cap', completed: false, major: true },
       { task: 'Reach 50 million market cap', completed: false, major: true },
-      { task: 'Reach 75 million market cap', completed: false, major: true },
-      { task: 'Reach 100 million market cap', completed: false, major: true },
       { task: 'Reach 10,000 token holders', completed: false, major: true },
       {
         task: 'Get listed on centralized exchanges',
