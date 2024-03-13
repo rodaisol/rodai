@@ -18,6 +18,8 @@ const config: Config = {
       },
       animation: {
         levitate: 'levitate 8s ease-in-out infinite',
+        'major-milestone-icon-levitate':
+          'majorMilestoneIconLevitate 1.5s ease-in-out infinite',
       },
       keyframes: {
         levitate: {
@@ -25,6 +27,10 @@ const config: Config = {
           '30%': { transform: 'translateY(-10px)' },
           '50%': { transform: 'translateY(4px)' },
           '70%': { transform: 'translateY(-15px)' },
+        },
+        majorMilestoneIconLevitate: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-2px)' },
         },
       },
     },
