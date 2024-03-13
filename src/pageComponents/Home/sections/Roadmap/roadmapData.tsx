@@ -75,7 +75,11 @@ export const roadmapData: RoadmapPhase[] = [
         task: 'Reach 10 million market cap',
         major: true,
       },
-      { task: 'Reach 3,000 token holders', major: true },
+      {
+        task: 'Reach 3,000 token holders',
+        major: true,
+        completedDate: new Date(2024, 2, 13),
+      },
     ],
   },
   {
