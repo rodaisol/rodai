@@ -31,8 +31,8 @@ export const roadmapData: RoadmapPhase[] = [
       },
       {
         task: 'Reach 100k market cap',
-        completedDate: new Date(2024, 1, 1),
         major: true,
+        completedDate: new Date(2024, 1, 1),
       },
       { task: 'Reach 500 token holders', completedDate: new Date(2024, 1, 28) },
     ],
@@ -42,17 +42,18 @@ export const roadmapData: RoadmapPhase[] = [
     items: [
       {
         task: 'Get listed on CoinMarketCap',
-        completedDate: new Date(2024, 1, 6),
         major: true,
+        completedDate: new Date(2024, 1, 6),
       },
       {
         task: 'Get listed on CoinGecko',
-        completedDate: new Date(2024, 2, 12),
         major: true,
+        completedDate: new Date(2024, 2, 12),
       },
       {
         task: 'Get added to the Jupiter Strict List',
         major: true,
+        completedDate: new Date(2024, 2, 14),
       },
       {
         task: 'Establish solid partnerships with KOLs',
@@ -63,13 +64,13 @@ export const roadmapData: RoadmapPhase[] = [
       },
       {
         task: 'Reach 1 million market cap',
-        completedDate: new Date(2024, 2, 11),
         major: true,
+        completedDate: new Date(2024, 2, 11),
       },
       {
         task: 'Reach 5 million market cap',
-        completedDate: new Date(2024, 2, 12),
         major: true,
+        completedDate: new Date(2024, 2, 12),
       },
       {
         task: 'Reach 10 million market cap',
