@@ -46,6 +46,10 @@ export const roadmapData: RoadmapPhase[] = [
         completedDate: new Date(2024, 1, 6),
       },
       {
+        task: 'Get MC and CS verified by CoinMarketCap',
+        major: true,
+      },
+      {
         task: 'Get listed on CoinGecko',
         major: true,
         completedDate: new Date(2024, 2, 12),
