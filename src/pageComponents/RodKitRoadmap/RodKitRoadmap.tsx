@@ -122,7 +122,7 @@ export const RodKitRoadmapPage = () => {
           </div>
           <section className="relative z-10 flex flex-col gap-2 w-full text-center mt-4">
             <h3 className="text-large text-default-500">
-              Supported and backed by
+              Born from and backed by
             </h3>
             <div className="flex justify-center">
               <Link href="/" className="flex gap-1 items-center">
