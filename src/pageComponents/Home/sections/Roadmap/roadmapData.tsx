@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ReactNode } from 'react'
 
 interface RoadmapItem {
@@ -108,7 +109,7 @@ export const roadmapData: RoadmapPhase[] = [
         major: true,
       },
       {
-        task: <span>Launch RODKit&#8482;</span>,
+        task: <Link href="/rodkit-roadmap">Launch RODKit&#8482;</Link>,
       },
     ],
   },
