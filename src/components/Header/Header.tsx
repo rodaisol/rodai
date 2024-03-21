@@ -45,6 +45,14 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4 justify-center">
         <NavbarItem
+          as={Link}
+          href="/rodkit"
+          target="_blank"
+          className="cursor-pointer"
+        >
+          RODKit
+        </NavbarItem>
+        <NavbarItem
           onClick={() => scrollToSection('about')}
           className="cursor-pointer"
         >
@@ -52,7 +60,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         </NavbarItem>
         <NavbarItem
           onClick={() => scrollToSection('tokenomics')}
-          className="cursor-pointer"
+          className="cursor-pointer sm:hidden"
         >
           Tokenomics
         </NavbarItem>
@@ -90,7 +98,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         </NavbarItem>
         <NavbarItem
           onClick={() => scrollToSection('faq')}
-          className="cursor-pointer"
+          className="cursor-pointer sm:hidden"
         >
           FAQ
         </NavbarItem>

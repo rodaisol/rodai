@@ -1,5 +1,7 @@
 'use client'
 
+import { Button, Link } from '@nextui-org/react'
+
 export const RodKitSection = () => {
   return (
     <section
@@ -7,7 +9,13 @@ export const RodKitSection = () => {
       className="px-4 py-8 md:p-8 flex flex-col md:flex-row gap-4 md:gap-8"
     >
       <div className="flex flex-col gap-4 md:gap-8 md:flex-1">
-        <h2 className="text-5xl md:text-6xl lg:text-7xl">What is RODKit?</h2>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl">
+          What is{' '}
+          <span className="tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
+            RODKit
+          </span>
+          ?
+        </h2>
         <div>
           <p>
             RODKit is an innovative platform under development, designed to
@@ -61,6 +69,18 @@ export const RodKitSection = () => {
             committed to ensuring it not only meets the needs of our users but
             also contributes to the overall health and growth of the community.
           </p>
+        </div>
+        <div>
+          <Button
+            as={Link}
+            variant="bordered"
+            className="border-white"
+            size="lg"
+            target="_blank"
+            href="/rodkit"
+          >
+            See RODKit Roadmap
+          </Button>
         </div>
       </div>
     </section>

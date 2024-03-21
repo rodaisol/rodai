@@ -1,3 +1,4 @@
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -109,7 +110,17 @@ export const roadmapData: RoadmapPhase[] = [
         major: true,
       },
       {
-        task: <Link href="/rodkit">Launch RODKit&#8482;</Link>,
+        task: (
+          <Link href="/rodkit" target="blank" className="flex items-center">
+            <span>
+              Launch the{' '}
+              <span className="text-large tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500">
+                RODKit
+              </span>
+            </span>
+            <ArrowTopRightOnSquareIcon className="ml-2 w-4 h-4" />
+          </Link>
+        ),
       },
     ],
   },
