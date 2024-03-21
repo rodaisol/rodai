@@ -144,7 +144,7 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Crowdfunding',
         fullDescription:
-          'Communities have goals that sometimes require funding. We will provide a platform for communities to raise funds for their strategic goals.',
+          'Communities have goals that sometimes require funding. The RODKit will provide a platform for communities to raise funds for their strategic goals.',
         icon: 'solar:hand-money-bold',
         complete: false,
       },
@@ -213,28 +213,28 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Telegram Group Setup',
         fullDescription:
-          'We will provide full support in setting up a Telegram group for the community in question.',
+          'The RODKit will provide full support in setting up a Telegram group for the community in question.',
         icon: 'ic:baseline-telegram',
         complete: false,
       },
       {
         description: 'Discord Server Setup',
         fullDescription:
-          'We will provide full support in setting up a Discord server for the community in question.',
+          'The RODKit will provide full support in setting up a Discord server for the community in question.',
         icon: 'ic:baseline-discord',
         complete: false,
       },
       {
         description: 'Stickers and GIF Creation',
         fullDescription:
-          'We will produce high-quality stickers, GIFs and other media content for engaging and motivating the community.',
+          'The RODKit will produce high-quality stickers, GIFs and other media content for engaging and motivating the community.',
         icon: 'fluent:sticker-12-regular',
         complete: false,
       },
       {
         description: 'Community Management Assistance',
         fullDescription:
-          'We will place a community manager or moderators to assist in the day-to-day management of the community.',
+          'The RODKit will place a community manager or moderators to assist in the day-to-day management of the community.',
         icon: 'fluent-mdl2:manager-self-service',
         complete: false,
       },

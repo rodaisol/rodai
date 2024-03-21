@@ -20,9 +20,18 @@ const config: Config = {
         levitate: 'levitate 8s ease-in-out infinite',
         'major-milestone-icon-levitate':
           'majorMilestoneIconLevitate 1.5s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+        'float-medium': 'float 8s ease-in-out infinite',
+        'float-fast': 'float 7s ease-in-out infinite',
       },
       keyframes: {
         levitate: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '30%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(4px)' },
+          '70%': { transform: 'translateY(-15px)' },
+        },
+        float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '30%': { transform: 'translateY(-10px)' },
           '50%': { transform: 'translateY(4px)' },

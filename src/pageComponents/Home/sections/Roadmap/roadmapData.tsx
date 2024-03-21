@@ -109,7 +109,7 @@ export const roadmapData: RoadmapPhase[] = [
         major: true,
       },
       {
-        task: <Link href="/rodkit-roadmap">Launch RODKit&#8482;</Link>,
+        task: <Link href="/rodkit">Launch RODKit&#8482;</Link>,
       },
     ],
   },

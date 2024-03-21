@@ -8,8 +8,7 @@ export const faqData = [
   },
   {
     question: "Will RODAI be listed on CEX's?",
-    answer:
-      'Yes, we will eventually get RODAI listed on several centralized exchanges.',
+    answer: 'Yes, CEX is coming very soon.',
   },
   {
     question: 'Is there a RODAI whitepaper?',
