@@ -14,17 +14,6 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
         className
       )}
     >
-      <Link
-        href="https://discord.gg/BsKmXyFJvE"
-        target="_blank"
-        className="hidden"
-      >
-        <img
-          src="/img/social/discord.png"
-          alt="discord"
-          className="w-12 md:w-16 cursor-pointer"
-        />
-      </Link>
       <Link href="https://t.me/rodaisol" target="_blank">
         <img
           src="/img/social/telegram.png"
@@ -36,6 +25,13 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
         <img
           src="/img/social/x.png"
           alt="twitter"
+          className="w-12 md:w-16 cursor-pointer"
+        />
+      </Link>
+      <Link href="https://discord.gg/rodai" target="_blank">
+        <img
+          src="/img/social/discord.png"
+          alt="discord"
           className="w-12 md:w-16 cursor-pointer"
         />
       </Link>
