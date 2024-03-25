@@ -114,7 +114,7 @@ export const roadmapData: RoadmapPhase[] = [
           <Link href="/rodkit" target="blank" className="flex items-center">
             <span>
               Launch the{' '}
-              <span className="text-large tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500">
+              <span className="text-large tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
                 RODKit
               </span>
             </span>
