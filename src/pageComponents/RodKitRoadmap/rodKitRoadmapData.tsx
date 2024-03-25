@@ -83,14 +83,14 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Implement functionality allowing users to update their token metadata after initial minting.',
         icon: 'material-symbols:edit',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Mint Authority Revocation',
         fullDescription:
           'Allow users to revoke the minting authority, ensuring no more tokens can ever be created.',
         icon: 'pepicons-print:coins-circle-off',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Freeze Authority Revocation',
