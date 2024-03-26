@@ -18,15 +18,13 @@ export const WhyInvest = () => {
           Why invest in the ROD?
         </h2>
         <p className="text-md md:text-lg">
-          RODAI is more than a meme coin; it’s a vision in progress on the
-          Solana blockchain, nurtured by an experienced development team. We are
-          dedicated to transforming RODAI into a utility token, aiming to
-          provide real-world applications and value in the near future.
-          Currently embraced for its community, innovation, and educational
-          value, RODAI is on a strategic path toward becoming a token with
-          tangible benefits and utilities for its holders. This journey
-          underscores our commitment to not just entertainment but also
-          practical utility within the cryptocurrency space.
+          RODAI isn’t just any meme coin—it’s a meme-making powerhouse, bringing
+          a unique and evolving vision to the Solana blockchain. Crafted by a
+          team of seasoned developers, our aim stretches beyond individual
+          benefits, focusing on enriching the entire Solana ecosystem. By
+          launching the RODKit, a premier community token platform, we’re
+          setting the stage for unparalleled meme creation and sharing, offering
+          utilities and advantages that reverberate across the whole network.
         </p>
         <p className="text-md md:text-lg mt-4">
           At the heart of our vision lies the RODKit, a groundbreaking platform
