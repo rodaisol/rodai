@@ -97,14 +97,14 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Allow users to remove freeze authority. This is necessary before you are allowed to setup a liquidity pool.',
         icon: 'ic:baseline-severe-cold',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Token Immutability',
         fullDescription:
           'Allow users to make their tokens immutable, improving the risk profile of the token.',
         icon: 'fluent:tag-lock-16-filled',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Tokenomics Setup',
