@@ -4,11 +4,11 @@ export const faqData = [
   {
     question: 'How do I buy and sell RODAI?',
     answer:
-      'You can trade RODAI on decentralised exchanges like Raydium and Jupiter.',
+      'You can trade RODAI on decentralised exchanges like Raydium and Jupiter or you can purchase RODAI on MEXC.',
   },
   {
-    question: "Will RODAI be listed on CEX's?",
-    answer: 'Yes, CEX is coming very soon.',
+    question: 'Is RODAI listed on any CEXs?',
+    answer: 'Yes, RODAI is listed on MEXC and more CEXs are on the way!',
   },
   {
     question: 'Is there a RODAI whitepaper?',

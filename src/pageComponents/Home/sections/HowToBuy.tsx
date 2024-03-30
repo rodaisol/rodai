@@ -90,7 +90,7 @@ export const HowToBuySection = () => {
           <ModalBody>
             <div className="flex justify-center items-center">
               <ReactPlayer
-                url="https://www.youtube.com/shorts/e3yYFG01N2I"
+                url={HOW_TO_BUY_YOUTUBE_URL}
                 playing={isOpen}
                 width={470}
                 height={774}

@@ -12,7 +12,7 @@ import {
 import Image from 'next/image' // Import Image from next/image
 import React, { FC } from 'react'
 
-import { HOW_TO_BUY_YOUTUBE_URL } from '../../constants'
+import { HOW_TO_BUY_YOUTUBE_URL, MEXC_BUY_URL } from '../../constants'
 
 const buyLinks = [
   {
@@ -27,6 +27,13 @@ const buyLinks = [
     label: 'Raydium',
     href: 'https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in',
     icon: '/img/exchanges/raydium.png',
+    className: 'w-8',
+  },
+  {
+    key: 'mexc',
+    label: 'MEXC',
+    href: MEXC_BUY_URL,
+    icon: '/img/exchanges/mexc.png',
     className: 'w-8',
   },
   {

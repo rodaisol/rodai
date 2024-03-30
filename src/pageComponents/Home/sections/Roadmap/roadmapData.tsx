@@ -108,6 +108,7 @@ export const roadmapData: RoadmapPhase[] = [
       {
         task: 'Get listed on centralized exchanges',
         major: true,
+        completedDate: new Date(2024, 2, 30),
       },
       {
         task: (
