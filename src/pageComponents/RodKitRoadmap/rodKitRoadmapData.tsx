@@ -19,7 +19,7 @@ export const roadmapData: RoadmapRelease[] = [
     version: '1.0.0',
     codeName: 'MVP (Minimum Viable Product)',
     icon: 'solar:rocket-2-bold',
-    targetDate: new Date(2024, 3, 5),
+    targetDate: new Date(2024, 3, 9),
     active: true,
     items: [
       {
@@ -111,27 +111,40 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Assist the user in creating a comprehensive and transparent tokenomics model, outlining how the tokens have been distributed after minting.',
         icon: 'pepicons-pop:coins',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Roadmap Setup',
         fullDescription:
           'Assist the user in creating a detailed and structured roadmap, providing clear visibility into the project’s future plans and milestones.',
         icon: 'streamline:arrow-roadmap',
-        complete: false,
+        complete: true,
       },
       {
         description: 'FAQ Section Creation',
         fullDescription:
           'Compile and publish a FAQ section to address common questions and provide support for users.',
         icon: 'wpf:faq',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Automated Website Generation Tool',
         fullDescription:
           'After all information has been collected, generate a website for the token.',
         icon: 'solar:global-linear',
+        complete: false,
+      },
+      {
+        description: 'Deployment to staging environment',
+        fullDescription:
+          'Deploy to staging environment for internal testing against testnet.',
+        icon: 'ooui:lab-flask',
+        complete: false,
+      },
+      {
+        description: 'Deployment to production',
+        fullDescription: 'Deploy to production and point mainnet.',
+        icon: 'tabler:ship',
         complete: false,
       },
     ],
