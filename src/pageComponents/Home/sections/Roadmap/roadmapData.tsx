@@ -57,6 +57,10 @@ export const roadmapData: RoadmapPhase[] = [
         completedDate: new Date(2024, 2, 12),
       },
       {
+        task: 'Get MC and CS verified by CoinGecko',
+        major: true,
+      },
+      {
         task: 'Get added to the Jupiter Strict List',
         major: true,
         completedDate: new Date(2024, 2, 14),
