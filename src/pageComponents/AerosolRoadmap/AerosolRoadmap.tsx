@@ -7,9 +7,9 @@ import Link from 'next/link'
 
 import { TokenSymbol } from '../../components/TokenSymbol'
 
+import { roadmapData } from './aerosolRoadmapData'
 import { MvpReleaseCard } from './MvpReleaseCard'
 import { ReleaseCard } from './ReleaseCard'
-import { roadmapData } from './rodKitRoadmapData'
 
 import './styles.css'
 
@@ -22,15 +22,15 @@ const toolkitFeatures = [
 
 const levitatingImages = [
   {
-    src: '/img/rodkit/rodkit-city.webp',
-    alt: 'RODKit city',
+    src: '/img/aerosol/aerosol-city.webp',
+    alt: 'Aerosol city',
   },
   {
-    src: '/img/rodkit/flying-rod.webp',
+    src: '/img/aerosol/flying-rod.webp',
     alt: 'Flying ROD',
   },
   {
-    src: '/img/rodkit/rod-train.webp',
+    src: '/img/aerosol/rod-train.webp',
     alt: 'ROD waiting for train',
   },
 ]
@@ -84,7 +84,7 @@ const LevitatingImagesSection = () => (
   </div>
 )
 
-export const RodKitRoadmapPage = () => {
+export const AerosolRoadmapPage = () => {
   const [mvpRelease, secondRelease, ...otherReleases] = roadmapData
 
   return (
@@ -95,15 +95,23 @@ export const RodKitRoadmapPage = () => {
             <h1 className="tracking-tight inline font-semibold text-[2.5rem] lg:text-5xl">
               Introducing&nbsp;
             </h1>
-            <h1 className="tracking-tight inline font-semibold text-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500 text-5xl lg:text-6xl">
-              RODKit
-            </h1>
+            <div className="flex items-center">
+              <Image
+                src="/img/aerosol/aerosol-logo.png"
+                alt="Aerosol logo"
+                width={64}
+                height={64}
+              />
+              <h1 className="tracking-tight inline font-semibold text-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500 text-4xl lg:text-6xl">
+                aerosol
+              </h1>
+            </div>
           </div>
           <h2 className="my-8 text-lg lg:text-xl font-normal mx-auto">
             Enabling <u>anyone</u> to launch community projects on Solana.
           </h2>
           <div className="text-sm md:text-lg mx-auto mt-4">
-            RODKit provides a comprehensive, accessible toolkit for:
+            Aerosol provides a comprehensive, accessible toolkit for:
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
               {toolkitFeatures.map((item) => (
                 <div

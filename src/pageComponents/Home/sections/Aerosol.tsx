@@ -2,7 +2,7 @@
 
 import { Button, Link } from '@nextui-org/react'
 
-export const RodKitSection = () => {
+export const AerosolSection = () => {
   return (
     <section
       id="how-to-buy"
@@ -12,23 +12,23 @@ export const RodKitSection = () => {
         <h2 className="text-5xl md:text-6xl lg:text-7xl">
           What is{' '}
           <span className="tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
-            RODKit
+            Aerosol
           </span>
           ?
         </h2>
         <div>
           <p>
-            RODKit is an innovative platform under development, designed to
+            Aerosol is an innovative platform under development, designed to
             empower the Solana blockchain community. It serves as a foundational
             tool for creating and maintaining community tokens, providing a
             comprehensive suite of features not just for token creation but also
             for fostering and sustaining vibrant communities.
           </p>
           <p>
-            With the flexibility to access RODKit services using RODAI, SOL, and
-            stablecoins, we ensure an inclusive approach, allowing a broad range
-            of users to engage with our platform, leveraging the payment method
-            that best suits their needs.
+            With the flexibility to access Aerosol services using RODAI, SOL,
+            and stablecoins, we ensure an inclusive approach, allowing a broad
+            range of users to engage with our platform, leveraging the payment
+            method that best suits their needs.
           </p>
 
           <h3 className="text-lg font-bold my-3">
@@ -46,40 +46,51 @@ export const RodKitSection = () => {
               remainder being burned, also enhancing the value of RODAI.
             </li>
             <li>
-              RODAI holders will benefit from exclusive features within RODKit,
+              RODAI holders will benefit from exclusive features within Aerosol,
               designed to enhance their experience and provide additional value.
               These features are a testament to our commitment to the RODAI
               community and aim to offer unique benefits to our dedicated users.
             </li>
           </ul>
 
-          <h3 className="text-lg font-bold my-3">Why Choose RODKit?</h3>
+          <h3 className="text-lg font-bold my-3">Why Choose Aerosol?</h3>
           <p>
-            Opting for RODKit for your community token project on Solana
+            Opting for Aerosol for your community token project on Solana
             signifies a commitment to a platform that prioritizes community
             empowerment at its core. Through a blend of diverse payment options,
             exclusive benefits for RODAI holders, and a suite of tools designed
-            to foster and sustain vibrant communities, RODKit is set to catalyze
-            the growth of a robust and thriving ecosystem on the Solana
+            to foster and sustain vibrant communities, Aerosol is set to
+            catalyze the growth of a robust and thriving ecosystem on the Solana
             blockchain.
           </p>
 
           <p className="mt-4">
-            <strong>Note:</strong> As RODKit is still under development, we are
+            <strong>Note:</strong> As Aerosol is still under development, we are
             committed to ensuring it not only meets the needs of our users but
             also contributes to the overall health and growth of the community.
           </p>
         </div>
-        <div>
+        <div className="flex gap-3">
           <Button
             as={Link}
+            href="/aerosol"
+            target="_blank"
             variant="bordered"
             className="border-white"
             size="lg"
-            target="_blank"
-            href="/rodkit"
           >
-            See RODKit Roadmap
+            See Aerosol Roadmap
+          </Button>
+
+          <Button
+            as={Link}
+            href="https://preview.aerosol.community"
+            target="_blank"
+            size="lg"
+            variant="shadow"
+            className="flex bg-gradient-to-tr from-pink-500 via-indigo-500 to-sky-600 shadow-lg"
+          >
+            Experience Aerosol
           </Button>
         </div>
       </div>

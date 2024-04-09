@@ -46,11 +46,11 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <NavbarContent className="hidden sm:flex gap-4 justify-center">
         <NavbarItem
           as={Link}
-          href="/rodkit"
+          href="/aerosol"
           target="_blank"
           className="cursor-pointer"
         >
-          RODKit
+          Aerosol
         </NavbarItem>
         <NavbarItem
           onClick={() => scrollToSection('about')}

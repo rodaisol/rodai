@@ -12,7 +12,7 @@ import {
 } from '@nextui-org/react'
 import React from 'react'
 
-import { ReleaseItem, RoadmapRelease } from './rodKitRoadmapData'
+import { ReleaseItem, RoadmapRelease } from './aerosolRoadmapData'
 import { calculateReleaseCompletionPercentage } from './utils'
 
 export interface RoadmapReleaseCardProps extends CardProps {

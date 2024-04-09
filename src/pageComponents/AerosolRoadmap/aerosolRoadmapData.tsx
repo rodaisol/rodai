@@ -139,7 +139,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Deploy to staging environment for internal testing against testnet.',
         icon: 'ooui:lab-flask',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Deployment to production',
@@ -157,7 +157,7 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Crowdfunding',
         fullDescription:
-          'Communities have goals that sometimes require funding. The RODKit will provide a platform for communities to raise funds for their strategic goals.',
+          'Communities have goals that sometimes require funding. Aerosol will provide a platform for communities to raise funds for their strategic goals.',
         icon: 'solar:hand-money-bold',
         complete: false,
       },
@@ -226,28 +226,28 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Telegram Group Setup',
         fullDescription:
-          'The RODKit will provide full support in setting up a Telegram group for the community in question.',
+          'Aerosol will provide full support in setting up a Telegram group for the community in question.',
         icon: 'ic:baseline-telegram',
         complete: false,
       },
       {
         description: 'Discord Server Setup',
         fullDescription:
-          'The RODKit will provide full support in setting up a Discord server for the community in question.',
+          'Aerosol will provide full support in setting up a Discord server for the community in question.',
         icon: 'ic:baseline-discord',
         complete: false,
       },
       {
         description: 'Stickers and GIF Creation',
         fullDescription:
-          'The RODKit will produce high-quality stickers, GIFs and other media content for engaging and motivating the community.',
+          'Aerosol will produce high-quality stickers, GIFs and other media content for engaging and motivating the community.',
         icon: 'fluent:sticker-12-regular',
         complete: false,
       },
       {
         description: 'Community Management Assistance',
         fullDescription:
-          'The RODKit will place a community manager or moderators to assist in the day-to-day management of the community.',
+          'Aerosol will place a community manager or moderators to assist in the day-to-day management of the community.',
         icon: 'fluent-mdl2:manager-self-service',
         complete: false,
       },

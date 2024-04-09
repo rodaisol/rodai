@@ -1,4 +1,4 @@
-import { RoadmapRelease } from './rodKitRoadmapData'
+import { RoadmapRelease } from './aerosolRoadmapData'
 
 export function calculateReleaseCompletionPercentage(
   release: RoadmapRelease

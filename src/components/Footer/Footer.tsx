@@ -5,8 +5,8 @@ export const Footer = () => {
         RODAI isn’t just any meme coin—it’s a meme-making powerhouse, bringing a
         unique and evolving vision to the Solana blockchain. Crafted by a team
         of seasoned developers, our aim stretches beyond individual benefits,
-        focusing on enriching the entire Solana ecosystem. By launching the
-        RODKit, a premier community token platform, we’re setting the stage for
+        focusing on enriching the entire Solana ecosystem. By launching Aerosol,
+        a premier community token platform, we’re setting the stage for
         unparalleled meme creation and sharing, offering utilities and
         advantages that reverberate across the whole network.
       </div>

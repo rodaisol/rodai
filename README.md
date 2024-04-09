@@ -31,7 +31,7 @@ RODAI's roadmap is divided into phases including Setup & Launch, Community Growt
 
 ## Why Invest in RODAI
 
-RODAI isn't just any meme coin—it's a meme-making powerhouse, bringing a unique and evolving vision to the Solana blockchain. Crafted by a team of seasoned developers, our aim stretches beyond individual benefits, focusing on enriching the entire Solana ecosystem. By launching the RODKit, a premier community token platform, we're setting the stage for unparalleled meme creation and sharing, offering utilities and advantages that reverberate across the whole network.
+RODAI isn't just any meme coin—it's a meme-making powerhouse, bringing a unique and evolving vision to the Solana blockchain. Crafted by a team of seasoned developers, our aim stretches beyond individual benefits, focusing on enriching the entire Solana ecosystem. By launching the Aerosol, a premier community token platform, we're setting the stage for unparalleled meme creation and sharing, offering utilities and advantages that reverberate across the whole network.
 
 ## Join Our Community
 
@@ -44,13 +44,13 @@ To buy RODAI, use a Phantom wallet app and swap your existing tokens for RODAI t
 - **Raydium**: [Buy RODAI on Raydium](https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in)
 - **Jupiter**: [Buy RODAI on Jupiter](https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC)
 
-## About RODKit
+## About Aerosol
 
-RODKit is an innovative platform under development, designed to empower the Solana blockchain community. It serves as a foundational tool for creating and maintaining community tokens, providing a comprehensive suite of features not just for token creation but also for fostering and sustaining vibrant communities.
+Aerosol is an innovative platform under development, designed to empower the Solana blockchain community. It serves as a foundational tool for creating and maintaining community tokens, providing a comprehensive suite of features not just for token creation but also for fostering and sustaining vibrant communities.
 
 ### Payment Flexibility
 
-Users will have the flexibility to access RODKit services using $RODAI, SOL, and stablecoins. This inclusive approach ensures that a wide range of users can engage with our platform, leveraging the payment method that best suits their needs:
+Users will have the flexibility to access Aerosol services using $RODAI, SOL, and stablecoins. This inclusive approach ensures that a wide range of users can engage with our platform, leveraging the payment method that best suits their needs:
 
 - **$RODAI Payments:** Transactions with $RODAI will directly support the ecosystem. A portion of these transactions will be allocated to the treasury to help cover operation costs and sustain and expand our platform. Additionally, a part will also be burned, contributing to the reduction of the $RODAI supply and enhancing its value.
 
@@ -58,13 +58,13 @@ Users will have the flexibility to access RODKit services using $RODAI, SOL, and
 
 ### Exclusive Features for $RODAI Holders
 
-$RODAI holders will also benefit from exclusive features within RODKit, designed to enhance their experience and provide them with additional value. These features are a testament to our commitment to the $RODAI community and aim to offer unique benefits to our investors.
+$RODAI holders will also benefit from exclusive features within Aerosol, designed to enhance their experience and provide them with additional value. These features are a testament to our commitment to the $RODAI community and aim to offer unique benefits to our investors.
 
 ### Community Benefits
 
-The use of RODKit will positively impact the $RODAI ecosystem, irrespective of the payment method chosen. Through our support for the treasury and the implementation of a token burn strategy for all transactions, we are committed to ensuring that the platform not only meets the needs of our users but also contributes to the overall health and growth of the community.
+The use of Aerosol will positively impact the $RODAI ecosystem, irrespective of the payment method chosen. Through our support for the treasury and the implementation of a token burn strategy for all transactions, we are committed to ensuring that the platform not only meets the needs of our users but also contributes to the overall health and growth of the community.
 
-As RODKit is still under development, we are dedicated to creating a seamless, inclusive, and beneficial experience for all involved. By embracing a wide array of payment options and providing exclusive benefits to $RODAI holders, our goal is to build a robust and thriving ecosystem on the Solana blockchain.
+As Aerosol is still under development, we are dedicated to creating a seamless, inclusive, and beneficial experience for all involved. By embracing a wide array of payment options and providing exclusive benefits to $RODAI holders, our goal is to build a robust and thriving ecosystem on the Solana blockchain.
 
 ## Contact and Social Media
 

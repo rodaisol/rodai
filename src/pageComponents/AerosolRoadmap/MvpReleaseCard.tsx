@@ -13,7 +13,7 @@ import {
 import { DateTime } from 'luxon'
 import React from 'react'
 
-import { ReleaseItem, RoadmapRelease } from './rodKitRoadmapData'
+import { ReleaseItem, RoadmapRelease } from './aerosolRoadmapData'
 import { calculateReleaseCompletionPercentage } from './utils'
 
 export interface MvpReleaseCardProps extends CardProps {

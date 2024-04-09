@@ -118,9 +118,9 @@ export const roadmapData: RoadmapPhase[] = [
         task: (
           <Link href="/rodkit" target="blank" className="flex items-center">
             <span>
-              Launch the{' '}
+              Launch{' '}
               <span className="text-large tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
-                RODKit
+                Aerosol
               </span>
             </span>
             <ArrowTopRightOnSquareIcon className="ml-2 w-4 h-4" />

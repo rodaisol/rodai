@@ -10,11 +10,11 @@ import { MEXC_BUY_URL } from '../../constants'
 
 import {
   AboutSection,
+  AerosolSection,
   CommunitySection,
   FAQSection,
   HowToBuySection,
   RoadmapSection,
-  RodKitSection,
   TokenomicsSection,
   WhyInvest,
 } from './sections'
@@ -50,7 +50,7 @@ export const HomePage = () => {
           <WhyInvest />
           <CommunitySection />
           <HowToBuySection />
-          <RodKitSection />
+          <AerosolSection />
           <FAQSection />
         </div>
       </main>

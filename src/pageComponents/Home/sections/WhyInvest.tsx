@@ -22,21 +22,21 @@ export const WhyInvest = () => {
           a unique and evolving vision to the Solana blockchain. Crafted by a
           team of seasoned developers, our aim stretches beyond individual
           benefits, focusing on enriching the entire Solana ecosystem. By
-          launching the RODKit, a premier community token platform, we’re
-          setting the stage for unparalleled meme creation and sharing, offering
+          launching Aerosol, a premier community token platform, we’re setting
+          the stage for unparalleled meme creation and sharing, offering
           utilities and advantages that reverberate across the whole network.
         </p>
         <p className="text-md md:text-lg mt-4">
-          At the heart of our vision lies the RODKit, a groundbreaking platform
+          At the heart of our vision lies Aerosol, a groundbreaking platform
           currently under development, aimed at broadening access beyond just
           RODAI holders to include users of SOL and stablecoins. Designed as an
-          all-encompassing toolkit, RODKit aims to streamline the creation and
+          all-encompassing toolkit, Aerosol aims to streamline the creation and
           nurturing of community tokens on the Solana blockchain. This
           initiative represents a crucial step towards unleashing RODAI’s
           utility and cultivating an expansive ecosystem. Anticipating the
-          launch of RODKit provides a glimpse into an ecosystem poised to
+          launch of Aerosol provides a glimpse into an ecosystem poised to
           revolutionize community engagement and token functionality on Solana.
-          RODKit positions RODAI as more than just a token; it’s a beacon of
+          Aerosol positions RODAI as more than just a token; it’s a beacon of
           innovation, inclusivity, and community empowerment.
         </p>
       </div>
