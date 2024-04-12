@@ -143,6 +143,13 @@ export const roadmapData: RoadmapRelease[] = [
         icon: 'ooui:lab-flask',
         complete: true,
       },
+      {
+        description: 'Deployment to production (for testing only)',
+        fullDescription:
+          'Deploy to production and mainnet for the purposes of testing. The official launch date will be provided by the team later on.',
+        icon: 'tabler:ship',
+        complete: true,
+      },
     ],
   },
   {
