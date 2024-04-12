@@ -10,6 +10,7 @@ export interface RoadmapRelease {
   codeName: string
   icon: string
   targetDate?: Date
+  currentTargetDate?: Date
   active?: boolean
   items: ReleaseItem[]
 }
@@ -19,7 +20,8 @@ export const roadmapData: RoadmapRelease[] = [
     version: '1.0.0',
     codeName: 'MVP (Minimum Viable Product)',
     icon: 'solar:rocket-2-bold',
-    targetDate: new Date(2024, 3, 9),
+    targetDate: new Date(2024, 3, 5),
+    currentTargetDate: new Date(2024, 3, 13),
     active: true,
     items: [
       {
@@ -141,16 +143,44 @@ export const roadmapData: RoadmapRelease[] = [
         icon: 'ooui:lab-flask',
         complete: true,
       },
+    ],
+  },
+  {
+    version: '1.1.0',
+    codeName: 'Marketplace',
+    icon: 'tdesign:swap',
+    items: [
       {
-        description: 'Deployment to production',
-        fullDescription: 'Deploy to production and point mainnet.',
-        icon: 'tabler:ship',
+        description: 'OpenBook Market Creation',
+        fullDescription:
+          'Create an OpenBook market which is required in order to setup a liquidity pool.',
+        icon: 'codicon:book',
+        complete: false,
+      },
+      {
+        description: 'Liquidity Pool Creation',
+        fullDescription:
+          'Establish a liquidity pool to enable everyone in the Solana ecosystem to buy the token in question.',
+        icon: 'fluent:arrow-swap-16-filled',
+        complete: false,
+      },
+      {
+        description: 'Adding Liquidity',
+        fullDescription: 'Allow admin to add liquidity to the liquidity pool.',
+        icon: 'material-symbols:add',
+        complete: false,
+      },
+      {
+        description: 'Removing Liquidity',
+        fullDescription:
+          'Allow admin to remove liquidity from the liquidity pool.',
+        icon: 'material-symbols:remove',
         complete: false,
       },
     ],
   },
   {
-    version: '1.1.0',
+    version: '1.2.0',
     codeName: 'Community Engagement',
     icon: 'iconoir:community',
     items: [
@@ -180,40 +210,6 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Implement mechanisms to gauge and analyze the sentiment within the community, aiding in feedback-driven development.',
         icon: 'mingcute:happy-line',
-        complete: false,
-      },
-    ],
-  },
-  {
-    version: '1.2.0',
-    codeName: 'Marketplace',
-    icon: 'tdesign:swap',
-    items: [
-      {
-        description: 'OpenBook Market Creation',
-        fullDescription:
-          'Create an OpenBook market which is required in order to setup a liquidity pool.',
-        icon: 'codicon:book',
-        complete: false,
-      },
-      {
-        description: 'Liquidity Pool Creation',
-        fullDescription:
-          'Establish a liquidity pool to enable everyone in the Solana ecosystem to buy the token in question.',
-        icon: 'fluent:arrow-swap-16-filled',
-        complete: false,
-      },
-      {
-        description: 'Adding Liquidity',
-        fullDescription: 'Allow admin to add liquidity to the liquidity pool.',
-        icon: 'material-symbols:add',
-        complete: false,
-      },
-      {
-        description: 'Removing Liquidity',
-        fullDescription:
-          'Allow admin to remove liquidity from the liquidity pool.',
-        icon: 'material-symbols:remove',
         complete: false,
       },
     ],

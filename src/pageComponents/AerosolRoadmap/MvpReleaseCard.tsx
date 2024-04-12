@@ -1,14 +1,15 @@
 'use client'
 
 import { Icon } from '@iconify/react'
-import type { CardProps } from '@nextui-org/react'
 import {
   Card,
   CardBody,
   CardHeader,
+  CardProps,
   Listbox,
   ListboxItem,
   Progress,
+  cn,
 } from '@nextui-org/react'
 import { DateTime } from 'luxon'
 import React from 'react'
@@ -45,12 +46,29 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
             label={`${release.version}: ${release.codeName}`}
             value={calculateReleaseCompletionPercentage(release)}
           />
-          {release.targetDate && (
-            <div className="text-small text-slate-300 mt-2">
-              Target Date:{' '}
-              {DateTime.fromJSDate(release.targetDate).toFormat('LLL dd, yyyy')}
-            </div>
-          )}
+          <div className="flex gap-2">
+            {!!release.targetDate && (
+              <div className="text-small text-slate-300 mt-2">
+                Target Date:{' '}
+                <span
+                  className={cn({
+                    'line-through': release.targetDate,
+                  })}
+                >
+                  {DateTime.fromJSDate(release.targetDate).toFormat(
+                    'LLL dd, yyyy'
+                  )}
+                </span>
+              </div>
+            )}
+            {!!release.currentTargetDate && (
+              <div className="text-small text-slate-300 mt-2">
+                {DateTime.fromJSDate(release.currentTargetDate).toFormat(
+                  'LLL dd, yyyy'
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </CardHeader>
       <CardBody className="px-1 pt-3 sm:px-2 md:px-6">
