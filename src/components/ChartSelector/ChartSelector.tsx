@@ -41,8 +41,15 @@ const chartLinks = [
   {
     key: 'coinmarketcap',
     label: 'CoinMarketCap',
-    href: 'https://coinmarketcap.com/currencies/rod-ai/',
+    href: 'https://coinmarketcap.com/currencies/rod-ai',
     icon: '/img/charts/coinmarketcap.png',
+    className: 'w-8 rounded-full',
+  },
+  {
+    key: 'coingecko',
+    label: 'CoinGecko',
+    href: 'https://www.coingecko.com/en/coins/rod-ai',
+    icon: '/img/charts/coingecko.png',
     className: 'w-8 rounded-full',
   },
 ]
