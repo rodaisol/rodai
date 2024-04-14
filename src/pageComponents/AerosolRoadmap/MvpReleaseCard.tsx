@@ -26,25 +26,44 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
   const itemsFirstHalf = release.items.slice(0, halfwayIndex)
   const itemsSecondHalf = release.items.slice(halfwayIndex)
 
+  const completedPercentage = calculateReleaseCompletionPercentage(release)
+  const isComplete = release.items.every((item) => item.complete)
   return (
     <Card
       {...props}
-      className="max-w-[1420px] py-1 md:py-4 border-medium border-orange-600"
+      className={cn(
+        'max-w-[1420px] py-1 md:py-4 border-medium border-orange-600',
+        {
+          'border-green-300 border-2': isComplete,
+        }
+      )}
     >
       <CardHeader className="flex items-center gap-3 px-4 pb-0 pt-3 md:px-10 md:pt-5">
-        <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-gradient-to-br from-secondary-300 to-primary-500">
+        <div
+          className={cn(
+            'flex h-14 w-14 flex-none items-center justify-center rounded-full',
+            {
+              'bg-gradient-to-br from-secondary-300 to-primary-500':
+                !isComplete,
+              'bg-gradient-to-br from-sky-400 to-green-500': isComplete,
+            }
+          )}
+        >
           <Icon className="text-white" icon={release.icon} width={30} />
         </div>
         <div className="flex flex-col flex-1">
           <Progress
             showValueLabel={release.active}
             classNames={{
-              label: 'font-medium',
-              indicator: 'bg-gradient-to-r from-primary-400 to-secondary-500',
-              value: 'text-foreground/60',
+              label: cn('font-medium', { 'text-green-300': isComplete }),
+              indicator: isComplete
+                ? 'bg-gradient-to-r from-sky-400 to-green-500'
+                : 'bg-gradient-to-r from-primary-400 to-secondary-500',
+              value: cn('text-foreground/60', { 'text-green-300': isComplete }),
             }}
             label={`${release.version}: ${release.codeName}`}
-            value={calculateReleaseCompletionPercentage(release)}
+            valueLabel={isComplete ? 'Complete' : completedPercentage}
+            value={completedPercentage}
           />
           <div className="flex gap-2">
             {!!release.targetDate && (
@@ -52,7 +71,7 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
                 Target Date:{' '}
                 <span
                   className={cn({
-                    'line-through': release.targetDate,
+                    'line-through': release.currentTargetDate,
                   })}
                 >
                   {DateTime.fromJSDate(release.targetDate).toFormat(
@@ -93,7 +112,9 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
                   startContent={
                     <div className="flex items-center rounded-md border border-divider p-2">
                       <Icon
-                        className="text-secondary"
+                        className={
+                          isComplete ? 'text-green-400' : 'text-primary-500'
+                        }
                         icon={item.icon}
                         width={24}
                       />
@@ -103,7 +124,9 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
                     <div className="flex flex-none">
                       {item.complete ? (
                         <Icon
-                          className="text-secondary"
+                          className={
+                            isComplete ? 'text-green-400' : 'text-primary-500'
+                          }
                           icon="solar:check-circle-bold"
                           width={30}
                         />
@@ -129,7 +152,9 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
                   startContent={
                     <div className="flex items-center rounded-md border border-divider p-2">
                       <Icon
-                        className="text-secondary"
+                        className={
+                          isComplete ? 'text-green-400' : 'text-primary-500'
+                        }
                         icon={item.icon}
                         width={24}
                       />
@@ -139,7 +164,9 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
                     <div className="flex flex-none">
                       {item.complete ? (
                         <Icon
-                          className="text-secondary"
+                          className={
+                            isComplete ? 'text-green-400' : 'text-primary-500'
+                          }
                           icon="solar:check-circle-bold"
                           width={30}
                         />

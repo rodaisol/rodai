@@ -134,7 +134,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'After all information has been collected, generate a website for the token.',
         icon: 'solar:global-linear',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Deployment to staging environment',
@@ -156,6 +156,8 @@ export const roadmapData: RoadmapRelease[] = [
     version: '1.1.0',
     codeName: 'Marketplace',
     icon: 'tdesign:swap',
+    active: true,
+    targetDate: new Date(2024, 3, 20),
     items: [
       {
         description: 'OpenBook Market Creation',
