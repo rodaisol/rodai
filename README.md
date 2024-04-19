@@ -69,7 +69,7 @@ As Aerosol is still under development, we are dedicated to creating a seamless, 
 ## Contact and Social Media
 
 - Telegram: [Join us on Telegram](https://t.me/rodaisol)
-- X: [Follow us on X](https://twitter.com/wearetherod)
+- X: [Follow us on X](https://twitter.com/RodAISol)
 - YouTube: [Subscribe on YouTube](https://youtube.com/@RodAISol)
 
 ## Worried about a rug pull?
