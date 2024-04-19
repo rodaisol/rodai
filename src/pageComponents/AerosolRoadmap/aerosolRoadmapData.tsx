@@ -164,7 +164,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Create an OpenBook market which is required in order to setup a liquidity pool.',
         icon: 'codicon:book',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Liquidity Pool Creation',
