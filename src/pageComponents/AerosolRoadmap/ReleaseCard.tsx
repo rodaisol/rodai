@@ -55,7 +55,7 @@ export function ReleaseCard({ release, ...props }: RoadmapReleaseCardProps) {
               value: cn('text-foreground/60', { 'text-green-300': isComplete }),
             }}
             label={`${release.version}: ${release.codeName}`}
-            valueLabel={isComplete ? 'Complete' : completedPercentage}
+            valueLabel={isComplete ? 'Complete' : undefined}
             value={completedPercentage}
           />
           <div className="flex gap-2">
