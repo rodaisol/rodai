@@ -158,11 +158,12 @@ export const roadmapData: RoadmapRelease[] = [
     icon: 'tdesign:swap',
     active: true,
     targetDate: new Date(2024, 3, 20),
+    currentTargetDate: new Date(2024, 3, 22),
     items: [
       {
-        description: 'OpenBook Market Creation',
+        description: 'Openbook Market Creation',
         fullDescription:
-          'Create an OpenBook market which is required in order to setup a liquidity pool.',
+          'Create an Openbook market which is required in order to setup a liquidity pool.',
         icon: 'codicon:book',
         complete: true,
       },
@@ -171,20 +172,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Establish a liquidity pool to enable everyone in the Solana ecosystem to buy the token in question.',
         icon: 'fluent:arrow-swap-16-filled',
-        complete: false,
-      },
-      {
-        description: 'Adding Liquidity',
-        fullDescription: 'Allow admin to add liquidity to the liquidity pool.',
-        icon: 'material-symbols:add',
-        complete: false,
-      },
-      {
-        description: 'Removing Liquidity',
-        fullDescription:
-          'Allow admin to remove liquidity from the liquidity pool.',
-        icon: 'material-symbols:remove',
-        complete: false,
+        complete: true,
       },
     ],
   },
@@ -210,14 +198,14 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Community Comments',
         fullDescription:
-          'Implement a system for collecting and integrating community feedback into development processes, fostering a user-centric approach.',
+          'Implement a system for collecting community feedback and comments, enabling users to share their thoughts about the project.',
         icon: 'fluent:person-feedback-16-filled',
         complete: false,
       },
       {
         description: 'Sentiment Tracker',
         fullDescription:
-          'Implement mechanisms to gauge and analyze the sentiment within the community, aiding in feedback-driven development.',
+          'Implement mechanisms to gauge and analyze the sentiment within the community.',
         icon: 'mingcute:happy-line',
         complete: false,
       },
@@ -225,6 +213,41 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.3.0',
+    codeName: 'Liquidity Pool Management',
+    icon: 'material-symbols:pool-rounded',
+    active: false,
+    items: [
+      {
+        description: 'Adding Liquidity',
+        fullDescription: 'Allow admin to add liquidity to the liquidity pool.',
+        icon: 'material-symbols:add',
+        complete: false,
+      },
+      {
+        description: 'Removing Liquidity',
+        fullDescription:
+          'Allow admin to remove liquidity from the liquidity pool.',
+        icon: 'material-symbols:remove',
+        complete: false,
+      },
+      {
+        description: 'Openbook Markets Management',
+        fullDescription:
+          'Allow admins to create an manage multiple Openbook markets.',
+        icon: 'ph:books',
+        complete: false,
+      },
+      {
+        description: 'Pool Management',
+        fullDescription:
+          'Allow admins to create an manage multiple liquidity pools.',
+        icon: 'fluent:swimming-pool-32-regular',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.4.0',
     codeName: 'Professional Services',
     icon: 'ph:suitcase-bold',
     items: [
@@ -266,7 +289,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.4.0',
+    version: '1.5.0',
     codeName: 'Listing Support',
     icon: 'clarity:bank-solid',
     items: [
@@ -301,7 +324,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.5.0',
+    version: '1.6.0',
     codeName: 'Other Utilities',
     icon: 'mdi:tools',
     items: [
