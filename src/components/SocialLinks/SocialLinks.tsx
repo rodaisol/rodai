@@ -21,11 +21,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
           className="w-12 md:w-16 cursor-pointer"
         />
       </Link>
-      <Link
-        className="hidden"
-        href="https://twitter.com/RodAISol"
-        target="_blank"
-      >
+      <Link href="https://twitter.com/aerosol_ai" target="_blank">
         <img
           src="/img/social/x.png"
           alt="twitter"
