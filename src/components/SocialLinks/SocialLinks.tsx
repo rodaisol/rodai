@@ -56,6 +56,13 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
           className="w-10 md:w-12 cursor-pointer rounded-full"
         />
       </Link>
+      <Link href="https://www.reddit.com/r/RODAI" target="_blank">
+        <img
+          src="/img/social/reddit.png"
+          alt="reddit"
+          className="w-10 md:w-12 cursor-pointer rounded-full"
+        />
+      </Link>
     </div>
   )
 }
