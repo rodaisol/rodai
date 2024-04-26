@@ -49,7 +49,7 @@ export const TeamMemberCard: FC<TeamMemberCardProps> = ({
         </Link>
       )}
       {social?.twitter && (
-        <Link isExternal href={`https://t.me/${social.twitter}`}>
+        <Link isExternal href={`https://twitter.com/${social.twitter}`}>
           <img
             src="/img/social/x.png"
             alt="twitter"
