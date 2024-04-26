@@ -11,6 +11,7 @@ import {
   FAQSection,
   HowToBuySection,
   RoadmapSection,
+  TeamSection,
   TokenomicsSection,
   WhyInvest,
 } from './sections'
@@ -29,6 +30,7 @@ export const HomePage = () => {
           <CommunitySection />
           <HowToBuySection />
           <AerosolSection />
+          <TeamSection />
           <FAQSection />
         </div>
       </main>
