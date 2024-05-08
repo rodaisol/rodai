@@ -156,7 +156,7 @@ export const AerosolRoadmapPage = () => {
 
         <LevitatingImagesSection />
       </section>
-      <section className="flex flex-col gap-4 justify-center items-stretch md:items-center">
+      <section className="w-full flex flex-col gap-4 justify-center items-stretch md:items-center">
         <h2 className="text-xl md:text-4xl font-bold mt-2 mb-4 text-center">
           Roadmap
         </h2>

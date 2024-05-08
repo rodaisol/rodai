@@ -91,7 +91,7 @@ export function MvpReleaseCard({ release, ...props }: MvpReleaseCardProps) {
         </div>
       </CardHeader>
       <CardBody className="px-1 pt-3 sm:px-2 md:px-6">
-        <div className="flex flex-col md:flex-row md:space-x-4">
+        <div className="flex flex-col items-start lg:flex-row lg:space-x-4">
           <div className="flex-1">
             <Listbox
               hideSelectedIcon
