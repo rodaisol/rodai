@@ -15,7 +15,7 @@ export const teamMembers: TeamMember[] = [
     name: 'Valencia',
     avatar: '/img/team/valencia.jpg',
     role: 'Social Media Manager',
-    bio: 'Cryptocurrency 😋 artist and marketing freelancer.',
+    bio: 'Cryptocurrency artist and marketing freelancer.',
     social: {
       twitter: 'Valencia_vz',
       telegram: 'ValenciaVZ',
