@@ -31,4 +31,14 @@ export const teamMembers: TeamMember[] = [
       telegram: 'adamgoldcrypto',
     },
   },
+  {
+    name: 'Lord Ecneralc',
+    avatar: '/img/team/lord.jpg',
+    role: 'Content Creator',
+    bio: 'Artist and cryptocurrency enthusiast, creating content as a hobby for 8+ years such as memes, videos, streams, and TikTok’s.',
+    social: {
+      twitter: 'LordEcneralc',
+      telegram: 'LordEcneralc',
+    },
+  },
 ]

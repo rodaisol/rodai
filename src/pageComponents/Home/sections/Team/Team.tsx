@@ -10,7 +10,7 @@ export const TeamSection = () => {
     <section className="px-4 py-8 flex justify-center w-full">
       <div className="flex max-w-4xl flex-col items-center py-24">
         <div className="flex max-w-xl flex-col text-center">
-          <h1 className="text-4xl  md:text-6xl lg:text-8xl font-medium tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-medium tracking-tight">
             Our Team
           </h1>
 
@@ -20,7 +20,7 @@ export const TeamSection = () => {
             community. Please let contact us with ideas, questions or concerns.
           </h2>
         </div>
-        <div className="mt-12 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid w-full grid-cols-1 gap-8 md:grid-cols-2">
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} {...member} />
           ))}
