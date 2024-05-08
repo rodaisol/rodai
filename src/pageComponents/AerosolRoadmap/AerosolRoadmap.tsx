@@ -95,16 +95,21 @@ export const AerosolRoadmapPage = () => {
             <h1 className="tracking-tight inline font-semibold text-[2.5rem] lg:text-5xl">
               Introducing&nbsp;
             </h1>
-            <div className="flex items-center">
+            <div className="flex items-center mt-2">
               <Image
                 src="/img/aerosol/aerosol-logo.png"
                 alt="Aerosol logo"
                 width={64}
                 height={64}
               />
-              <h1 className="tracking-tight inline font-semibold text-[2.5rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500 text-4xl lg:text-6xl">
-                aerosol
-              </h1>
+              <Image
+                src="/img/aerosol/aerosol-logo-text.png"
+                alt="logo"
+                draggable={false}
+                className="relative top-1"
+                width={152}
+                height={50}
+              />
             </div>
           </div>
           <h2 className="my-8 text-lg lg:text-xl font-normal mx-auto">

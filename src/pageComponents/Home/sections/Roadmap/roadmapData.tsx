@@ -1,4 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -117,15 +118,28 @@ export const roadmapData: RoadmapPhase[] = [
         completedDate: new Date(2024, 2, 30),
       },
       {
+        major: true,
         task: (
-          <Link href="/rodkit" target="blank" className="flex items-center">
-            <span>
-              Launch{' '}
-              <span className="text-large tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
-                Aerosol
-              </span>
-            </span>
-            <ArrowTopRightOnSquareIcon className="ml-2 w-4 h-4" />
+          <Link href="/aerosol" target="blank" className="flex">
+            <div className="flex items-center w-full">
+              <div className="flex gap-1 items-center">
+                <Image
+                  src="/img/aerosol/aerosol-logo.png"
+                  alt="Aerosol logo"
+                  width={32}
+                  height={32}
+                />
+                <Image
+                  src="/img/aerosol/aerosol-logo-text.png"
+                  alt="logo"
+                  draggable={false}
+                  className="relative"
+                  width={76}
+                  height={25}
+                />
+              </div>
+              <ArrowTopRightOnSquareIcon className="ml-2 w-4 h-4" />
+            </div>
           </Link>
         ),
       },

@@ -1,6 +1,7 @@
 'use client'
 
 import { Button, Link } from '@nextui-org/react'
+import Image from 'next/image'
 
 export const AerosolSection = () => {
   return (
@@ -9,11 +10,24 @@ export const AerosolSection = () => {
       className="px-4 py-8 md:p-8 flex flex-col md:flex-row gap-4 md:gap-8"
     >
       <div className="flex flex-col gap-4 md:gap-8 md:flex-1">
-        <h2 className="text-5xl md:text-6xl lg:text-7xl">
-          What is{' '}
-          <span className="tracking-tight inline font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-purple-400">
-            Aerosol
-          </span>
+        <h2 className="flex gap-2 items-center text-5xl md:text-6xl lg:text-7xl">
+          <div>What is</div>
+          <div className="flex gap-2 items-center">
+            <Image
+              src="/img/aerosol/aerosol-logo.png"
+              alt="Aerosol logo"
+              width={68}
+              height={68}
+            />
+            <Image
+              src="/img/aerosol/aerosol-logo-text.png"
+              alt="logo"
+              draggable={false}
+              className="relative top-1"
+              width={183}
+              height={60}
+            />
+          </div>
           ?
         </h2>
         <div>
@@ -81,13 +95,11 @@ export const AerosolSection = () => {
           >
             See Aerosol Roadmap
           </Button>
-
           <Button
             as={Link}
-            href="https://preview.aerosol.community"
+            href="https://aerosol.community"
             target="_blank"
             size="lg"
-            variant="shadow"
             className="flex bg-gradient-to-tr from-pink-500 via-indigo-500 to-sky-600 shadow-lg"
           >
             Experience Aerosol

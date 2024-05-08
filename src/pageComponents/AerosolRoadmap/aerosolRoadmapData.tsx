@@ -178,6 +178,77 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.2.0',
+    codeName: 'Search and Discovery',
+    icon: 'iconamoon:search-duotone',
+    targetDate: new Date(2024, 4, 10),
+    items: [
+      {
+        description: 'Automatic Token Imports',
+        fullDescription:
+          'Automatically import token projects that have sufficient liquidity.',
+        icon: 'solar:hand-money-bold',
+        complete: true,
+      },
+      {
+        description: 'Price and Market Info',
+        fullDescription:
+          'Automatically import and refresh real time price and market data from the Solana blockchain.',
+        icon: 'icon-park-outline:stock-market',
+        complete: true,
+      },
+      {
+        description: 'Full-text search',
+        fullDescription:
+          'Allow users to search for tokens, communities, and projects using full-text search.',
+        icon: 'iconamoon:search-duotone',
+        complete: true,
+      },
+      {
+        description: 'Sorting and Filtering',
+        fullDescription:
+          'Allow users to sort and filter search results based on various criteria.',
+        icon: 'solar:filter-bold-duotone',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.3.0',
+    targetDate: new Date(2024, 4, 17),
+    codeName: 'All About the Buyers',
+    icon: 'tdesign:money',
+    items: [
+      {
+        description: 'Buy',
+        fullDescription: 'Allow users to buy tokens right from within Aerosol',
+        icon: 'fluent:money-hand-16-filled',
+        complete: true,
+      },
+      {
+        description: 'Risk Analysis',
+        fullDescription:
+          'Provide a risk analysis for each token to protect the user as much as possible from rug pulls.',
+        icon: 'ph:warning-duotone',
+        complete: false,
+      },
+      {
+        description: 'Buyer Profile',
+        fullDescription:
+          'Enable buyers to set up their investment profiles to match them with suitable tokens.',
+        icon: 'pajamas:log',
+        complete: false,
+      },
+      {
+        description: 'Track Buys',
+        fullDescription:
+          'Keep track of all the tokens users buy within Aerosol.',
+        icon: 'pajamas:log',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.4.0',
     codeName: 'Community Engagement',
     icon: 'iconoir:community',
     items: [
@@ -212,7 +283,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.3.0',
+    version: '1.5.0',
     codeName: 'Liquidity Pool Management',
     icon: 'material-symbols:pool-rounded',
     active: false,
@@ -247,7 +318,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.4.0',
+    version: '1.6.0',
     codeName: 'Professional Services',
     icon: 'ph:suitcase-bold',
     items: [
@@ -289,7 +360,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.5.0',
+    version: '1.7.0',
     codeName: 'Listing Support',
     icon: 'clarity:bank-solid',
     items: [
@@ -324,17 +395,10 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.6.0',
+    version: '1.8.0',
     codeName: 'Other Utilities',
     icon: 'mdi:tools',
     items: [
-      {
-        description: 'Risk Analysis',
-        fullDescription:
-          'Integrate with existing risk analysis tools to provide communities with insights into the risk profile of their token.',
-        icon: 'mingcute:asterisk-fill',
-        complete: false,
-      },
       {
         description: 'RAID Helper Utility',
         fullDescription:

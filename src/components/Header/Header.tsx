@@ -1,10 +1,4 @@
-import {
-  Button,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from '@nextui-org/react'
+import { Button, Navbar, NavbarItem, cn } from '@nextui-org/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -29,9 +23,14 @@ export const Header: FC<HeaderProps> = ({ className }) => {
   }
 
   return (
-    <Navbar className={className}>
-      <NavbarBrand
-        className="flex gap-2 items-center cursor-pointer"
+    <Navbar
+      className={cn('justify-center', className)}
+      classNames={{
+        wrapper: 'w-full max-w-5xl',
+      }}
+    >
+      <ul
+        className="flex flex-none gap-2 items-center cursor-pointer max-w-32"
         onClick={() => scrollToSection('hero')}
       >
         <Image
@@ -42,15 +41,30 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           draggable={false}
         />
         <TokenSymbol />
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4 justify-center">
+      </ul>
+      <ul className="hidden flex-1 sm:flex gap-4 justify-center items-center h-full">
         <NavbarItem
           as={Link}
-          href="/aerosol"
+          href="https://aerosol.community"
           target="_blank"
-          className="cursor-pointer"
+          className="cursor-pointer w-auto"
         >
-          Aerosol
+          <div className="flex gap-2 items-center">
+            <Image
+              src="/img/aerosol/aerosol-logo.png"
+              alt="Aerosol logo"
+              width={42}
+              height={42}
+            />
+            <Image
+              src="/img/aerosol/aerosol-logo-text.png"
+              alt="logo"
+              draggable={false}
+              className="relative top-1"
+              width={91}
+              height={30}
+            />
+          </div>
         </NavbarItem>
         <NavbarItem
           onClick={() => scrollToSection('about')}
@@ -102,8 +116,21 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         >
           FAQ
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
+      </ul>
+      <ul className="flex gap-2 items-center">
+        <NavbarItem
+          as={Link}
+          href="https://aerosol.community"
+          target="_blank"
+          className="sm:hidden cursor-pointer w-auto"
+        >
+          <Image
+            src="/img/aerosol/aerosol-logo.png"
+            alt="Aerosol logo"
+            width={42}
+            height={42}
+          />
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Button
             className="border border-white text-white cursor-pointer hover:bg-white hover:text-black transition-colors duration-300"
@@ -116,7 +143,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         <NavbarItem>
           <BuyDropdown />
         </NavbarItem>
-      </NavbarContent>
+      </ul>
     </Navbar>
   )
 }
