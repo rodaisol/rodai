@@ -229,7 +229,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Provide a risk analysis for each token to protect the user as much as possible from rug pulls.',
         icon: 'ph:warning-duotone',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Buyer Profile',
