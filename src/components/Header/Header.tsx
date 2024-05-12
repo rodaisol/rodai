@@ -49,7 +49,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           target="_blank"
           className="cursor-pointer w-auto"
         >
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center">
             <Image
               src="/img/aerosol/aerosol-logo.png"
               alt="Aerosol logo"
@@ -60,7 +60,6 @@ export const Header: FC<HeaderProps> = ({ className }) => {
               src="/img/aerosol/aerosol-logo-text.png"
               alt="logo"
               draggable={false}
-              className="relative top-1"
               width={91}
               height={30}
             />

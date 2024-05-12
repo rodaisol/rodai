@@ -122,7 +122,7 @@ export const roadmapData: RoadmapPhase[] = [
         task: (
           <Link href="/aerosol" target="blank" className="flex">
             <div className="flex items-center w-full">
-              <div className="flex gap-1 items-center">
+              <div className="flex items-center">
                 <Image
                   src="/img/aerosol/aerosol-logo.png"
                   alt="Aerosol logo"
@@ -133,7 +133,6 @@ export const roadmapData: RoadmapPhase[] = [
                   src="/img/aerosol/aerosol-logo-text.png"
                   alt="logo"
                   draggable={false}
-                  className="relative"
                   width={76}
                   height={25}
                 />

@@ -12,7 +12,7 @@ export const AerosolSection = () => {
       <div className="flex flex-col gap-4 md:gap-8 md:flex-1">
         <h2 className="flex gap-2 items-center text-5xl md:text-6xl lg:text-7xl">
           <div>What is</div>
-          <div className="flex gap-2 items-center">
+          <div className="flex items-center">
             <Image
               src="/img/aerosol/aerosol-logo.png"
               alt="Aerosol logo"
@@ -23,7 +23,6 @@ export const AerosolSection = () => {
               src="/img/aerosol/aerosol-logo-text.png"
               alt="logo"
               draggable={false}
-              className="relative top-1"
               width={183}
               height={60}
             />

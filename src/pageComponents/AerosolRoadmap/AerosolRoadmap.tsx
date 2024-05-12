@@ -106,7 +106,6 @@ export const AerosolRoadmapPage = () => {
                 src="/img/aerosol/aerosol-logo-text.png"
                 alt="logo"
                 draggable={false}
-                className="relative top-1"
                 width={152}
                 height={50}
               />
