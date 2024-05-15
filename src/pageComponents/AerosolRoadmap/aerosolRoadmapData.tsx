@@ -181,6 +181,7 @@ export const roadmapData: RoadmapRelease[] = [
     codeName: 'Search and Discovery',
     icon: 'iconamoon:search-duotone',
     targetDate: new Date(2024, 4, 10),
+    currentTargetDate: new Date(2024, 4, 17),
     items: [
       {
         description: 'Automatic Token Imports',
@@ -232,16 +233,23 @@ export const roadmapData: RoadmapRelease[] = [
         complete: true,
       },
       {
-        description: 'Buyer Profile',
+        description: 'Likes',
         fullDescription:
-          'Enable buyers to set up their investment profiles to match them with suitable tokens.',
-        icon: 'pajamas:log',
-        complete: false,
+          'Allow buyers to like and track their favorite tokens in a separate list.',
+        icon: 'ph:heart-duotone',
+        complete: true,
       },
       {
         description: 'Track Buys',
         fullDescription:
           'Keep track of all the tokens users buy within Aerosol.',
+        icon: 'pajamas:log',
+        complete: true,
+      },
+      {
+        description: 'Buyer Profile',
+        fullDescription:
+          'Enable buyers to set up their investment profiles to match them with suitable tokens.',
         icon: 'pajamas:log',
         complete: false,
       },
