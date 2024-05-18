@@ -45,7 +45,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <ul className="hidden flex-1 sm:flex gap-4 justify-center items-center h-full">
         <NavbarItem
           as={Link}
-          href="https://aerosol.community"
+          href="https://aerosol.so"
           target="_blank"
           className="cursor-pointer w-auto"
         >
@@ -119,7 +119,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <ul className="flex gap-2 items-center">
         <NavbarItem
           as={Link}
-          href="https://aerosol.community"
+          href="https://aerosol.so"
           target="_blank"
           className="sm:hidden cursor-pointer w-auto"
         >

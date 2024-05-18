@@ -96,7 +96,7 @@ export const AerosolSection = () => {
           </Button>
           <Button
             as={Link}
-            href="https://aerosol.community"
+            href="https://aerosol.so"
             target="_blank"
             size="lg"
             className="flex bg-gradient-to-tr from-pink-500 via-indigo-500 to-sky-600 shadow-lg"
