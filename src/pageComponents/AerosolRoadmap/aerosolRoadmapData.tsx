@@ -181,7 +181,7 @@ export const roadmapData: RoadmapRelease[] = [
     codeName: 'Search and Discovery',
     icon: 'iconamoon:search-duotone',
     targetDate: new Date(2024, 4, 10),
-    currentTargetDate: new Date(2024, 4, 17),
+    currentTargetDate: new Date(2024, 4, 20),
     items: [
       {
         description: 'Automatic Token Imports',
@@ -216,6 +216,7 @@ export const roadmapData: RoadmapRelease[] = [
   {
     version: '1.3.0',
     targetDate: new Date(2024, 4, 17),
+    currentTargetDate: new Date(2024, 4, 24),
     codeName: 'All About the Buyers',
     icon: 'tdesign:money',
     items: [
