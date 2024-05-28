@@ -250,6 +250,97 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.4.0',
+    codeName: '[Data] Power to the People',
+    icon: 'streamline:fist',
+    items: [
+      {
+        description: 'Date Added',
+        fullDescription:
+          'Show date added of tokens so users can quickly detect when a token became tradeable.',
+        icon: 'clarity:new-line',
+        complete: false,
+      },
+      {
+        description: 'Catalogs',
+        fullDescription:
+          'Allow users to save their filter and sort options into a shareable catalogs.',
+        icon: 'mdi:book-outline',
+        complete: false,
+      },
+      {
+        description: 'Trending Lists',
+        fullDescription:
+          'Show trending lists in Aerosol so that users can take advantage of opportunities in the market.',
+        icon: 'fluent:data-trending-28-regular',
+        complete: false,
+      },
+      {
+        description: 'Views',
+        fullDescription:
+          'Track views of a token and show users how many times a token has been viewed.',
+        icon: 'ph:eye-duotone',
+        complete: false,
+      },
+      {
+        description: 'Anonymous Likes',
+        fullDescription:
+          'Allow users to like tokens without having to sign in.',
+        icon: 'solar:chat-square-like-line-duotone',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.5.0',
+    codeName: 'Automated Community Engagement',
+    icon: 'bx:bot',
+    items: [
+      {
+        description: 'X Trending Lists',
+        fullDescription:
+          'Regularly posts trending lists on X to showcase and interact with other communities in a consistent manner.',
+        icon: 'pajamas:twitter',
+        complete: false,
+      },
+      {
+        description: 'Telegram Trending Lists',
+        fullDescription:
+          'Regularly posts trending lists Telegram groups where the Aerosol Bot has been added.',
+        icon: 'ic:baseline-telegram',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.6.0',
+    codeName: 'Burn the ROD',
+    icon: 'noto:fire',
+    items: [
+      {
+        description: 'Rodcinerator',
+        fullDescription:
+          'Use the SOL (and any other valuable tokens) in the Rodcinerator account to purchase and burn $RODAI.',
+        icon: 'mdi:fire',
+        complete: false,
+      },
+      {
+        description: 'Burn Notifications',
+        fullDescription:
+          'Notify RODAI holders about the burn via X, Telegram, Discord and the Aerosol website.',
+        icon: 'ic:twotone-notifications',
+        complete: false,
+      },
+      {
+        description: 'Burn Report',
+        fullDescription:
+          'Show a $RODAI burn report on Aerosol. This will serve as promotion for $RODAI and also keep existing and future investors informed.',
+        icon: 'carbon:report',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.7.0',
     codeName: 'Community Engagement',
     icon: 'iconoir:community',
     items: [
@@ -284,7 +375,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.5.0',
+    version: '1.8.0',
     codeName: 'Liquidity Pool Management',
     icon: 'material-symbols:pool-rounded',
     active: false,
@@ -319,7 +410,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.6.0',
+    version: '1.9.0',
     codeName: 'Professional Services',
     icon: 'ph:suitcase-bold',
     items: [
@@ -361,7 +452,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.7.0',
+    version: '1.10.0',
     codeName: 'Listing Support',
     icon: 'clarity:bank-solid',
     items: [
@@ -396,7 +487,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.8.0',
+    version: '1.11.0',
     codeName: 'Other Utilities',
     icon: 'mdi:tools',
     items: [
