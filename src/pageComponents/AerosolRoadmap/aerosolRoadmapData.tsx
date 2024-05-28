@@ -277,7 +277,7 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Views',
         fullDescription:
-          'Track views of a token and show users how many times a token has been viewed.',
+          'Track views and show users how many times a token has been viewed.',
         icon: 'ph:eye-duotone',
         complete: false,
       },
