@@ -258,7 +258,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Show date added of tokens so users can quickly detect when a token became tradeable.',
         icon: 'clarity:new-line',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Catalogs',
