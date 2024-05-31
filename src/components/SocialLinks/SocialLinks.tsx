@@ -1,11 +1,4 @@
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from '@nextui-org/react'
 import classNames from 'classnames'
-import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 
@@ -28,58 +21,13 @@ export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {
           className="w-10 md:w-12 cursor-pointer"
         />
       </Link>
-      <Dropdown size="lg">
-        <DropdownTrigger>
-          <img
-            src="/img/social/x.png"
-            alt="twitter"
-            className="w-10 md:w-12 cursor-pointer"
-          />
-        </DropdownTrigger>
-        <DropdownMenu
-          variant="bordered"
-          aria-label="Dropdown menu for buying options"
-        >
-          <DropdownItem
-            key="rodai-community"
-            className="text-white"
-            as={Link}
-            target="_blank"
-            href="https://x.com/rodaimeme"
-            startContent={
-              <Image
-                draggable={false}
-                src="/img/rod/x_rodaimeme.jpg"
-                alt="RODAI community X account logo"
-                className="rounded-full"
-                width={32}
-                height={32}
-              />
-            }
-          >
-            @rodaimeme
-          </DropdownItem>
-          <DropdownItem
-            key="aerosol"
-            className="text-white"
-            as={Link}
-            target="_blank"
-            href="https://x.com/aerosol_ai"
-            startContent={
-              <Image
-                draggable={false}
-                src="/img/aerosol/aerosol-logo.png"
-                alt="Aerosol logo"
-                className="rounded-full"
-                width={32}
-                height={32}
-              />
-            }
-          >
-            @aerosol_ai
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
+      <Link href="https://x.com/rodaimeme" target="_blank">
+        <img
+          src="/img/social/x.png"
+          alt="x"
+          className="w-10 md:w-12 cursor-pointer"
+        />
+      </Link>
       <Link href="https://discord.gg/rodai" target="_blank">
         <img
           src="/img/social/discord.png"
