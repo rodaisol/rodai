@@ -4,8 +4,9 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Geologica } from 'next/font/google'
 
-import './globals.css'
 import AppProviders from './providers'
+
+import './globals.css'
 
 const font = Geologica({ subsets: ['latin'], weight: '400' })
 
