@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
@@ -21,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="AW-16587738152" />
       <body className={font.className}>
         <AppProviders>{children}</AppProviders>
         <SpeedInsights />
