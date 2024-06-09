@@ -119,6 +119,7 @@ export const roadmapData: RoadmapPhase[] = [
       },
       {
         major: true,
+        completedDate: new Date(2024, 5, 4),
         task: (
           <Link href="/aerosol" target="blank" className="flex">
             <div className="flex items-center w-full">
