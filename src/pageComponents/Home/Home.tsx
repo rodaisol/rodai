@@ -20,11 +20,13 @@ import {
 
 export const HomePage = () => {
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    gtag('event', 'conversion', {
-      send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
-    })
+    try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      gtag?.('event', 'conversion', {
+        send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
+      })
+    } catch (e) {}
   }, [])
   return (
     <>
