@@ -261,10 +261,17 @@ export const roadmapData: RoadmapRelease[] = [
         complete: true,
       },
       {
-        description: 'Catalogs',
+        description: 'Categorization',
         fullDescription:
-          'Allow users to save their filter and sort options into a shareable catalogs.',
-        icon: 'mdi:book-outline',
+          'Automatically categorize tokens as they are imported using AI.',
+        icon: 'ic:twotone-category',
+        complete: true,
+      },
+      {
+        description: 'Moderation',
+        fullDescription:
+          'Automatically ban any scam tokens or any tokens associated with hate, self-harm, and sexual content involving minors.',
+        icon: 'fa6-solid:ban',
         complete: true,
       },
       {
