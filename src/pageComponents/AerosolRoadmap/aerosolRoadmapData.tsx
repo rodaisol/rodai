@@ -265,7 +265,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Allow users to save their filter and sort options into a shareable catalogs.',
         icon: 'mdi:book-outline',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Trending Lists',
