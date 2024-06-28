@@ -25,6 +25,10 @@ export const HomePage = () => {
       event: 'conversion',
       send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
     })
+
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
+    })
   }, [])
   return (
     <>
