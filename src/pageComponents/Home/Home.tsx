@@ -23,9 +23,8 @@ export const HomePage = () => {
   useEffect(() => {
     sendGTMEvent({
       event: 'conversion',
-      value: { send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9' },
+      send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
     })
-    console.log('gtag', { gtag: window.gtag, sendGTMEvent })
   }, [])
   return (
     <>
