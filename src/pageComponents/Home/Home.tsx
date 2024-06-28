@@ -1,5 +1,6 @@
 'use client'
 
+import { sendGTMEvent } from '@next/third-parties/google'
 import { useEffect } from 'react'
 
 import { Footer } from '../../components/Footer'
@@ -20,7 +21,11 @@ import {
 
 export const HomePage = () => {
   useEffect(() => {
-    console.log('gtag', window.gtag)
+    sendGTMEvent({
+      event: 'conversion',
+      value: { send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9' },
+    })
+    console.log('gtag', { gtag: window.gtag, sendGTMEvent })
   }, [])
   return (
     <>
