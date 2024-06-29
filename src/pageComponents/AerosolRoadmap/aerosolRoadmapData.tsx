@@ -279,20 +279,13 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Show trending lists in Aerosol so that users can take advantage of opportunities in the market.',
         icon: 'fluent:data-trending-28-regular',
-        complete: false,
+        complete: true,
       },
       {
         description: 'Views',
         fullDescription:
           'Track views and show users how many times a token has been viewed.',
         icon: 'ph:eye-duotone',
-        complete: false,
-      },
-      {
-        description: 'Anonymous Likes',
-        fullDescription:
-          'Allow users to like tokens without having to sign in.',
-        icon: 'solar:chat-square-like-line-duotone',
         complete: false,
       },
     ],
