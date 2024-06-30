@@ -1,5 +1,6 @@
 'use client'
 
+import { sendGAEvent } from '@next/third-parties/google'
 import { useEffect } from 'react'
 
 import { Footer } from '../../components/Footer'
@@ -20,7 +21,7 @@ import {
 
 export const HomePage = () => {
   useEffect(() => {
-    window.gtag?.('event', 'conversion', {
+    sendGAEvent('event', 'conversion', {
       send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
     })
   }, [])
