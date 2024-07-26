@@ -252,6 +252,7 @@ export const roadmapData: RoadmapRelease[] = [
     version: '1.4.0',
     codeName: '[Data] Power to the People',
     icon: 'streamline:fist',
+    targetDate: new Date(2024, 5, 29),
     items: [
       {
         description: 'Date Added',
@@ -275,38 +276,55 @@ export const roadmapData: RoadmapRelease[] = [
         complete: true,
       },
       {
+        description: 'More Filters',
+        fullDescription:
+          'Add new filters: Jupiter verified, Liquidity (TVL), Holders, Release Date, Launchpad',
+        icon: 'solar:filter-bold-duotone',
+        complete: true,
+      },
+      {
         description: 'Trending Lists',
         fullDescription:
           'Show trending lists in Aerosol so that users can take advantage of opportunities in the market.',
         icon: 'fluent:data-trending-28-regular',
         complete: true,
       },
-      {
-        description: 'Views',
-        fullDescription:
-          'Track views and show users how many times a token has been viewed.',
-        icon: 'ph:eye-duotone',
-        complete: false,
-      },
     ],
   },
   {
     version: '1.5.0',
-    codeName: 'Automated Community Engagement',
-    icon: 'bx:bot',
+    codeName: 'Wen better launches? - Thanks, Franchot',
+    targetDate: new Date(2024, 7, 2),
+    icon: 'fluent-emoji:rocket',
     items: [
       {
-        description: 'X Trending Lists',
-        fullDescription:
-          'Regularly posts trending lists on X to showcase and interact with other communities in a consistent manner.',
-        icon: 'pajamas:twitter',
+        description: 'Taxes',
+        fullDescription: 'Allow users to mint a token with a tax extension.',
+        icon: 'heroicons-outline:receipt-tax',
+        complete: true,
+      },
+      {
+        description: 'Drop Openbook Markets',
+        fullDescription: "Openbook markets are expensive; let's drop em'.",
+        icon: 'pepicons-pencil:book-off',
         complete: false,
       },
       {
-        description: 'Telegram Trending Lists',
-        fullDescription:
-          'Regularly posts trending lists Telegram groups where the Aerosol Bot has been added.',
-        icon: 'ic:baseline-telegram',
+        description: 'New Raydium LP protocols',
+        fullDescription: 'Integrate with the new Raydium LP protocols',
+        icon: 'token-branded:ray',
+        complete: false,
+      },
+      {
+        description: 'Hello Meteora',
+        fullDescription: 'Integrate with the Meteora LP protocols',
+        icon: 'bx:meteor',
+        complete: false,
+      },
+      {
+        description: 'Aerosol Launch Spotlight',
+        fullDescription: 'Spotlight tokens launched on Aerosol.',
+        icon: 'tabler:sunshine',
         complete: false,
       },
     ],
@@ -341,21 +359,41 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.7.0',
-    codeName: 'Community Engagement',
-    icon: 'iconoir:community',
+    codeName: 'Aerosocial',
+    icon: 'mynaui:funny-circle',
     items: [
       {
-        description: 'Crowdfunding',
+        description: 'Web2 Authentication',
         fullDescription:
-          'Communities have goals that sometimes require funding. Aerosol will provide a platform for communities to raise funds for their strategic goals.',
-        icon: 'solar:hand-money-bold',
+          'Allow users to authenticate using their Web2 accounts instead of having to connect their wallets.',
+        icon: 'simple-icons:fusionauth',
+        complete: true,
+      },
+      {
+        description: 'Views',
+        fullDescription:
+          'Track views and show users how many times a token has been viewed.',
+        icon: 'ph:eye-duotone',
         complete: false,
       },
       {
-        description: 'Website Customization',
+        description: 'Shares',
         fullDescription:
-          'Allow administrators to customize the website to match their brand identity, ensuring a consistent and professional appearance.',
-        icon: 'dashicons:admin-customizer',
+          'Track shares and show users how many times a token has been shared.',
+        icon: 'mdi:share',
+        complete: false,
+      },
+      {
+        description: 'Token Reactions',
+        fullDescription:
+          'On top of liking, allow users to react in other ways to tokens.',
+        icon: 'material-symbols:add-reaction-outline',
+        complete: false,
+      },
+      {
+        description: 'Discoverability',
+        fullDescription: 'Add innovative ways for users to find new tokens.',
+        icon: 'iconamoon:discover-duotone',
         complete: false,
       },
       {
@@ -366,16 +404,37 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'Sentiment Tracker',
+        description: 'X Trending Lists',
         fullDescription:
-          'Implement mechanisms to gauge and analyze the sentiment within the community.',
-        icon: 'mingcute:happy-line',
+          'Regularly posts trending lists on X to showcase and interact with other communities in a consistent manner.',
+        icon: 'pajamas:twitter',
+        complete: false,
+      },
+      {
+        description: 'Crowdfunding',
+        fullDescription:
+          'Communities have goals that sometimes require funding. Aerosol will provide a platform for communities to raise funds for their strategic goals.',
+        icon: 'solar:hand-money-bold',
         complete: false,
       },
     ],
   },
   {
     version: '1.8.0',
+    codeName: 'Website Customization',
+    icon: 'iconoir:community',
+    items: [
+      {
+        description: 'Website Customization',
+        fullDescription:
+          'Allow administrators to customize the website to match their brand identity, ensuring a consistent and professional appearance.',
+        icon: 'fluent-mdl2:design',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.9.0',
     codeName: 'Liquidity Pool Management',
     icon: 'material-symbols:pool-rounded',
     active: false,
@@ -394,13 +453,6 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'Openbook Markets Management',
-        fullDescription:
-          'Allow admins to create an manage multiple Openbook markets.',
-        icon: 'ph:books',
-        complete: false,
-      },
-      {
         description: 'Pool Management',
         fullDescription:
           'Allow admins to create an manage multiple liquidity pools.',
@@ -410,7 +462,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.9.0',
+    version: '1.10.0',
     codeName: 'Professional Services',
     icon: 'ph:suitcase-bold',
     items: [
@@ -452,7 +504,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.10.0',
+    version: '1.11.0',
     codeName: 'Listing Support',
     icon: 'clarity:bank-solid',
     items: [
@@ -471,9 +523,9 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'Jupiter Strict List Inclusion Support',
+        description: 'Jupiter Verification',
         fullDescription:
-          'Offer assistance in getting listed on the Jupiter Strict List, ensuring compliance and broadening the token’s reach.',
+          'Offer assistance in getting verified by Jupiter, ensuring compliance and broadening the token’s reach.',
         icon: 'game-icons:jupiter',
         complete: false,
       },
@@ -487,7 +539,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.11.0',
+    version: '1.12.0',
     codeName: 'Other Utilities',
     icon: 'mdi:tools',
     items: [
