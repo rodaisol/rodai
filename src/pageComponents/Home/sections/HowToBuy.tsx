@@ -65,7 +65,6 @@ export const HowToBuySection = () => {
             alt="How to buy RODAI"
             width={370}
             height={674}
-            objectFit="cover"
           />
           <div className="absolute inset-0 flex justify-center items-center">
             <Image

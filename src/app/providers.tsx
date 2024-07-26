@@ -3,6 +3,8 @@
 import { NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
+import { CookieConsentBanner } from '../components/CookieConsentBanner'
+
 export default function AppProviders({
   children,
 }: {
@@ -15,6 +17,7 @@ export default function AppProviders({
         defaultTheme="dark"
         forcedTheme="dark"
       >
+        <CookieConsentBanner />
         {children}
       </NextThemesProvider>
     </NextUIProvider>
