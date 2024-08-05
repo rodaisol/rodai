@@ -18,7 +18,7 @@ const buyLinks = [
   {
     key: 'aerosol',
     label: 'Aerosol',
-    href: 'https://www.aerosol.so/rod-ai',
+    href: 'https://www.aerosol.so/tokens/rod-ai',
     icon: '/img/aerosol/aerosol-logo.png',
     className: 'w-8',
   },
