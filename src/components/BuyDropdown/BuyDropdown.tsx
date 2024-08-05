@@ -16,6 +16,13 @@ import { HOW_TO_BUY_YOUTUBE_URL, MEXC_BUY_URL } from '../../constants'
 
 const buyLinks = [
   {
+    key: 'aerosol',
+    label: 'Aerosol',
+    href: 'https://www.aerosol.so/rod-ai',
+    icon: '/img/aerosol/aerosol-logo.png',
+    className: 'w-8',
+  },
+  {
     key: 'jupiter',
     label: 'Jupiter',
     href: 'https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
