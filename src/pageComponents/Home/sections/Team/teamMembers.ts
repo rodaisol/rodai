@@ -32,13 +32,13 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: 'Lord Ecneralc',
-    avatar: '/img/team/lord.jpg',
-    role: 'Content Creator',
-    bio: 'Artist and cryptocurrency enthusiast, creating content as a hobby for 8+ years such as memes, videos, streams, and TikTok’s.',
+    name: 'M2Dev',
+    avatar: '/img/team/m2dev.jpg',
+    role: 'Ambassador',
+    bio: "M2 is our ambassador and project evangelist; an expert on all things RODAI and Aerosol related. Also, one of the nicest people you'll ever meet.",
     social: {
-      twitter: 'LordEcneralc',
-      telegram: 'LordEcneralc',
+      twitter: 'JdH1476234',
+      telegram: 'M2devil',
     },
   },
 ]
