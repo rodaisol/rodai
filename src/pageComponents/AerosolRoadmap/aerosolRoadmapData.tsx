@@ -304,14 +304,21 @@ export const roadmapData: RoadmapRelease[] = [
         complete: true,
       },
       {
+        description: 'Aerosol Launch Spotlight',
+        fullDescription: 'Spotlight tokens launched on Aerosol.',
+        icon: 'tabler:sunshine',
+        complete: true,
+      },
+      {
         description: 'Drop Openbook Markets',
         fullDescription: "Openbook markets are expensive; let's drop em'.",
         icon: 'pepicons-pencil:book-off',
         complete: false,
       },
       {
-        description: 'New Raydium LP protocols',
-        fullDescription: 'Integrate with the new Raydium LP protocols',
+        description: 'New Raydium CLMM protocols',
+        fullDescription:
+          'Integrate with the new Raydium CLMM protocol to provide liquidity for tokens with taxes.',
         icon: 'token-branded:ray',
         complete: false,
       },
@@ -322,9 +329,31 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'Aerosol Launch Spotlight',
-        fullDescription: 'Spotlight tokens launched on Aerosol.',
-        icon: 'tabler:sunshine',
+        description: 'Token Creator Likes Tracker',
+        fullDescription:
+          'Allow token creators to see who has liked their project.',
+        icon: 'solar:chat-square-like-bold-duotone',
+        complete: false,
+      },
+      {
+        description: 'Token Creator Views Tracker',
+        fullDescription:
+          'Allow token creators to see who has viewed their project.',
+        icon: 'lets-icons:view-duotone',
+        complete: false,
+      },
+      {
+        description: 'Token Creator Shares Tracker',
+        fullDescription:
+          'Allow token creators to see who has shared their project.',
+        icon: 'fontisto:share-a',
+        complete: false,
+      },
+      {
+        description: 'Airdrops',
+        fullDescription:
+          'Allow token creators to take snapshot and execute airdrops.',
+        icon: 'hugeicons:hot-air-balloon',
         complete: false,
       },
     ],
@@ -344,16 +373,30 @@ export const roadmapData: RoadmapRelease[] = [
       {
         description: 'Burn Notifications',
         fullDescription:
-          'Notify RODAI holders about the burn via X, Telegram, Discord and the Aerosol website.',
+          'Notify RODAI holders about the burn via X, Telegram and the Aerosol website.',
         icon: 'ic:twotone-notifications',
         complete: false,
       },
       {
+        description: 'Tribute Notifications',
+        fullDescription:
+          'Notify RODAI holders whenever a token tribute is made to the Rodcinerator via Telegram.',
+        icon: 'ic:twotone-notifications',
+        complete: true,
+      },
+      {
         description: 'Burn Report',
         fullDescription:
-          'Show a $RODAI burn report on Aerosol. This will serve as promotion for $RODAI and also keep existing and future investors informed.',
+          'Show a $RODAI burn report on Aerosol. Allow users to also run a command on Telegram to see the burn report.',
         icon: 'carbon:report',
         complete: false,
+      },
+      {
+        description: 'Aerosol Incinerator',
+        fullDescription:
+          'Allow comrods to burn and close their token accounts within Aerosol. This will allow them to reclaim some of their SOL while at the same time help the team and burn some ROD.',
+        icon: 'mdi:gas-burner',
+        complete: true,
       },
     ],
   },
@@ -381,13 +424,6 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Track shares and show users how many times a token has been shared.',
         icon: 'mdi:share',
-        complete: false,
-      },
-      {
-        description: 'Token Reactions',
-        fullDescription:
-          'On top of liking, allow users to react in other ways to tokens.',
-        icon: 'material-symbols:add-reaction-outline',
         complete: false,
       },
       {
