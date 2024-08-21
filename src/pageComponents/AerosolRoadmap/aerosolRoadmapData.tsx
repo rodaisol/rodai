@@ -360,7 +360,7 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.6.0',
-    codeName: 'Burn the ROD',
+    codeName: 'Monetize and Burn the ROD',
     icon: 'noto:fire',
     items: [
       {
@@ -396,6 +396,13 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Allow comrods to burn and close their token accounts within Aerosol. This will allow them to reclaim some of their SOL while at the same time help the team and burn some ROD.',
         icon: 'mdi:gas-burner',
+        complete: true,
+      },
+      {
+        description: 'Aeroterminal',
+        fullDescription:
+          "Implement our terminal instead of using Jupiter's so that we can improve user experience and have more precision when collecting our platform fees.",
+        icon: 'ri:swap-2-fill',
         complete: true,
       },
     ],
