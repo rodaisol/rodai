@@ -403,7 +403,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           "Implement our terminal instead of using Jupiter's so that we can improve user experience and have more precision when collecting our platform fees.",
         icon: 'ri:swap-2-fill',
-        complete: true,
+        complete: false,
       },
     ],
   },
