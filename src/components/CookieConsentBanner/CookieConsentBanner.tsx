@@ -2,6 +2,7 @@
 
 import { sendGAEvent } from '@next/third-parties/google'
 import { Button, Checkbox } from '@nextui-org/react'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useLocalStorage } from 'react-use'
 
@@ -45,6 +46,7 @@ export const CookieConsentBanner = () => {
     })
     closeModal()
   }
+
   const acceptSelection = () => {
     sendGAEvent('consent', 'update', {
       ad_storage: allowNecessary ? 'granted' : 'denied',
@@ -54,6 +56,7 @@ export const CookieConsentBanner = () => {
     })
     closeModal()
   }
+
   const rejectAll = () => {
     closeModal()
   }
@@ -69,7 +72,12 @@ export const CookieConsentBanner = () => {
   }
 
   return (
-    <div className="w-full fixed bottom-0 z-20 bg-content3">
+    <motion.div
+      initial={{ y: '100%' }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.5 }} // Delay the animation
+      className="w-full fixed bottom-0 z-20 bg-content3"
+    >
       <div className="p-4 flex flex-col gap-2 items-center">
         <h1 className="text-xl">{cookieConsentLabels.title}</h1>
         <p>{cookieConsentLabels.description}</p>
@@ -106,6 +114,6 @@ export const CookieConsentBanner = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
