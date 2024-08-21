@@ -294,7 +294,6 @@ export const roadmapData: RoadmapRelease[] = [
   {
     version: '1.5.0',
     codeName: 'Wen better launches? - Thanks, Franchot ($BOTA) and M2!',
-    targetDate: new Date(2024, 7, 2),
     icon: 'fluent-emoji:rocket',
     items: [
       {
