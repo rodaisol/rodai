@@ -293,12 +293,55 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.5.0',
+    codeName: 'Burn the ROD',
+    icon: 'noto:fire',
+    targetDate: new Date(2024, 7, 26),
+    items: [
+      {
+        description: 'Rodcinerator',
+        fullDescription:
+          'Use the SOL (and any other valuable tokens) in the Rodcinerator account to purchase and burn $RODAI.',
+        icon: 'mdi:fire',
+        complete: true,
+      },
+      {
+        description: 'Burn Notifications',
+        fullDescription: 'Notify RODAI holders about the burn via Telegram.',
+        icon: 'ic:twotone-notifications',
+        complete: true,
+      },
+      {
+        description: 'Tribute Notifications',
+        fullDescription:
+          'Notify RODAI holders whenever a token tribute is made to the Rodcinerator via Telegram.',
+        icon: 'ic:twotone-notifications',
+        complete: true,
+      },
+      {
+        description: 'Burn Report',
+        fullDescription:
+          'Show a $RODAI burn report on Aerosol. Allow users to also run a command on Telegram to see the burn report.',
+        icon: 'carbon:report',
+        complete: true,
+      },
+      {
+        description: 'Aerosol Incinerator',
+        fullDescription:
+          'Allow comrods to burn and close their token accounts within Aerosol. This will allow them to reclaim some of their SOL while at the same time help the team and burn some ROD.',
+        icon: 'mdi:gas-burner',
+        complete: true,
+      },
+    ],
+  },
+  {
+    version: '1.6.0',
     codeName: 'Wen better launches? - Thanks, Franchot ($BOTA) and M2!',
     icon: 'fluent-emoji:rocket',
     items: [
       {
-        description: 'Taxes',
-        fullDescription: 'Allow users to mint a token with a tax extension.',
+        description: 'Transfer Fees',
+        fullDescription:
+          'Allow users to mint a token with the transfer fee extension.',
         icon: 'heroicons-outline:receipt-tax',
         complete: true,
       },
@@ -306,6 +349,20 @@ export const roadmapData: RoadmapRelease[] = [
         description: 'Aerosol Launch Spotlight',
         fullDescription: 'Spotlight tokens launched on Aerosol.',
         icon: 'tabler:sunshine',
+        complete: true,
+      },
+      {
+        description: 'Harvest and Withdraw Transfer Fees',
+        fullDescription:
+          'Allow creators to harvest and withdraw their transfer fees.',
+        icon: 'mdi:corn',
+        complete: true,
+      },
+      {
+        description: 'Revoke Transfer Fee Config Authority',
+        fullDescription:
+          'Allow creators to revoke their transfer fee authority.',
+        icon: 'line-md:file-document-cancel-twotone',
         complete: true,
       },
       {
@@ -358,55 +415,6 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.6.0',
-    codeName: 'Monetize and Burn the ROD',
-    icon: 'noto:fire',
-    items: [
-      {
-        description: 'Rodcinerator',
-        fullDescription:
-          'Use the SOL (and any other valuable tokens) in the Rodcinerator account to purchase and burn $RODAI.',
-        icon: 'mdi:fire',
-        complete: false,
-      },
-      {
-        description: 'Burn Notifications',
-        fullDescription:
-          'Notify RODAI holders about the burn via X, Telegram and the Aerosol website.',
-        icon: 'ic:twotone-notifications',
-        complete: false,
-      },
-      {
-        description: 'Tribute Notifications',
-        fullDescription:
-          'Notify RODAI holders whenever a token tribute is made to the Rodcinerator via Telegram.',
-        icon: 'ic:twotone-notifications',
-        complete: true,
-      },
-      {
-        description: 'Burn Report',
-        fullDescription:
-          'Show a $RODAI burn report on Aerosol. Allow users to also run a command on Telegram to see the burn report.',
-        icon: 'carbon:report',
-        complete: false,
-      },
-      {
-        description: 'Aerosol Incinerator',
-        fullDescription:
-          'Allow comrods to burn and close their token accounts within Aerosol. This will allow them to reclaim some of their SOL while at the same time help the team and burn some ROD.',
-        icon: 'mdi:gas-burner',
-        complete: true,
-      },
-      {
-        description: 'Aeroterminal',
-        fullDescription:
-          "Implement our terminal instead of using Jupiter's so that we can improve user experience and have more precision when collecting our platform fees.",
-        icon: 'ri:swap-2-fill',
-        complete: false,
-      },
-    ],
-  },
-  {
     version: '1.7.0',
     codeName: 'Aerosocial',
     icon: 'mynaui:funny-circle',
@@ -430,6 +438,13 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Track shares and show users how many times a token has been shared.',
         icon: 'mdi:share',
+        complete: false,
+      },
+      {
+        description: 'Aeroterminal',
+        fullDescription:
+          "Implement our terminal instead of using Jupiter's so that we can improve user experience and have more precision when collecting our platform fees.",
+        icon: 'ri:swap-2-fill',
         complete: false,
       },
       {

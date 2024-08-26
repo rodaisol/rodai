@@ -118,6 +118,11 @@ export const roadmapData: RoadmapPhase[] = [
         completedDate: new Date(2024, 2, 30),
       },
       {
+        task: 'Start burning $RODAI periodically',
+        major: true,
+        completedDate: new Date(2024, 7, 26),
+      },
+      {
         major: true,
         completedDate: new Date(2024, 5, 4),
         task: (
