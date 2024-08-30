@@ -372,16 +372,10 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'New Raydium CLMM protocols',
+        description: 'New Raydium CLMM pools',
         fullDescription:
-          'Integrate with the new Raydium CLMM protocol to provide liquidity for tokens with taxes.',
+          'Integrate with the new Raydium CLMM pool protocol to provide liquidity for tokens with transfer fees and also skip Openbook Market fees.',
         icon: 'token-branded:ray',
-        complete: false,
-      },
-      {
-        description: 'Hello Meteora',
-        fullDescription: 'Integrate with the Meteora LP protocols',
-        icon: 'bx:meteor',
         complete: false,
       },
       {
