@@ -32,8 +32,15 @@ const buyLinks = [
   {
     key: 'raydium',
     label: 'Raydium',
-    href: 'https://raydium.io/swap/?inputCurrency=sol&outputCurrency=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC&fixed=in',
+    href: 'https://raydium.io/swap/?inputMint=sol&outputMint=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
     icon: '/img/exchanges/raydium.png',
+    className: 'w-8',
+  },
+  {
+    key: 'photon',
+    label: 'Photon',
+    href: 'https://photon-sol.tinyastro.io/en/lp/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8',
+    icon: '/img/exchanges/photon.svg',
     className: 'w-8',
   },
   {
