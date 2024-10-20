@@ -480,7 +480,7 @@ export const roadmapData: RoadmapRelease[] = [
         fullDescription:
           'Allow administrators to customize the website to match their brand identity, ensuring a consistent and professional appearance.',
         icon: 'fluent-mdl2:design',
-        complete: false,
+        complete: true,
       },
     ],
   },
