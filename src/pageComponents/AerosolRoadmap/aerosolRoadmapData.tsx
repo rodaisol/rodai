@@ -325,7 +325,7 @@ export const roadmapData: RoadmapRelease[] = [
         complete: true,
       },
       {
-        description: 'Aerosol Incinerator',
+        description: 'Aerosol Burner',
         fullDescription:
           'Allow comrods to burn and close their token accounts within Aerosol. This will allow them to reclaim some of their SOL while at the same time help the team and burn some ROD.',
         icon: 'mdi:gas-burner',
