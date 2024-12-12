@@ -1,48 +1,189 @@
 'use client'
 
 import { sendGAEvent } from '@next/third-parties/google'
-import { useEffect } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 
-import { Footer } from '../../components/Footer'
-import { Header } from '../../components/Header'
-import { Hero } from '../../components/Hero'
-
-import {
-  AboutSection,
-  AerosolSection,
-  CommunitySection,
-  FAQSection,
-  HowToBuySection,
-  RoadmapSection,
-  TeamSection,
-  TokenomicsSection,
-  WhyInvest,
-} from './sections'
+import { slides } from './slidesConfig'
 
 export const HomePage = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [direction, setDirection] = useState<'left' | 'right'>('right')
+  const [visibilityRatios, setVisibilityRatios] = useState<number[]>([])
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const lastStableIndex = useRef<number>(0)
+
+  const handleMouseMove = (e: MouseEvent) => {
+    const { clientX, clientY } = e
+    setMousePosition({
+      x: -(clientX / window.innerWidth - 0.5) * 30,
+      y: -(clientY / window.innerHeight - 0.5) * 30,
+    })
+  }
+
+  const handleTabClick = (index: number) => {
+    scrollContainerRef.current?.scrollTo({
+      left: index * window.innerWidth,
+      behavior: 'smooth',
+    })
+  }
+
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const updatedRatios = [...visibilityRatios]
+        let maxVisibility = 0
+        let maxVisibleIndex = activeIndex
+
+        entries.forEach((entry) => {
+          const index = slides.findIndex(
+            (slide) => slide.id === entry.target.id
+          )
+          if (index !== -1) {
+            updatedRatios[index] = entry.intersectionRatio
+            if (entry.intersectionRatio > maxVisibility) {
+              maxVisibility = entry.intersectionRatio
+              maxVisibleIndex = index
+            }
+          }
+        })
+
+        setVisibilityRatios(updatedRatios)
+        if (maxVisibleIndex !== activeIndex) {
+          setDirection(maxVisibleIndex > activeIndex ? 'right' : 'left')
+          lastStableIndex.current = maxVisibleIndex
+          setActiveIndex(maxVisibleIndex)
+        }
+      },
+      {
+        root: container,
+        threshold: Array.from({ length: 101 }, (_, i) => i / 100),
+      }
+    )
+
+    slides.forEach((section) => {
+      const target = document.getElementById(section.id)
+      if (target) observer.observe(target)
+    })
+
+    return () => observer.disconnect()
+  }, [activeIndex, visibilityRatios])
+
   useEffect(() => {
     sendGAEvent('event', 'conversion', {
       send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
     })
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
+
+  const { scrollXProgress } = useScroll({ container: scrollContainerRef })
+  const scaleX = useSpring(scrollXProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
+
   return (
-    <>
-      <Header />
-      <main>
-        <div className="flex flex-col gap-4 md:gap-16 lg:gap-24">
-          <Hero />
-          <AboutSection />
-          <TokenomicsSection />
-          <RoadmapSection />
-          <WhyInvest />
-          <CommunitySection />
-          <HowToBuySection />
-          <AerosolSection />
-          <TeamSection />
-          <FAQSection />
-        </div>
-      </main>
-      <Footer />
-    </>
+    <motion.main
+      className="relative h-screen w-full overflow-hidden bg-black"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      <div className="fixed bottom-8 right-8 w-[150px] h-1 bg-white/20 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-white rounded-full"
+          style={{
+            scaleX,
+            transformOrigin: 'left center',
+          }}
+        />
+      </div>
+
+      <motion.div
+        className="absolute top-16 md:top-20 lg:top-28 w-full flex justify-center items-center pointer-events-auto"
+        animate={{
+          x: mousePosition.x,
+          y: mousePosition.y,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 200,
+          damping: 25,
+          duration: 0.8,
+        }}
+      >
+        {slides.map((section, i) => {
+          let positionX = '0vw'
+          const positionY = i === activeIndex ? '1rem' : '0'
+
+          if (i < activeIndex - 1) positionX = '-150vw'
+          if (i === activeIndex - 1) positionX = '-50vw'
+          if (i === activeIndex) positionX = '0vw'
+          if (i === activeIndex + 1) positionX = '50vw'
+          if (i > activeIndex + 1) positionX = '150vw'
+
+          return (
+            <motion.div
+              key={section.id}
+              className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
+              initial={{ x: '150vw' }}
+              animate={{
+                x: positionX,
+                y: positionY,
+                opacity: i === activeIndex ? 1 : 0.4,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 200,
+                damping: 25,
+                duration: 0.8,
+              }}
+              onClick={() => handleTabClick(i)}
+            >
+              <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
+                {section.label}
+              </span>
+            </motion.div>
+          )
+        })}
+      </motion.div>
+
+      <div
+        ref={scrollContainerRef}
+        className="flex h-full w-screen overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
+      >
+        {slides.map((section, index) => {
+          const visibilityRatio = visibilityRatios[index] || 0
+          const state =
+            visibilityRatio === 1 && index === lastStableIndex.current
+              ? 'idle'
+              : 'moving'
+
+          const SlideComponent = section.Component
+
+          return (
+            <div
+              key={section.id}
+              id={section.id}
+              className="snap-start h-screen w-screen flex-shrink-0 flex justify-center items-center"
+              style={{ background: section.background }}
+            >
+              <SlideComponent
+                state={state}
+                direction={direction}
+                visibilityRatio={visibilityRatio}
+              />
+            </div>
+          )
+        })}
+      </div>
+    </motion.main>
   )
 }

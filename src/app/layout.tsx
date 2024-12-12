@@ -2,13 +2,13 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
-import { Geologica } from 'next/font/google'
+import { Lalezar } from 'next/font/google'
 
 import AppProviders from './providers'
 
 import './globals.css'
 
-const font = Geologica({ subsets: ['latin'], weight: '400' })
+const font = Lalezar({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'RODAI - The hardest and evergrowing ROD of Solana',

@@ -1,0 +1,1 @@
+export const RODAI_MINT_ADDRESS = 'GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'

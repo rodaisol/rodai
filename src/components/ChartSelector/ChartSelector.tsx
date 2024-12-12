@@ -1,5 +1,4 @@
 import {
-  Button,
   Dropdown,
   DropdownItem,
   DropdownMenu,
@@ -8,6 +7,8 @@ import {
 } from '@nextui-org/react'
 import Image from 'next/image' // Import Image from next/image
 import React from 'react'
+
+import { Button } from '../Button'
 
 const chartLinks = [
   {
@@ -60,9 +61,11 @@ export const ChartSelector = () => {
   return (
     <Dropdown size="lg">
       <DropdownTrigger>
-        <Button variant="bordered" className="border-white" size="lg">
-          Chart
-        </Button>
+        <div>
+          <Button variant="bordered" className="border-white" size="md">
+            Chart
+          </Button>
+        </div>
       </DropdownTrigger>
       <DropdownMenu
         variant="bordered"

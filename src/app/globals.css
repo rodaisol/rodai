@@ -4,7 +4,6 @@
 
 body {
   background-color: #000000;
-  background-image: linear-gradient(19deg, #2156fd 0%, #B721FF 100%);
 }
 
 @media (max-width: 640px) {
@@ -14,4 +13,12 @@ body {
     overflow: hidden;
     white-space: nowrap;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

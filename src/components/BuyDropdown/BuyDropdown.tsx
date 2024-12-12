@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  Button,
   ButtonProps,
   Dropdown,
   DropdownItem,
@@ -9,10 +8,11 @@ import {
   DropdownTrigger,
   Link,
 } from '@nextui-org/react'
-import Image from 'next/image' // Import Image from next/image
+import Image from 'next/image'
 import React, { FC } from 'react'
 
 import { HOW_TO_BUY_YOUTUBE_URL, MEXC_BUY_URL } from '../../constants'
+import { Button } from '../Button'
 
 const buyLinks = [
   {
@@ -65,15 +65,17 @@ export const BuyDropdown: FC<ButtonProps> = (buttonProps) => {
   return (
     <Dropdown size="lg">
       <DropdownTrigger>
-        <Button
-          variant="shadow"
-          color="primary"
-          className="border-white"
-          size="lg"
-          {...buttonProps}
-        >
-          Buy Now
-        </Button>
+        <div>
+          <Button
+            variant="shadow"
+            color="primary"
+            className="border-white"
+            size="md"
+            {...buttonProps}
+          >
+            Buy Now
+          </Button>
+        </div>
       </DropdownTrigger>
       <DropdownMenu
         variant="bordered"
