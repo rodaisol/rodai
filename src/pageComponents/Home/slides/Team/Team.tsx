@@ -11,12 +11,11 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
     <section className="px-8 py-12 w-full flex flex-col items-center text-white">
       <motion.div
         className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl w-full"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{
-          opacity: visibilityRatio,
-          y: visibilityRatio * 20,
+        initial={{ opacity: 0 }}
+        animate={{ opacity: visibilityRatio }}
+        transition={{
+          opacity: { duration: 0.5, ease: 'easeOut' },
         }}
-        transition={{ type: 'spring', stiffness: 100, damping: 25 }}
       >
         {teamMembers.map((member, index) => (
           <motion.div
@@ -26,21 +25,22 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
             animate={{
               opacity: visibilityRatio,
               y: visibilityRatio * 20,
+              scale: visibilityRatio * 0.1 + 1, // Smooth scaling as it comes into view
             }}
             transition={{
-              delay: index * 0.1,
-              duration: 0.5,
+              delay: index * 0.15, // Stagger the animations
               type: 'spring',
-              stiffness: 100,
+              stiffness: 300,
               damping: 25,
+              duration: 0.6,
             }}
           >
             <motion.div
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-lg"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: visibilityRatio,
-                scale: visibilityRatio * 0.2 + 0.8,
+                scale: visibilityRatio * 0.1 + 0.9, // Smooth scaling effect for images
               }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
