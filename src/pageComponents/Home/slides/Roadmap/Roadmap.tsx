@@ -105,7 +105,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
             animate={{
               opacity: visibilityRatio,
             }}
-            transition={{ duration: 0.4, delay: 0.5 }}
+            transition={{ duration: 0.2, delay: 0.3 }}
           >
             {roadmapData[activePhaseIndex].items.map((item, itemIndex) => {
               const formattedDate = item.completedDate
