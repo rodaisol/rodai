@@ -21,8 +21,8 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
           }}
           transition={{
             type: 'spring',
-            stiffness: 200,
-            damping: 20,
+            stiffness: 150,
+            damping: 25,
           }}
           className="max-w-4xl text-xl md:text-2xl lg:text-3xl"
         >
@@ -50,15 +50,45 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
 
         <div className="flex gap-3 mt-8 w-full justify-center">
           <a href="/aerosol" target="_blank">
-            <Button variant="bordered" className="border-white text-white">
-              See Aerosol Roadmap
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: visibilityRatio,
+                y: 0,
+              }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                delay: 0.2,
+              }}
+            >
+              <Button variant="bordered" className="border-white text-white">
+                See Aerosol Roadmap
+              </Button>
+            </motion.div>
           </a>
 
           <a href={AEROSOL_URL} target="_blank">
-            <Button className="flex bg-gradient-to-tr from-teal-400 via-blue-500 to-indigo-600 shadow-lg">
-              Experience Aerosol
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: visibilityRatio,
+                y: 0,
+              }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{
+                type: 'spring',
+                stiffness: 200,
+                damping: 30,
+                delay: 0.4,
+              }}
+            >
+              <Button className="flex bg-gradient-to-tr from-teal-400 via-blue-500 to-indigo-600 shadow-lg">
+                Experience Aerosol
+              </Button>
+            </motion.div>
           </a>
         </div>
       </div>

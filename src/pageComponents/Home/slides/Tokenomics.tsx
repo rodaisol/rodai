@@ -1,6 +1,9 @@
 'use client'
 
 import { ResponsivePie } from '@nivo/pie'
+import { motion } from 'framer-motion'
+
+import { SlideProps } from '../../../types'
 
 const pieData = [
   { id: 'Liquidity Pool', value: 80, color: '#3B82F6' },
@@ -9,18 +12,63 @@ const pieData = [
   { id: 'Airdrops', value: 3, color: '#E879F9' },
 ]
 
-export const TokenomicsSlide = () => {
+export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
       id="tokenomics"
-      className="flex flex-col items-center justify-center w-full h-full p-8"
+      className="flex flex-col items-center justify-start w-full h-full p-8 mt-12"
     >
-      <h2 className="text-xl lg:text-2xl font-bold mb-2">Total Supply</h2>
-      <p className="text-3xl lg:text-5xl font-extrabold text-orange-400 mb-6">
-        69.42 Trillion
-      </p>
+      <motion.h2
+        className="text-xl lg:text-2xl font-bold mb-2"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: visibilityRatio * 50,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 150,
+          damping: 25,
+        }}
+      >
+        Total Supply
+      </motion.h2>
 
-      <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] max-w-[800px]">
+      <motion.p
+        className="text-3xl lg:text-5xl font-extrabold text-orange-400 mb-6"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: visibilityRatio * 50,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 150,
+          damping: 25,
+          delay: 0.3,
+        }}
+      >
+        69.42 Trillion
+      </motion.p>
+
+      <motion.div
+        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] max-w-[800px]"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: visibilityRatio * 50,
+        }}
+        exit={{
+          opacity: 0,
+          y: 50,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 200,
+          damping: 30,
+          delay: 0.5,
+        }}
+      >
         <ResponsivePie
           data={pieData}
           margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -75,7 +123,7 @@ export const TokenomicsSlide = () => {
             },
           ]}
         />
-      </div>
+      </motion.div>
     </section>
   )
 }

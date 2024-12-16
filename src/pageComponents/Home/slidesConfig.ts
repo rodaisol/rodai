@@ -40,7 +40,7 @@ export const slides: Slide[] = [
     id: 'roadmap',
     label: 'Roadmap',
     Component: RoadmapSlide,
-    background: 'bg-gradient-to-r from-green-500 via-teal-500 to-cyan-500',
+    background: 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500',
   },
   {
     id: 'how-to-buy',

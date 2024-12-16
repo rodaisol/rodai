@@ -91,7 +91,7 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
             size="lg"
           >
             <PlayIcon className="w-6 h-6 mr-2" />
-            Watch Video
+            Watch Tutorial
           </Button>
         </div>
       </motion.div>

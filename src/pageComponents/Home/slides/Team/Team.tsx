@@ -1,23 +1,56 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
+import { SlideProps } from '../../../../types'
+
 import { teamMembers } from './teamMembers'
 
-export const TeamSlide = () => {
+export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section className="px-8 py-12 w-full flex flex-col items-center text-white">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl w-full">
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl w-full"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: visibilityRatio * 20,
+        }}
+        transition={{ type: 'spring', stiffness: 100, damping: 25 }}
+      >
         {teamMembers.map((member, index) => (
-          <div
+          <motion.div
             key={index}
             className="flex flex-col items-center text-center space-y-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: visibilityRatio,
+              y: visibilityRatio * 20,
+            }}
+            transition={{
+              delay: index * 0.1,
+              duration: 0.5,
+              type: 'spring',
+              stiffness: 100,
+              damping: 25,
+            }}
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden">
+            <motion.div
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-lg"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: visibilityRatio,
+                scale: visibilityRatio * 0.2 + 0.8,
+              }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
               <img
                 src={member.avatar}
                 alt={member.name}
                 className="object-cover w-full h-full"
               />
-            </div>
+            </motion.div>
+
             <div className="flex flex-col">
               <h3 className="text-base sm:text-lg md:text-xl font-bold">
                 {member.name}
@@ -57,9 +90,9 @@ export const TeamSlide = () => {
                 </a>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
