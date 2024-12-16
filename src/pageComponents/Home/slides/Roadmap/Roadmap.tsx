@@ -35,7 +35,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
       <div className="flex gap-8 mb-6">
         {roadmapData.map((phase, index) => (
           <motion.button
-            key={index}
+            key={phase.name}
             onClick={() => handleTabClick(index)}
             className={`text-lg md:text-xl font-bold px-6 py-2 rounded-lg transition transform ${
               index === activePhaseIndex
