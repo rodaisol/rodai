@@ -21,18 +21,16 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
           <motion.div
             key={index}
             className="flex flex-col items-center text-center space-y-2"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: visibilityRatio,
-              y: visibilityRatio * 20,
-              scale: visibilityRatio * 0.1 + 1, // Smooth scaling as it comes into view
+              y: visibilityRatio * 20, // Gentle vertical animation as it enters
+              scale: visibilityRatio * 0.1 + 0.9, // Subtle scaling as it enters
             }}
             transition={{
-              delay: index * 0.15, // Stagger the animations
-              type: 'spring',
-              stiffness: 300,
-              damping: 25,
-              duration: 0.6,
+              delay: index * 0.1, // Stagger the animations with a smaller delay
+              duration: 0.6, // Slightly longer duration for smoothness
+              ease: 'easeInOut', // Smooth easing
             }}
           >
             <motion.div
@@ -40,7 +38,7 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: visibilityRatio,
-                scale: visibilityRatio * 0.1 + 0.9, // Smooth scaling effect for images
+                scale: visibilityRatio * 0.1 + 0.9, // Smooth scaling of the avatar
               }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
