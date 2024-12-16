@@ -1,88 +1,65 @@
 'use client'
 
-import { Button, Link } from '@nextui-org/react'
+import { motion } from 'framer-motion'
 
-export const AerosolSection = () => {
+import { Button } from '../../../components/Button'
+import { AEROSOL_URL } from '../../../constants'
+import { SlideProps } from '../../../types'
+
+export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
-      id="how-to-buy"
-      className="px-4 py-8 md:p-8 flex flex-col md:flex-row gap-4 md:gap-8"
+      id="aerosol"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-center"
     >
-      <div className="flex flex-col gap-4 md:gap-8 md:flex-1">
-        <div>
-          <p>
-            Aerosol is an innovative platform under development, designed to
-            empower the Solana blockchain community. It serves as a foundational
-            tool for creating and maintaining community tokens, providing a
-            comprehensive suite of features not just for token creation but also
-            for fostering and sustaining vibrant communities.
+      <div className="px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{
+            opacity: visibilityRatio,
+            y: 0,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 20,
+          }}
+          className="max-w-4xl text-xl md:text-2xl lg:text-3xl"
+        >
+          <p className="leading-relaxed">
+            Aerosol is a platform that empowers Solana communities with a wide
+            range of utilities. It features an AI-powered launchpad, a fully
+            featured marketplace, and a burner tool that allows users to reclaim
+            their <span className="text-yellow-300">$SOL</span> by cleaning up
+            their wallets.
           </p>
-          <p>
-            With the flexibility to access Aerosol services using RODAI, SOL,
-            and stablecoins, we ensure an inclusive approach, allowing a broad
-            range of users to engage with our platform, leveraging the payment
-            method that best suits their needs.
+          <p className="leading-relaxed mt-6">
+            Aerosol has gained a lot of traction since its launch, with
+            thousands of weekly users. It has even{' '}
+            <a
+              href="https://x.com/aeyakovenko/status/1857938273920070005"
+              target="_blank"
+              className="underline decoration-yellow-300 decoration-[8px]"
+            >
+              earned recognition
+            </a>{' '}
+            from Toly, the co-founder of Solana, for delivering token
+            compression features as quickly as possible.
           </p>
+        </motion.div>
 
-          <h3 className="text-lg font-bold my-3">
-            Payment Flexibility and Community Engagement
-          </h3>
-          <ul className="list-disc pl-5">
-            <li>
-              Transactions with RODAI directly support the ecosystem, with a
-              portion allocated to the treasury to help cover operation costs
-              and a part also being burned to reduce the RODAI supply.
-            </li>
-            <li>
-              Transactions using SOL or stablecoins will involve swapping these
-              into RODAI first, with a portion supporting our treasury and the
-              remainder being burned, also enhancing the value of RODAI.
-            </li>
-            <li>
-              RODAI holders will benefit from exclusive features within Aerosol,
-              designed to enhance their experience and provide additional value.
-              These features are a testament to our commitment to the RODAI
-              community and aim to offer unique benefits to our dedicated users.
-            </li>
-          </ul>
+        <div className="flex gap-3 mt-8 w-full justify-center">
+          <a href="/aerosol" target="_blank">
+            <Button variant="bordered" className="border-white text-white">
+              See Aerosol Roadmap
+            </Button>
+          </a>
 
-          <h3 className="text-lg font-bold my-3">Why Choose Aerosol?</h3>
-          <p>
-            Opting for Aerosol for your community token project on Solana
-            signifies a commitment to a platform that prioritizes community
-            empowerment at its core. Through a blend of diverse payment options,
-            exclusive benefits for RODAI holders, and a suite of tools designed
-            to foster and sustain vibrant communities, Aerosol is set to
-            catalyze the growth of a robust and thriving ecosystem on the Solana
-            blockchain.
-          </p>
-
-          <p className="mt-4">
-            <strong>Note:</strong> As Aerosol is still under development, we are
-            committed to ensuring it not only meets the needs of our users but
-            also contributes to the overall health and growth of the community.
-          </p>
-        </div>
-        <div className="flex gap-3">
-          <Button
-            as={Link}
-            href="/aerosol"
-            target="_blank"
-            variant="bordered"
-            className="border-white"
-            size="lg"
-          >
-            See Aerosol Roadmap
-          </Button>
-          <Button
-            as={Link}
-            href="https://aerosol.so"
-            target="_blank"
-            size="lg"
-            className="flex bg-gradient-to-tr from-pink-500 via-indigo-500 to-sky-600 shadow-lg"
-          >
-            Experience Aerosol
-          </Button>
+          <a href={AEROSOL_URL} target="_blank">
+            <Button className="flex bg-gradient-to-tr from-teal-400 via-blue-500 to-indigo-600 shadow-lg">
+              Experience Aerosol
+            </Button>
+          </a>
         </div>
       </div>
     </section>

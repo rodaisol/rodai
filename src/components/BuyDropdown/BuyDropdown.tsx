@@ -11,7 +11,11 @@ import {
 import Image from 'next/image'
 import React, { FC } from 'react'
 
-import { HOW_TO_BUY_YOUTUBE_URL, MEXC_BUY_URL } from '../../constants'
+import {
+  HOW_TO_BUY_YOUTUBE_URL,
+  MEXC_BUY_URL,
+  SOLCEX_BUY_URL,
+} from '../../constants'
 import { Button } from '../Button'
 
 const buyLinks = [
@@ -51,10 +55,17 @@ const buyLinks = [
     className: 'w-8',
   },
   {
+    key: 'mexc',
+    label: 'Solcex',
+    href: SOLCEX_BUY_URL,
+    icon: '/img/exchanges/solcex.png',
+    className: 'w-8',
+  },
+  {
     key: 'youtube',
     label: 'Watch Tutorial',
     href: HOW_TO_BUY_YOUTUBE_URL,
-    icon: '/img/social/youtube.png',
+    icon: '/img/social/youtube-color.png',
     className: 'w-8',
   },
 ]

@@ -39,6 +39,11 @@ const socialLinks = [
     src: '/img/social/tiktok.png',
     alt: 'tiktok',
   },
+  {
+    href: 'https://medium.com/rodai',
+    src: '/img/social/medium.png',
+    alt: 'medium',
+  },
 ]
 
 export const SocialLinks: FC<SocialLinksProps> = ({ className }) => {

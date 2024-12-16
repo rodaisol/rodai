@@ -1,13 +1,16 @@
 'use client'
 
+import { Snippet } from '@nextui-org/react'
 import { motion, useAnimationFrame } from 'framer-motion'
 import Image from 'next/image'
 import { FC, MouseEventHandler, useState } from 'react'
 
+import { RODAI_MINT_ADDRESS } from '../../../app/contants'
 import { Button } from '../../../components/Button'
 import { BuyDropdown } from '../../../components/BuyDropdown'
 import { ChartSelector } from '../../../components/ChartSelector'
 import { SocialLinks } from '../../../components/SocialLinks'
+import { AEROSOL_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
 export const WelcomeSlide: FC<SlideProps> = ({
@@ -72,11 +75,10 @@ export const WelcomeSlide: FC<SlideProps> = ({
 
   return (
     <section
-      id="aerosol-slide"
-      className="flex flex-col lg:flex-row gap-8 justify-center items-center p-4 lg:p-8 max-w-screen-xl mx-auto"
+      className="w-full flex flex-col lg:flex-row gap-8 justify-center items-center p-4 lg:p-8 max-w-screen-xl mx-auto"
       onMouseMove={handleMouseMove}
     >
-      <div className="flex gap-8 justify-center items-center">
+      <div className="flex gap-8 justify-center items-center w-full">
         <motion.div
           initial="initial"
           animate="animate"
@@ -124,14 +126,16 @@ export const WelcomeSlide: FC<SlideProps> = ({
               damping: 15,
             }}
           >
-            <Image
-              src="/img/aerosol/aerosol-logo.png"
-              alt="Aerosol logo"
-              width={500}
-              height={500}
-              className="w-full"
-              draggable={false}
-            />
+            <a href={AEROSOL_URL} target="_blank">
+              <Image
+                src="/img/aerosol/aerosol-logo.png"
+                alt="Aerosol logo"
+                width={500}
+                height={500}
+                className="w-full"
+                draggable={false}
+              />
+            </a>{' '}
           </motion.div>
         </motion.div>
       </div>
@@ -147,24 +151,45 @@ export const WelcomeSlide: FC<SlideProps> = ({
           stiffness: 200,
           damping: 20,
         }}
-        className="flex flex-col items-center lg:items-start text-center lg:text-left"
+        className="flex flex-col items-center lg:items-start text-center lg:text-left w-full"
       >
         <h2 className="text-2xl sm:text-3xl lg:text-4xl">Meet</h2>
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold">
-          ROD<span className="text-orange-300">AI</span>
+          ROD<span className="text-yellow-300">AI</span>
         </h1>
         <p className="text-2xl sm:text-3xl lg:text-4xl">
           The{' '}
-          <span className="underline decoration-orange-300 decoration-[8px]">
+          <span className="underline decoration-yellow-300 decoration-[8px]">
             deflationary
           </span>{' '}
-          token of the Aerosol platform.
+          token of the{' '}
+          <a
+            href={AEROSOL_URL}
+            target="_blank"
+            className="underline decoration-yellow-300 decoration-[8px]"
+          >
+            Aerosol platform
+          </a>
+          {'.'}
         </p>
+        <div className="italic px-3 mt-2">Launched on January 13th, 2024</div>
+        <div className="w-full overflow-hidden mt-2 px-8 sm:px-0">
+          <Snippet
+            id="token-address-snippet"
+            size="md"
+            hideSymbol
+            className="w-full max-w-[500px]"
+          >
+            {RODAI_MINT_ADDRESS}
+          </Snippet>
+        </div>
         <div className="flex flex-col gap-4 mt-6 lg:mt-8">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center">
             <BuyDropdown />
             <a target="_blank" href="https://t.me/rodaisol">
-              <Button color="primary">Join Us</Button>
+              <Button variant="bordered" className="border-white text-white">
+                Join Us
+              </Button>
             </a>
             <ChartSelector />
           </div>
@@ -172,7 +197,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
         </div>
         <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
           Buy a memecoin,{' '}
-          <span className="underline decoration-orange-300 decoration-[8px]">
+          <span className="underline decoration-yellow-300 decoration-[8px]">
             own a company.
           </span>
         </p>

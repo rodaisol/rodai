@@ -1,6 +1,7 @@
 'use client'
 
 import { sendGAEvent } from '@next/third-parties/google'
+import { cn } from '@nextui-org/react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
@@ -107,7 +108,7 @@ export const HomePage = () => {
       </div>
 
       <motion.div
-        className="absolute top-16 md:top-20 lg:top-28 w-full flex justify-center items-center pointer-events-auto"
+        className="absolute top-10  w-full flex justify-center items-center pointer-events-auto"
         animate={{
           x: mousePosition.x,
           y: mousePosition.y,
@@ -172,8 +173,10 @@ export const HomePage = () => {
             <div
               key={section.id}
               id={section.id}
-              className="snap-start h-screen w-screen flex-shrink-0 flex justify-center items-center"
-              style={{ background: section.background }}
+              className={cn(
+                'snap-start h-screen w-screen flex-shrink-0 flex justify-center items-center',
+                section.background
+              )}
             >
               <SlideComponent
                 state={state}

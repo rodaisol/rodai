@@ -1,75 +1,57 @@
+import { Slide } from '../../types'
+
 import {
-  AboutSection,
-  AerosolSection,
-  CommunitySection,
-  FAQSection,
-  HowToBuySection,
-  RoadmapSection,
-  TeamSection,
-  TokenomicsSection,
+  AerosolSlide,
+  HowToBuySlide,
+  RoadmapSlide,
+  RodaiSlide,
+  TeamSlide,
+  TokenomicsSlide,
   WelcomeSlide,
-  WhyInvest,
 } from './slides'
 
-export const slides = [
+export const slides: Slide[] = [
   {
     id: 'hero',
     label: 'Welcome',
     Component: WelcomeSlide,
-    background: 'linear-gradient(to bottom right, #60a5fa, #34d399)',
+    background: 'bg-gradient-to-r from-indigo-500 to-purple-500',
   },
   {
-    id: 'about',
-    label: "What's RODAI",
-    Component: AboutSection,
-    background: 'linear-gradient(to bottom right, #a78bfa, #f472b6)',
+    id: 'rodai',
+    label: "What's RODAI?",
+    Component: RodaiSlide,
+    background: 'bg-gradient-to-r from-indigo-600 to-blue-500',
+  },
+  {
+    id: 'aerosol',
+    label: "What's Aerosol?",
+    Component: AerosolSlide,
+    background: 'bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-500',
   },
   {
     id: 'tokenomics',
     label: 'Tokenomics',
-    Component: TokenomicsSection,
-    background: 'linear-gradient(to bottom right, #f87171, #facc15)',
+    Component: TokenomicsSlide,
+    background:
+      'bg-gradient-to-br from-indigo-900 via-indigo-700 to-indigo-500',
   },
   {
     id: 'roadmap',
     label: 'Roadmap',
-    Component: RoadmapSection,
-    background: 'linear-gradient(to bottom right, #6366f1, #a78bfa)',
-  },
-  {
-    id: 'why-invest',
-    label: 'Why Invest',
-    Component: WhyInvest,
-    background: 'linear-gradient(to bottom right, #14b8a6, #22d3ee)',
-  },
-  {
-    id: 'community',
-    label: 'Community',
-    Component: CommunitySection,
-    background: 'linear-gradient(to bottom right, #fb923c, #f87171)',
+    Component: RoadmapSlide,
+    background: 'bg-gradient-to-r from-green-500 via-teal-500 to-cyan-500',
   },
   {
     id: 'how-to-buy',
     label: 'How to Buy',
-    Component: HowToBuySection,
-    background: 'linear-gradient(to bottom right, #fbbf24, #f59e0b)',
-  },
-  {
-    id: 'aerosol',
-    label: 'Aerosol',
-    Component: AerosolSection,
-    background: 'linear-gradient(to bottom right, #84cc16, #10b981)',
+    Component: HowToBuySlide,
+    background: 'bg-gradient-to-r from-blue-500 via-blue-400 to-sky-400',
   },
   {
     id: 'team',
     label: 'Team',
-    Component: TeamSection,
-    background: 'linear-gradient(to bottom right, #0ea5e9, #6366f1)',
-  },
-  {
-    id: 'faq',
-    label: 'FAQ',
-    Component: FAQSection,
-    background: 'linear-gradient(to bottom right, #f43f5e, #f472b6)',
+    Component: TeamSlide,
+    background: 'bg-gradient-to-r from-red-600 to-pink-400',
   },
 ]

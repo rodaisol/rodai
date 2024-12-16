@@ -10,13 +10,13 @@ interface RoadmapItem {
 }
 
 interface RoadmapPhase {
-  phase: string
+  name: string
   items: RoadmapItem[]
 }
 
 export const roadmapData: RoadmapPhase[] = [
   {
-    phase: 'Phase 1 - Setup & Launch',
+    name: 'Setup & Launch',
     items: [
       { task: 'Create website', completedDate: new Date(2024, 0, 10) },
       {
@@ -41,7 +41,7 @@ export const roadmapData: RoadmapPhase[] = [
     ],
   },
   {
-    phase: 'Phase 2 - Community Growth',
+    name: 'Community Growth',
     items: [
       {
         task: 'Get listed on CoinMarketCap',
@@ -97,7 +97,7 @@ export const roadmapData: RoadmapPhase[] = [
     ],
   },
   {
-    phase: 'Phase 3 - Utility 🚀',
+    name: 'Utility 🚀',
     items: [
       {
         task: 'Reach 50,000 social media followers',

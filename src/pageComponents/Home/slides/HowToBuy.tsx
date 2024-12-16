@@ -1,3 +1,5 @@
+'use client'
+
 import { PlayIcon } from '@heroicons/react/20/solid'
 import {
   Button,
@@ -7,15 +9,16 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
-import Image from 'next/image'
+import { motion } from 'motion/react'
 import React from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useMedia } from 'react-use'
 
 import { BuyDropdown } from '../../../components/BuyDropdown'
 import { HOW_TO_BUY_YOUTUBE_URL } from '../../../constants'
+import { SlideProps } from '../../../types'
 
-export const HowToBuySection = () => {
+export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const isMobile = useMedia('(max-width: 768px)')
@@ -31,19 +34,54 @@ export const HowToBuySection = () => {
   return (
     <section
       id="how-to-buy"
-      className="px-4 py-8 md:p-8 flex flex-col md:flex-row gap-4 md:gap-8"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-center"
     >
-      <div className="flex flex-col gap-4 md:gap-8 md:flex-1">
-        <p className="text-base md:text-lg">
-          To buy RODAI, get the Phantom wallet app and then use a decentralized
-          exchange such as Jupiter or Raydium to swap your existing tokens for
-          RODAI.
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: 0,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 200,
+          damping: 20,
+        }}
+        className="px-8 max-w-4xl text-2xl md:text-3xl text-center"
+      >
+        <p className="leading-relaxed mt-6">
+          To buy RODAI, get the{' '}
+          <span className="font-bold text-yellow-400">Phantom</span> or{' '}
+          <span className="font-bold text-yellow-400">Solflare</span> wallet app
+          and use a decentralized exchange such as{' '}
+          <span className="font-bold text-yellow-400">Jupiter</span> or{' '}
+          <span className="font-bold text-yellow-400">Raydium</span> to swap
+          your existing tokens for RODAI.
         </p>
-        <p className="text-base md:text-lg">
+        <p className="leading-relaxed mt-6">
+          RODAI is also listed on centralized exchanges like{' '}
+          <span className="font-bold text-yellow-400">MEXC</span> and{' '}
+          <span className="font-bold text-yellow-400">SolCex</span>, where it
+          can be bought directly.
+        </p>
+        <p className="leading-relaxed mt-6">
           We have prepared a step-by-step video guide to help you through the
           process.
         </p>
-        <div className="w-full flex justify-center md:justify-start gap-4">
+      </motion.div>
+
+      <motion.div
+        style={{
+          y: (1 - visibilityRatio) * 200,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 150,
+          damping: 15,
+        }}
+        className="w-full flex justify-center items-center mt-8"
+      >
+        <div className="flex justify-center gap-4 w-full">
           <BuyDropdown variant="bordered" className="border-white text-white" />
           <Button
             onClick={handleOpenVideo}
@@ -56,25 +94,8 @@ export const HowToBuySection = () => {
             Watch Video
           </Button>
         </div>
-      </div>
-      <div className="md:flex-1 flex justify-center items-center relative group cursor-pointer">
-        <div onClick={handleOpenVideo}>
-          <Image
-            src="/img/how-to-buy.png"
-            alt="How to buy RODAI"
-            width={370}
-            height={674}
-          />
-          <div className="absolute inset-0 flex justify-center items-center">
-            <Image
-              src="/img/play.png"
-              alt="Play video"
-              width={64}
-              height={64}
-            />
-          </div>
-        </div>
-      </div>
+      </motion.div>
+
       <Modal
         backdrop="blur"
         isOpen={isOpen}

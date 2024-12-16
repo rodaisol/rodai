@@ -1,9 +1,9 @@
-import { TeamMember } from './TeamMemberCard'
+import { TeamMember } from '../../../../types'
 
 export const teamMembers: TeamMember[] = [
   {
     name: 'Kelvin',
-    avatar: '/img/team/llegoelkelo.png',
+    avatar: '/img/team/llegoelkelo.jpeg',
     role: 'DEV',
     bio: 'Seasoned software engineer with over 20 years of experience.',
     social: {

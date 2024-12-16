@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "@next/third-parties": "^14.2.3",
     "@nextui-org/react": "^2.2.9",
+    "@nivo/pie": "^0.88.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.3",
     "classnames": "^2.5.1",
@@ -27,6 +28,7 @@
     "react-player": "^2.15.1",
     "react-use": "^17.5.0",
     "tailwind-merge": "^2.2.2",
+    "url-join": "^5.0.0",
     "usehooks-ts": "^3.0.1"
   },
   "devDependencies": {
