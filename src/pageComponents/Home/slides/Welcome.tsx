@@ -84,7 +84,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
           initial="initial"
           animate="animate"
           variants={getImageAnimation(150)}
-          className="w-[160px] sm:w-[200px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
+          className="w-[120px] sm:w-[200px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
         >
           <motion.div
             style={{
@@ -113,7 +113,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
           initial="initial"
           animate="animate"
           variants={getImageAnimation(150)}
-          className="w-[140px] sm:w-[180px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
+          className="w-[100px] sm:w-[180px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
         >
           <motion.div
             style={{
@@ -182,9 +182,6 @@ export const WelcomeSlide: FC<SlideProps> = ({
             {RODAI_MINT_ADDRESS}
           </Snippet>
         </div>
-        <div className="md:hidden mt-8">
-          <SwipeIndicator label="Swipe to learn more" />
-        </div>
         <div className="flex flex-col gap-4 mt-6 lg:mt-8">
           <div className="flex flex-wrap gap-2 justify-center">
             <BuyDropdown />
@@ -196,6 +193,9 @@ export const WelcomeSlide: FC<SlideProps> = ({
             <ChartSelector />
           </div>
           <SocialLinks className="justify-center lg:justify-start" />
+        </div>
+        <div className="md:hidden mt-8">
+          <SwipeIndicator label="Swipe to learn more" />
         </div>
         <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
           Buy a memecoin,{' '}
