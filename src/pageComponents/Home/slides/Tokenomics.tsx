@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { SlideProps } from '../../../types'
 
 const pieData = [
-  { id: 'Liquidity Pool', value: 80, color: '#3B82F6' },
+  { id: 'Liquidity', value: 80, color: '#3B82F6' },
   { id: 'Team', value: 15, color: '#F97316' },
   { id: 'DAO', value: 2, color: '#10B981' },
   { id: 'Airdrops', value: 3, color: '#E879F9' },
@@ -35,7 +35,7 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
       </motion.h2>
 
       <motion.p
-        className="text-3xl lg:text-5xl font-extrabold text-orange-400 mb-6"
+        className="text-3xl lg:text-5xl font-extrabold text-orange-400"
         initial={{ opacity: 0, y: 50 }}
         animate={{
           opacity: visibilityRatio,
@@ -52,7 +52,7 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
       </motion.p>
 
       <motion.div
-        className="mt-6 grid grid-cols-2 md:grid-cols-4 lg:flex lg:justify-start gap-6 text-white text-center"
+        className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:flex lg:justify-start gap-6 text-white text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{
           opacity: visibilityRatio,
@@ -79,7 +79,7 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
       </motion.div>
 
       <motion.div
-        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] max-w-[800px]"
+        className="mt-4 w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] max-w-[800px]"
         initial={{ opacity: 0, y: 50 }}
         animate={{
           opacity: visibilityRatio,
