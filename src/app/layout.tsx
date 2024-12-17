@@ -13,7 +13,7 @@ import './globals.css'
 const font = Font({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'RODAI - The Official AI Memetility Token of the Aerosol Platform',
+  title: 'RODAI - The Official AI Meme Token of the Aerosol Platform',
   description: SEO_DESCRIPTION,
   keywords: [
     'RODAI',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'Solana ecosystem',
   ],
   openGraph: {
-    title: 'RODAI - The Official AI Memetility Token of the Aerosol Platform',
+    title: 'RODAI - The Official AI Meme Token of the Aerosol Platform',
     description: SEO_DESCRIPTION,
     url: 'https://www.rodai.meme',
     type: 'website',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RODAI - The Official AI Memetility Token of Aerosol',
+    title: 'RODAI - The Official AI Meme Token of Aerosol',
     description: SEO_DESCRIPTION,
     site: X_HANDLE,
     creator: X_HANDLE,
