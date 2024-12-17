@@ -4,6 +4,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Lalezar } from 'next/font/google'
 
+import { SEO_DESCRIPTION, X_HANDLE } from '../constants'
+
 import AppProviders from './providers'
 
 import './globals.css'
@@ -11,9 +13,47 @@ import './globals.css'
 const font = Lalezar({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'RODAI - The hardest and evergrowing ROD of Solana',
-  description:
-    'The mighty, long and powerful RODAI token. Only possible on Solana.',
+  title: 'RODAI - The Official AI Memetility Token of the Aerosol Platform',
+  description: SEO_DESCRIPTION,
+  keywords: [
+    'RODAI',
+    'Aerosol',
+    'AI',
+    'AI meme',
+    'memetility',
+    'utility',
+    'Solana meme token',
+    'crypto meme',
+    'blockchain',
+    'crypto collectibles',
+    'Web3',
+    'Aerosol platform',
+    'crypto innovation',
+    'Solana blockchain',
+    'Solana ecosystem',
+  ],
+  openGraph: {
+    title: 'RODAI - The Official AI Memetility Token of the Aerosol Platform',
+    description: SEO_DESCRIPTION,
+    url: 'https://www.rodai.meme',
+    type: 'website',
+    images: [
+      {
+        url: '/img/seo/rodai_og_image.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'RODAI Token Banner',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RODAI - The Official AI Memetility Token of Aerosol',
+    description: SEO_DESCRIPTION,
+    site: X_HANDLE,
+    creator: X_HANDLE,
+    images: ['/img/seo/rodai_summary_large_image.jpeg'],
+  },
 }
 
 export default function RootLayout({
