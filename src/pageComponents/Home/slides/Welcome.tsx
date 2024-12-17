@@ -185,7 +185,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
           <div className="flex flex-wrap gap-2 justify-center">
             <BuyDropdown />
             <a target="_blank" href="https://t.me/rodaisol">
-              <Button variant="bordered" className="border-white text-white">
+              <Button color="primary" className="text-white">
                 Join Us
               </Button>
             </a>

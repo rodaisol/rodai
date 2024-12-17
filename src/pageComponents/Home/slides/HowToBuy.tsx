@@ -61,7 +61,7 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
         className="w-full flex justify-center items-center mt-8"
       >
         <div className="flex justify-center gap-4 w-full">
-          <BuyDropdown variant="bordered" className="border-white text-white" />
+          <BuyDropdown />
           <a href={HOW_TO_BUY_YOUTUBE_URL} target="_blank">
             <Button variant="shadow" color="secondary" className="border-white">
               <PlayIcon className="w-6 h-6 mr-2" />

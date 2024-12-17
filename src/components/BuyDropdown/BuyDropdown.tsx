@@ -79,8 +79,7 @@ export const BuyDropdown: FC<ButtonProps> = (buttonProps) => {
         <div>
           <Button
             variant="shadow"
-            color="primary"
-            className="border-white"
+            className="border-white bg-pink-600 text-white"
             size="md"
             {...buttonProps}
           >
