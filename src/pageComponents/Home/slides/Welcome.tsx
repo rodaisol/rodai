@@ -157,7 +157,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold">
           ROD<span className="text-yellow-300">AI</span>
         </h1>
-        <p className="text-2xl sm:text-3xl lg:text-4xl leading-loose">
+        <p className="text-2xl sm:text-3xl lg:text-4xl leading-10">
           The deflationary meme token of the{' '}
           <a
             href={AEROSOL_URL}
