@@ -157,22 +157,20 @@ export const WelcomeSlide: FC<SlideProps> = ({
         <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold">
           ROD<span className="text-yellow-300">AI</span>
         </h1>
-        <p className="text-2xl sm:text-3xl lg:text-4xl">
-          The{' '}
-          <span className="underline decoration-yellow-300 decoration-[8px]">
-            deflationary
-          </span>{' '}
-          token of the{' '}
+        <p className="text-2xl sm:text-3xl lg:text-4xl leading-loose">
+          The deflationary meme token of the{' '}
           <a
             href={AEROSOL_URL}
             target="_blank"
-            className="underline decoration-yellow-300 decoration-[8px]"
+            className="underline decoration-yellow-300 decoration-[8px] underline-offset-8"
           >
             Aerosol platform
           </a>
           {'.'}
         </p>
-        <div className="italic px-3 mt-2">Launched on January 13th, 2024</div>
+        <div className="text-xl italic px-3 mt-2">
+          Launched on January 13th, 2024
+        </div>
         <div className="w-full overflow-hidden mt-2 px-8 sm:px-0">
           <Snippet
             id="token-address-snippet"
@@ -197,7 +195,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
         </div>
         <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
           Buy a memecoin,{' '}
-          <span className="underline decoration-yellow-300 decoration-[8px]">
+          <span className="underline decoration-yellow-300 decoration-[8px] underline-offset-8">
             own a company.
           </span>
         </p>

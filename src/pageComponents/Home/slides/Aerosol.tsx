@@ -39,7 +39,7 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
             <a
               href="https://x.com/aeyakovenko/status/1857938273920070005"
               target="_blank"
-              className="underline decoration-yellow-300 decoration-[8px]"
+              className="underline decoration-yellow-300 decoration-[8px] underline-offset-8"
             >
               earned recognition
             </a>{' '}

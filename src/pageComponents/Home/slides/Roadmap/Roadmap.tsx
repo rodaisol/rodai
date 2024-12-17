@@ -39,7 +39,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
             onClick={() => handleTabClick(index)}
             className={`text-lg md:text-xl font-bold px-6 py-2 rounded-lg transition transform ${
               index === activePhaseIndex
-                ? 'underline underline-offset-8 decoration-4 decoration-yellow-400 text-white scale-105'
+                ? 'underline decoration-4 decoration-yellow-400 underline-offset-8 text-white scale-105'
                 : 'hover:text-white scale-100 opacity-70'
             }`}
             whileHover={{ scale: 1.1 }}
