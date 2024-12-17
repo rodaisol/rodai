@@ -937,4 +937,11 @@ const mediaConfig: MediaConfig[] = [
     height: 1024,
     aspectRatio: '1 / 1',
   },
+  {
+    fileName: 'pudgy-rod.webp',
+    type: 'image',
+    width: 1024,
+    height: 1024,
+    aspectRatio: '1 / 1',
+  },
 ]

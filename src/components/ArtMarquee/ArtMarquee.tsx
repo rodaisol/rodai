@@ -23,7 +23,7 @@ export const ArtMarquee = () => {
 
   return (
     <Marquee
-      speed={70}
+      speed={100}
       gradient={false}
       pauseOnHover
       pauseOnClick
