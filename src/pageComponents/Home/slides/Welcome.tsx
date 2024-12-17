@@ -10,6 +10,7 @@ import { Button } from '../../../components/Button'
 import { BuyDropdown } from '../../../components/BuyDropdown'
 import { ChartSelector } from '../../../components/ChartSelector'
 import { SocialLinks } from '../../../components/SocialLinks'
+import { SwipeIndicator } from '../../../components/SwipeIndicator'
 import { AEROSOL_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
@@ -180,6 +181,9 @@ export const WelcomeSlide: FC<SlideProps> = ({
           >
             {RODAI_MINT_ADDRESS}
           </Snippet>
+        </div>
+        <div className="md:hidden mt-8">
+          <SwipeIndicator label="Swipe to learn more" />
         </div>
         <div className="flex flex-col gap-4 mt-6 lg:mt-8">
           <div className="flex flex-wrap gap-2 justify-center">
