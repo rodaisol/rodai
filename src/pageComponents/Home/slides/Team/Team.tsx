@@ -8,9 +8,9 @@ import { teamMembers } from './teamMembers'
 
 export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
   return (
-    <section className="px-8 py-12 w-full flex flex-col items-center text-white">
+    <section className="px-8 py-12 w-full h-full flex flex-col items-center text-white mt-44">
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-5xl w-full"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-8 max-w-5xl w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: visibilityRatio }}
         transition={{
@@ -24,13 +24,13 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{
               opacity: visibilityRatio,
-              y: visibilityRatio * 30, // Increased vertical movement
-              scale: visibilityRatio * 0.2 + 0.9, // Increase scaling slightly
+              y: visibilityRatio * 30,
+              scale: visibilityRatio * 0.2 + 0.9,
             }}
             transition={{
-              delay: index * 0.15, // Reduced delay for smoother sequential animation
-              duration: 0.4, // Snappier duration
-              ease: 'easeOut', // Smooth easing
+              delay: index * 0.15,
+              duration: 0.4,
+              ease: 'easeOut',
             }}
           >
             <motion.div
@@ -38,7 +38,7 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: visibilityRatio,
-                scale: visibilityRatio * 0.2 + 0.9, // Smoother scaling for avatars
+                scale: visibilityRatio * 0.2 + 0.9,
               }}
               transition={{
                 duration: 0.3,

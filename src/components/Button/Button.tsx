@@ -16,6 +16,7 @@ export interface ButtonProps {
   size?: 'sm' | 'md' | 'lg'
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   children?: ReactNode
+  onClick?: () => void
 }
 
 const variantClasses: Record<string, string> = {

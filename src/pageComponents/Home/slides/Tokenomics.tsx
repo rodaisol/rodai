@@ -71,7 +71,7 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
       >
         <ResponsivePie
           data={pieData}
-          margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+          margin={{ top: 40, right: 8, bottom: 8, left: 8 }}
           innerRadius={0.6}
           padAngle={1}
           cornerRadius={4}
@@ -98,31 +98,31 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
               {datum.id}: {datum.value}%
             </div>
           )}
-          legends={[
-            {
-              anchor: 'bottom',
-              direction: 'row',
-              translateX: 0,
-              translateY: 56,
-              itemsSpacing: 0,
-              itemWidth: 100,
-              itemHeight: 18,
-              itemTextColor: '#FFFFFF',
-              itemDirection: 'left-to-right',
-              itemOpacity: 1,
-              symbolSize: 18,
-              symbolShape: 'circle',
-              effects: [
-                {
-                  on: 'hover',
-                  style: {
-                    itemTextColor: '#fff',
-                  },
-                },
-              ],
-            },
-          ]}
         />
+      </motion.div>
+      <motion.div
+        className="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:flex lg:justify-start gap-6 text-white text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{
+          opacity: visibilityRatio,
+          y: visibilityRatio * 50,
+        }}
+        transition={{
+          type: 'spring',
+          stiffness: 150,
+          damping: 25,
+          delay: 0.7,
+        }}
+      >
+        {pieData.map((datum, index) => (
+          <div key={index} className="flex items-center space-x-2">
+            <div
+              style={{ backgroundColor: datum.color }}
+              className="w-6 h-6 rounded-full"
+            ></div>
+            <span className="text-lg">{datum.id}</span>
+          </div>
+        ))}
       </motion.div>
     </section>
   )

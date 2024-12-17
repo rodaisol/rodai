@@ -2,7 +2,6 @@
 
 import { PlayIcon } from '@heroicons/react/20/solid'
 import {
-  Button,
   Modal,
   ModalBody,
   ModalContent,
@@ -14,6 +13,7 @@ import React from 'react'
 import ReactPlayer from 'react-player/youtube'
 import { useMedia } from 'react-use'
 
+import { Button } from '../../../components/Button'
 import { BuyDropdown } from '../../../components/BuyDropdown'
 import { HOW_TO_BUY_YOUTUBE_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
@@ -88,7 +88,6 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
             variant="shadow"
             color="secondary"
             className="border-white"
-            size="lg"
           >
             <PlayIcon className="w-6 h-6 mr-2" />
             Watch Tutorial
