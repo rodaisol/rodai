@@ -1,6 +1,6 @@
 import { cn } from '@nextui-org/react'
 import { motion } from 'motion/react'
-import { FC, ReactNode } from 'react'
+import { FC, MouseEventHandler, ReactNode } from 'react'
 
 export interface ButtonProps {
   className?: string
@@ -16,7 +16,7 @@ export interface ButtonProps {
   size?: 'sm' | 'md' | 'lg'
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full'
   children?: ReactNode
-  onClick?: () => void
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined
 }
 
 const variantClasses: Record<string, string> = {
