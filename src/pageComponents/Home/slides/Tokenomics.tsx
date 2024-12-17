@@ -16,7 +16,7 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
       id="tokenomics"
-      className="flex flex-col items-center justify-start w-full h-full p-8 mt-12"
+      className="flex flex-col items-center justify-start w-full h-full p-8 pt-0"
     >
       <motion.h2
         className="text-xl lg:text-2xl font-bold mb-2"

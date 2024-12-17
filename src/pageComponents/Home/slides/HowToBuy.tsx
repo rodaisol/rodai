@@ -13,7 +13,7 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
       id="how-to-buy"
-      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-center"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-start"
     >
       <motion.div
         initial={{ opacity: 0, y: -50 }}

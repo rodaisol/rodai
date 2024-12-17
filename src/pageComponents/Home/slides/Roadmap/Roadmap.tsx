@@ -30,7 +30,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
   return (
     <section
       id="roadmap"
-      className="px-4 py-8 md:px-8 md:py-8 flex flex-col gap-2 w-full h-full mt-32 text-white items-center"
+      className="px-4 py-8 md:px-8 md:py-8 flex flex-col gap-2 w-full h-full text-white items-center"
     >
       <div className="flex gap-8 mb-6">
         {roadmapData.map((phase, index) => (

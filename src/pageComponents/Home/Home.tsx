@@ -90,102 +90,115 @@ export const HomePage = () => {
     restDelta: 0.001,
   })
 
+  const activeSlide = slides[activeIndex]
+
   return (
     <motion.main
-      className="relative h-screen w-full overflow-hidden bg-black"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className={cn(
+        'relative h-screen w-screen overflow-hidden',
+        activeSlide.background
+      )}
+      initial={{ opacity: 0, backgroundColor: '#000000' }}
+      animate={{
+        opacity: 1,
+        backgroundColor: activeSlide.background,
+      }}
+      transition={{
+        duration: 0.6,
+        ease: 'easeOut',
+        backgroundColor: { duration: 1, ease: 'easeInOut' },
+      }}
     >
-      <div className="fixed bottom-8 right-8 w-[150px] h-1 bg-white/20 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-white rounded-full"
-          style={{
-            scaleX,
-            transformOrigin: 'left center',
-          }}
-        />
-      </div>
+      <div className="w-full h-full flex flex-col">
+        <div className="relative h-[100px]">
+          <motion.div
+            className="absolute top-10  w-full flex justify-center items-center pointer-events-auto"
+            animate={{
+              x: mousePosition.x,
+              y: mousePosition.y,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              damping: 25,
+              duration: 0.8,
+            }}
+          >
+            {slides.map((section, i) => {
+              let positionX = '0vw'
+              const positionY = i === activeIndex ? '1rem' : '0'
 
-      <motion.div
-        className="absolute top-10  w-full flex justify-center items-center pointer-events-auto"
-        animate={{
-          x: mousePosition.x,
-          y: mousePosition.y,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 200,
-          damping: 25,
-          duration: 0.8,
-        }}
-      >
-        {slides.map((section, i) => {
-          let positionX = '0vw'
-          const positionY = i === activeIndex ? '1rem' : '0'
+              if (i < activeIndex - 1) positionX = '-150vw'
+              if (i === activeIndex - 1) positionX = '-50vw'
+              if (i === activeIndex) positionX = '0vw'
+              if (i === activeIndex + 1) positionX = '50vw'
+              if (i > activeIndex + 1) positionX = '150vw'
 
-          if (i < activeIndex - 1) positionX = '-150vw'
-          if (i === activeIndex - 1) positionX = '-50vw'
-          if (i === activeIndex) positionX = '0vw'
-          if (i === activeIndex + 1) positionX = '50vw'
-          if (i > activeIndex + 1) positionX = '150vw'
+              return (
+                <motion.div
+                  key={section.id}
+                  className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
+                  initial={{ x: '150vw' }}
+                  animate={{
+                    x: positionX,
+                    y: positionY,
+                    opacity: i === activeIndex ? 1 : 0.4,
+                  }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 25,
+                    duration: 0.8,
+                  }}
+                  onClick={() => handleTabClick(i)}
+                >
+                  <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
+                    {section.label}
+                  </span>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        </div>
+        <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full bg-white rounded-full"
+            style={{
+              scaleX,
+              transformOrigin: 'left center',
+            }}
+          />
+        </div>
+        <div
+          ref={scrollContainerRef}
+          className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+        >
+          {slides.map((section, index) => {
+            const visibilityRatio = visibilityRatios[index] || 0
+            const state =
+              visibilityRatio === 1 && index === lastStableIndex.current
+                ? 'idle'
+                : 'moving'
 
-          return (
-            <motion.div
-              key={section.id}
-              className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
-              initial={{ x: '150vw' }}
-              animate={{
-                x: positionX,
-                y: positionY,
-                opacity: i === activeIndex ? 1 : 0.4,
-              }}
-              transition={{
-                type: 'spring',
-                stiffness: 200,
-                damping: 25,
-                duration: 0.8,
-              }}
-              onClick={() => handleTabClick(i)}
-            >
-              <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
-                {section.label}
-              </span>
-            </motion.div>
-          )
-        })}
-      </motion.div>
+            const SlideComponent = section.Component
 
-      <div
-        ref={scrollContainerRef}
-        className="flex h-full w-screen overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth no-scrollbar"
-      >
-        {slides.map((section, index) => {
-          const visibilityRatio = visibilityRatios[index] || 0
-          const state =
-            visibilityRatio === 1 && index === lastStableIndex.current
-              ? 'idle'
-              : 'moving'
-
-          const SlideComponent = section.Component
-
-          return (
-            <div
-              key={section.id}
-              id={section.id}
-              className={cn(
-                'snap-start h-screen w-screen flex-shrink-0 flex justify-center items-center',
-                section.background
-              )}
-            >
-              <SlideComponent
-                state={state}
-                direction={direction}
-                visibilityRatio={visibilityRatio}
-              />
-            </div>
-          )
-        })}
+            return (
+              <div
+                key={section.id}
+                id={section.id}
+                className={cn(
+                  'snap-start w-screen flex-shrink-0 flex justify-center items-center'
+                )}
+              >
+                <SlideComponent
+                  state={state}
+                  direction={direction}
+                  visibilityRatio={visibilityRatio}
+                />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </motion.main>
   )

@@ -10,7 +10,7 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
       id="aerosol"
-      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-center"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-start"
     >
       <div className="px-8 text-center">
         <motion.div

@@ -11,7 +11,7 @@ export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
   return (
     <section
       id="about"
-      className="w-full h-full overflow-hidden py-8 flex flex-col gap-4 items-center justify-center"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-4 items-center justify-start"
     >
       <div className="px-8">
         <motion.div
@@ -27,7 +27,7 @@ export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
           }}
           className="max-w-4xl text-2xl md:text-3xl text-center"
         >
-          <p className="leading-relaxed mt-6">
+          <p className="leading-relaxed">
             <span className="text-yellow-300">$RODAI</span> is the AI meme token
             of the{' '}
             <a

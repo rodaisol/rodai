@@ -8,7 +8,7 @@ import { teamMembers } from './teamMembers'
 
 export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
   return (
-    <section className="px-8 py-12 w-full h-full flex flex-col items-center text-white mt-44">
+    <section className="px-8 py-12 w-full h-full flex flex-col items-center text-white">
       <motion.div
         className="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-8 max-w-5xl w-full"
         initial={{ opacity: 0 }}

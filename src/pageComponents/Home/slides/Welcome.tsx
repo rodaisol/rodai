@@ -75,7 +75,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
 
   return (
     <section
-      className="w-full flex flex-col lg:flex-row gap-8 justify-center items-center p-4 lg:p-8 max-w-screen-xl mx-auto"
+      className="w-full h-full flex flex-col lg:flex-row gap-8 justify-start items-center p-4 py-12 lg:p-8 mx-auto"
       onMouseMove={handleMouseMove}
     >
       <div className="flex gap-8 justify-center items-center w-full">
