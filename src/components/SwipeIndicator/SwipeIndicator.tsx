@@ -6,7 +6,7 @@ export const SwipeIndicator = ({ label = 'Swipe' }) => {
       <motion.img
         src="/img/icons/hand.png"
         alt="Swipe Hand"
-        className="w-12 h-12"
+        className="w-10 h-10"
         draggable={false}
         initial={{ rotate: 0, x: 0, y: 0 }}
         animate={{
