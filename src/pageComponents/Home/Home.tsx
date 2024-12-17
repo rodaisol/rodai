@@ -110,6 +110,7 @@ export const HomePage = () => {
       }}
     >
       <div className="w-full h-full flex flex-col">
+        {/* Header section */}
         <div className="relative h-[100px]">
           <motion.div
             className="absolute top-10  w-full flex justify-center items-center pointer-events-auto"
@@ -160,6 +161,8 @@ export const HomePage = () => {
             })}
           </motion.div>
         </div>
+
+        {/* Progress Bar */}
         <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-white rounded-full"
@@ -169,6 +172,8 @@ export const HomePage = () => {
             }}
           />
         </div>
+
+        {/* Main Body */}
         <div
           ref={scrollContainerRef}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
@@ -198,6 +203,24 @@ export const HomePage = () => {
               </div>
             )
           })}
+        </div>
+
+        <div className="md:hidden">
+          {/* Left Arrow Button */}
+          <div className="absolute top-0 left-0 w-[10%] h-full bg-transparent cursor-pointer">
+            <motion.div
+              className="h-full w-full bg-transparent"
+              onClick={() => handleTabClick(activeIndex - 1)}
+            />
+          </div>
+
+          {/* Right Arrow Button */}
+          <div className="absolute top-0 right-0 w-[10%] h-full bg-transparent cursor-pointer">
+            <motion.div
+              className="h-full w-full bg-transparent"
+              onClick={() => handleTabClick(activeIndex + 1)}
+            />
+          </div>
         </div>
       </div>
     </motion.main>
