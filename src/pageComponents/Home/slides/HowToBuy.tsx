@@ -1,17 +1,8 @@
 'use client'
 
 import { PlayIcon } from '@heroicons/react/20/solid'
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalHeader,
-  useDisclosure,
-} from '@nextui-org/react'
 import { motion } from 'motion/react'
 import React from 'react'
-import ReactPlayer from 'react-player/youtube'
-import { useMedia } from 'react-use'
 
 import { Button } from '../../../components/Button'
 import { BuyDropdown } from '../../../components/BuyDropdown'
@@ -19,18 +10,6 @@ import { HOW_TO_BUY_YOUTUBE_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
 export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const isMobile = useMedia('(max-width: 768px)')
-
-  const handleOpenVideo = () => {
-    if (isMobile) {
-      window.open(HOW_TO_BUY_YOUTUBE_URL, '_blank')
-    } else {
-      onOpen()
-    }
-  }
-
   return (
     <section
       id="how-to-buy"
@@ -83,40 +62,14 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
       >
         <div className="flex justify-center gap-4 w-full">
           <BuyDropdown variant="bordered" className="border-white text-white" />
-          <Button
-            onClick={handleOpenVideo}
-            variant="shadow"
-            color="secondary"
-            className="border-white"
-          >
-            <PlayIcon className="w-6 h-6 mr-2" />
-            Watch Tutorial
-          </Button>
+          <a href={HOW_TO_BUY_YOUTUBE_URL} target="_blank">
+            <Button variant="shadow" color="secondary" className="border-white">
+              <PlayIcon className="w-6 h-6 mr-2" />
+              Watch Tutorial
+            </Button>
+          </a>
         </div>
       </motion.div>
-
-      <Modal
-        backdrop="blur"
-        isOpen={isOpen}
-        onClose={onClose}
-        closeButton
-        autoFocus
-        size="xl"
-      >
-        <ModalContent>
-          <ModalHeader>How to Buy RODAI</ModalHeader>
-          <ModalBody>
-            <div className="flex justify-center items-center">
-              <ReactPlayer
-                url={HOW_TO_BUY_YOUTUBE_URL}
-                playing={isOpen}
-                width={470}
-                height={774}
-              />
-            </div>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
     </section>
   )
 }
