@@ -14,23 +14,23 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: visibilityRatio }}
         transition={{
-          opacity: { duration: 0.5, ease: 'easeOut' },
+          opacity: { duration: 0.6, ease: 'easeOut' },
         }}
       >
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center text-center space-y-2"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{
               opacity: visibilityRatio,
-              y: visibilityRatio * 20, // Gentle vertical animation as it enters
-              scale: visibilityRatio * 0.1 + 0.9, // Subtle scaling as it enters
+              y: visibilityRatio * 30, // Increased vertical movement
+              scale: visibilityRatio * 0.2 + 0.9, // Increase scaling slightly
             }}
             transition={{
-              delay: index * 0.1, // Stagger the animations with a smaller delay
-              duration: 0.6, // Slightly longer duration for smoothness
-              ease: 'easeInOut', // Smooth easing
+              delay: index * 0.15, // Reduced delay for smoother sequential animation
+              duration: 0.4, // Snappier duration
+              ease: 'easeOut', // Smooth easing
             }}
           >
             <motion.div
@@ -38,9 +38,12 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
                 opacity: visibilityRatio,
-                scale: visibilityRatio * 0.1 + 0.9, // Smooth scaling of the avatar
+                scale: visibilityRatio * 0.2 + 0.9, // Smoother scaling for avatars
               }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{
+                duration: 0.3,
+                ease: 'easeOut',
+              }}
             >
               <img
                 src={member.avatar}
