@@ -114,7 +114,7 @@ export const HomePage = () => {
           navigation={true}
           modules={[Navigation]}
           onSwiper={setSwiper}
-          onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
+          onSlideChange={(s) => handleSlideChange(s.activeIndex)}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth"
         >
           {slides.map((slide, index) => {
