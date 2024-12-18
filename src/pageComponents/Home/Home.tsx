@@ -65,7 +65,7 @@ export const HomePage = () => {
           >
             {slides.map((section, i) => {
               let positionX = '0vw'
-              const positionY = i === activeIndex ? '1rem' : '0'
+              const positionY = i === activeIndex ? '1rem' : '-1rem'
 
               if (i < activeIndex - 1) positionX = '-150vw'
               if (i === activeIndex - 1) positionX = '-50vw'
