@@ -9,7 +9,7 @@ import { BuyDropdown } from '../../../components/BuyDropdown'
 import { HOW_TO_BUY_YOUTUBE_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
-export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
+export const HowToBuySlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="how-to-buy"
@@ -18,8 +18,8 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: 0,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 0 : -50,
         }}
         transition={{
           type: 'spring',
@@ -51,7 +51,7 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
 
       <motion.div
         style={{
-          y: (1 - visibilityRatio) * 200,
+          y: isActive ? (1 - 1) * 200 : (1 - 0) * 200,
         }}
         transition={{
           type: 'spring',
@@ -61,13 +61,46 @@ export const HowToBuySlide = ({ visibilityRatio }: SlideProps) => {
         className="w-full flex justify-center items-center mt-8"
       >
         <div className="flex justify-center gap-4 w-full">
-          <BuyDropdown />
-          <a href={HOW_TO_BUY_YOUTUBE_URL} target="_blank">
-            <Button variant="shadow" color="secondary" className="border-white">
-              <PlayIcon className="w-6 h-6 mr-2" />
-              Watch Tutorial
-            </Button>
-          </a>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: isActive ? 1 : 0,
+              y: isActive ? 0 : 50,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              damping: 30,
+              delay: 0.2,
+            }}
+          >
+            <BuyDropdown />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: isActive ? 1 : 0,
+              y: isActive ? 0 : 50,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              damping: 30,
+              delay: 0.4,
+            }}
+          >
+            <a href={HOW_TO_BUY_YOUTUBE_URL} target="_blank">
+              <Button
+                variant="shadow"
+                color="secondary"
+                className="border-white"
+              >
+                <PlayIcon className="w-6 h-6 mr-2" />
+                Watch Tutorial
+              </Button>
+            </a>
+          </motion.div>
         </div>
       </motion.div>
     </section>

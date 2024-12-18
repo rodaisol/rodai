@@ -6,7 +6,7 @@ import { Button } from '../../../components/Button'
 import { AEROSOL_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
-export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
+export const AerosolSlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="aerosol"
@@ -16,8 +16,8 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{
-            opacity: visibilityRatio,
-            y: 0,
+            opacity: isActive ? 1 : 0,
+            y: isActive ? 0 : -50,
           }}
           transition={{
             type: 'spring',
@@ -53,8 +53,8 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{
-                opacity: visibilityRatio,
-                y: 0,
+                opacity: isActive ? 1 : 0,
+                y: isActive ? 0 : 50,
               }}
               exit={{ opacity: 0, y: 50 }}
               transition={{
@@ -74,8 +74,8 @@ export const AerosolSlide = ({ visibilityRatio }: SlideProps) => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{
-                opacity: visibilityRatio,
-                y: 0,
+                opacity: isActive ? 1 : 0,
+                y: isActive ? 0 : 50,
               }}
               exit={{ opacity: 0, y: 50 }}
               transition={{

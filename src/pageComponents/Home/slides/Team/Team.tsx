@@ -6,13 +6,13 @@ import { SlideProps } from '../../../../types'
 
 import { teamMembers } from './teamMembers'
 
-export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
+export const TeamSlide = ({ isActive }: SlideProps) => {
   return (
     <section className="px-8 py-12 w-full h-full flex flex-col items-center text-white">
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-10 sm:gap-8 max-w-5xl w-full"
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10 sm:gap-8 max-w-5xl w-full"
         initial={{ opacity: 0 }}
-        animate={{ opacity: visibilityRatio }}
+        animate={{ opacity: isActive ? 1 : 0 }}
         transition={{
           opacity: { duration: 0.6, ease: 'easeOut' },
         }}
@@ -23,9 +23,9 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
             className="flex flex-col items-center text-center space-y-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{
-              opacity: visibilityRatio,
-              y: visibilityRatio * 30,
-              scale: visibilityRatio * 0.2 + 0.9,
+              opacity: isActive ? 1 : 0,
+              y: isActive ? 0 : 20,
+              scale: isActive ? 1 : 0.9,
             }}
             transition={{
               delay: index * 0.15,
@@ -37,8 +37,8 @@ export const TeamSlide = ({ visibilityRatio }: SlideProps) => {
               className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full overflow-hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{
-                opacity: visibilityRatio,
-                scale: visibilityRatio * 0.2 + 0.9,
+                opacity: isActive ? 1 : 0,
+                scale: isActive ? 1 : 0.8,
               }}
               transition={{
                 duration: 0.3,

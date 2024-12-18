@@ -14,10 +14,7 @@ import { SwipeIndicator } from '../../../components/SwipeIndicator'
 import { AEROSOL_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
-export const WelcomeSlide: FC<SlideProps> = ({
-  direction,
-  visibilityRatio,
-}) => {
+export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
   const [rodPosition, setRodPosition] = useState({ x: 0, y: 0 })
   const [aerosolPosition, setAerosolPosition] = useState({ x: 0, y: 0 })
 
@@ -57,34 +54,25 @@ export const WelcomeSlide: FC<SlideProps> = ({
     })
   })
 
-  const getImageAnimation = (offset: number) => ({
-    initial: { opacity: 0, scale: 0.8 },
-    animate: {
-      opacity: visibilityRatio,
-      scale: visibilityRatio * 0.7 + 0.5,
-      x:
-        direction === 'right'
-          ? -offset * (1 - visibilityRatio)
-          : offset * (1 - visibilityRatio),
-    },
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-      damping: 20,
-    },
-  })
-
   return (
     <section
       className="w-full h-full flex flex-col lg:flex-row gap-8 justify-start items-center p-4 py-12 lg:p-8 mx-auto"
       onMouseMove={handleMouseMove}
     >
       <div className="flex gap-8 justify-center items-center w-full">
+        {/* RODAI Image */}
         <motion.div
-          initial="initial"
-          animate="animate"
-          variants={getImageAnimation(150)}
-          className="w-[120px] sm:w-[200px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{
+            opacity: isActive ? 1 : 0,
+            scale: isActive ? 1 : 0.8,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 30,
+          }}
+          className="w-[120px] sm:w-[160px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
         >
           <motion.div
             style={{
@@ -109,11 +97,19 @@ export const WelcomeSlide: FC<SlideProps> = ({
           </motion.div>
         </motion.div>
 
+        {/* Aerosol Image */}
         <motion.div
-          initial="initial"
-          animate="animate"
-          variants={getImageAnimation(150)}
-          className="w-[100px] sm:w-[180px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{
+            opacity: isActive ? 1 : 0,
+            scale: isActive ? 1 : 0.8,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            damping: 30,
+          }}
+          className="w-[100px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
         >
           <motion.div
             style={{
@@ -136,16 +132,17 @@ export const WelcomeSlide: FC<SlideProps> = ({
                 className="w-full"
                 draggable={false}
               />
-            </a>{' '}
+            </a>
           </motion.div>
         </motion.div>
       </div>
 
+      {/* Text and Content */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: 0,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 0 : 50,
         }}
         transition={{
           type: 'spring',

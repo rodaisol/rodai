@@ -62,11 +62,7 @@ export const ChartSelector = () => {
     <Dropdown size="lg">
       <DropdownTrigger>
         <div>
-          <Button
-            variant="bordered"
-            className="border-white text-white"
-            size="md"
-          >
+          <Button variant="bordered" className="border-white text-white">
             Chart
           </Button>
         </div>

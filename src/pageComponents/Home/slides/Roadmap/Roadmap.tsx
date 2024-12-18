@@ -11,7 +11,7 @@ import { SlideProps } from '../../../../types'
 
 import { roadmapData } from './roadmapData'
 
-export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
+export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
   const [activePhaseIndex, setActivePhaseIndex] = useState(0)
 
   const handleTabClick = (index: number) => {
@@ -61,9 +61,9 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
             y: 50,
           }}
           animate={{
-            opacity: visibilityRatio,
-            scale: 1,
-            y: 0,
+            opacity: isActive ? 1 : 0,
+            scale: isActive ? 1 : 0.9,
+            y: isActive ? 0 : 50,
             backgroundImage: getBackgroundStyle(
               roadmapData[activePhaseIndex].items.filter(
                 (item) => item.completedDate
@@ -91,8 +91,8 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
             className="font-bold text-lg md:text-xl mb-4 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{
-              opacity: visibilityRatio,
-              y: visibilityRatio * 20,
+              opacity: isActive ? 1 : 0,
+              y: isActive ? 10 : -20,
             }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
@@ -103,7 +103,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
             className="list-none m-0 p-0"
             initial={{ opacity: 0 }}
             animate={{
-              opacity: visibilityRatio,
+              opacity: isActive ? 1 : 0,
             }}
             transition={{ duration: 0.2, delay: 0.3 }}
           >
@@ -125,8 +125,8 @@ export const RoadmapSlide: FC<SlideProps> = ({ visibilityRatio }) => {
                   }`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{
-                    opacity: visibilityRatio,
-                    y: visibilityRatio * 20,
+                    opacity: isActive ? 1 : 0,
+                    y: isActive ? 0 : 20,
                   }}
                   transition={{
                     delay: itemIndex * 0.2 + 0.5,

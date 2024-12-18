@@ -1,9 +1,7 @@
 import { FC } from 'react'
 
 export interface SlideProps {
-  state: 'moving' | 'idle'
-  direction: 'left' | 'right'
-  visibilityRatio: number
+  isActive: boolean
 }
 
 export interface MediaConfig {

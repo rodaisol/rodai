@@ -7,7 +7,7 @@ import { ArtMarquee } from '../../../components/ArtMarquee'
 import { AEROSOL_URL } from '../../../constants'
 import { SlideProps } from '../../../types'
 
-export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
+export const RodaiSlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="about"
@@ -17,8 +17,8 @@ export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{
-            opacity: visibilityRatio,
-            y: 0,
+            opacity: isActive ? 1 : 0,
+            y: isActive ? 0 : -50,
           }}
           transition={{
             type: 'spring',
@@ -46,19 +46,34 @@ export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
           </p>
         </motion.div>
       </div>
+
       <motion.div
         style={{
-          y: (1 - visibilityRatio) * 200,
+          y: isActive ? 0 : 200,
         }}
         transition={{
           type: 'spring',
           stiffness: 150,
-          damping: 15,
+          damping: 20,
+          delay: 0.2,
         }}
         className="w-full flex justify-center items-center"
       >
         <ScrollShadow orientation="horizontal">
-          <ArtMarquee />
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: isActive ? '0%' : '100%' }}
+            exit={{ y: '100%' }}
+            transition={{
+              type: 'spring',
+              stiffness: 150,
+              damping: 20,
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
+            <ArtMarquee />
+          </motion.div>
         </ScrollShadow>
       </motion.div>
     </section>

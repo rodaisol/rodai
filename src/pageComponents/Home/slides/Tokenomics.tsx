@@ -6,24 +6,28 @@ import { motion } from 'framer-motion'
 import { SlideProps } from '../../../types'
 
 const pieData = [
-  { id: 'Liquidity', value: 80, color: '#3B82F6' },
+  { id: 'Liquidity', value: 80, color: '#0096FF' },
   { id: 'Team', value: 15, color: '#F97316' },
   { id: 'DAO', value: 2, color: '#10B981' },
   { id: 'Airdrops', value: 3, color: '#E879F9' },
 ]
 
-export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
+export const TokenomicsSlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="tokenomics"
       className="flex flex-col items-center justify-start w-full h-full p-8 pt-0"
     >
       <motion.h2
-        className="text-xl lg:text-2xl font-bold mb-2"
-        initial={{ opacity: 0, y: 50 }}
+        className="text-xl lg:text-2xl font-bold mb-6"
+        initial={{ opacity: 0, y: -50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: visibilityRatio * 50,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 40 : -50,
+        }}
+        exit={{
+          opacity: 0,
+          y: 50,
         }}
         transition={{
           type: 'spring',
@@ -35,11 +39,15 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
       </motion.h2>
 
       <motion.p
-        className="text-3xl lg:text-5xl font-extrabold text-orange-400"
-        initial={{ opacity: 0, y: 50 }}
+        className="text-3xl lg:text-5xl font-extrabold text-yellow-300 mb-6"
+        initial={{ opacity: 0, y: -50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: visibilityRatio * 50,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 20 : -50,
+        }}
+        exit={{
+          opacity: 0,
+          y: 50,
         }}
         transition={{
           type: 'spring',
@@ -53,10 +61,14 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
 
       <motion.div
         className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:flex lg:justify-start gap-6 text-white text-center"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: visibilityRatio * 50,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 0 : -50,
+        }}
+        exit={{
+          opacity: 0,
+          y: 50,
         }}
         transition={{
           type: 'spring',
@@ -80,10 +92,10 @@ export const TokenomicsSlide = ({ visibilityRatio }: SlideProps) => {
 
       <motion.div
         className="mt-4 w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] max-w-[800px]"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={{
-          opacity: visibilityRatio,
-          y: visibilityRatio * 50,
+          opacity: isActive ? 1 : 0,
+          y: isActive ? 0 : -50,
         }}
         exit={{
           opacity: 0,

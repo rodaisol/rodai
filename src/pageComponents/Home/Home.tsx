@@ -10,10 +10,7 @@ import { slides } from './slidesConfig'
 export const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [direction, setDirection] = useState<'left' | 'right'>('right')
-  const [visibilityRatios, setVisibilityRatios] = useState<number[]>([])
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const lastStableIndex = useRef<number>(0)
 
   const handleMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e
@@ -31,50 +28,6 @@ export const HomePage = () => {
   }
 
   useEffect(() => {
-    const container = scrollContainerRef.current
-    if (!container) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const updatedRatios = [...visibilityRatios]
-        let maxVisibility = 0
-        let maxVisibleIndex = activeIndex
-
-        entries.forEach((entry) => {
-          const index = slides.findIndex(
-            (slide) => slide.id === entry.target.id
-          )
-          if (index !== -1) {
-            updatedRatios[index] = entry.intersectionRatio
-            if (entry.intersectionRatio > maxVisibility) {
-              maxVisibility = entry.intersectionRatio
-              maxVisibleIndex = index
-            }
-          }
-        })
-
-        setVisibilityRatios(updatedRatios)
-        if (maxVisibleIndex !== activeIndex) {
-          setDirection(maxVisibleIndex > activeIndex ? 'right' : 'left')
-          lastStableIndex.current = maxVisibleIndex
-          setActiveIndex(maxVisibleIndex)
-        }
-      },
-      {
-        root: container,
-        threshold: Array.from({ length: 101 }, (_, i) => i / 100),
-      }
-    )
-
-    slides.forEach((section) => {
-      const target = document.getElementById(section.id)
-      if (target) observer.observe(target)
-    })
-
-    return () => observer.disconnect()
-  }, [activeIndex, visibilityRatios])
-
-  useEffect(() => {
     sendGAEvent('event', 'conversion', {
       send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
     })
@@ -90,30 +43,50 @@ export const HomePage = () => {
     restDelta: 0.001,
   })
 
+  const intersectionObserverCallback = (
+    entries: IntersectionObserverEntry[]
+  ) => {
+    const updatedRatios = entries.map((entry) => ({
+      index: slides.findIndex((slide) => slide.id === entry.target.id),
+      isActive: entry.isIntersecting,
+    }))
+
+    const activeSlide = updatedRatios.find((entry) => entry.isActive)
+    if (activeSlide) {
+      setActiveIndex(activeSlide.index)
+    }
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(intersectionObserverCallback, {
+      root: scrollContainerRef.current,
+      threshold: 0.5,
+    })
+
+    slides.forEach((slide) => {
+      const element = document.getElementById(slide.id)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   const activeSlide = slides[activeIndex]
 
   return (
-    <motion.main
+    <div
       className={cn(
-        'relative h-dvh w-screen overflow-hidden',
+        'relative h-dvh w-screen overflow-hidden transition-all duration-1000 ease-out',
         activeSlide.background
       )}
-      initial={{ opacity: 0, backgroundColor: '#000000' }}
-      animate={{
-        opacity: 1,
-        backgroundColor: activeSlide.background,
-      }}
-      transition={{
-        duration: 0.6,
-        ease: 'easeOut',
-        backgroundColor: { duration: 1, ease: 'easeInOut' },
-      }}
     >
       <div className="w-full h-full flex flex-col">
         {/* Header section */}
         <div className="relative h-[100px]">
           <motion.div
-            className="absolute top-10  w-full flex justify-center items-center pointer-events-auto"
+            className="absolute top-10 w-full flex justify-center items-center pointer-events-auto"
             animate={{
               x: mousePosition.x,
               y: mousePosition.y,
@@ -178,28 +151,19 @@ export const HomePage = () => {
           ref={scrollContainerRef}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
         >
-          {slides.map((section, index) => {
-            const visibilityRatio = visibilityRatios[index] || 0
-            const state =
-              visibilityRatio === 1 && index === lastStableIndex.current
-                ? 'idle'
-                : 'moving'
-
-            const SlideComponent = section.Component
+          {slides.map((slide, index) => {
+            const isActive = activeIndex === index
+            const SlideComponent = slide.Component
 
             return (
               <div
-                key={section.id}
-                id={section.id}
+                key={slide.id}
+                id={slide.id}
                 className={cn(
                   'snap-start w-screen flex-shrink-0 flex justify-center items-center'
                 )}
               >
-                <SlideComponent
-                  state={state}
-                  direction={direction}
-                  visibilityRatio={visibilityRatio}
-                />
+                <SlideComponent isActive={isActive} />
               </div>
             )
           })}
@@ -223,6 +187,6 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
-    </motion.main>
+    </div>
   )
 }
