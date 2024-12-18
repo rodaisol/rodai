@@ -1,6 +1,6 @@
 'use client'
 
-import { Snippet } from '@nextui-org/react'
+import { Snippet, Spacer } from '@nextui-org/react'
 import { motion, useAnimationFrame } from 'framer-motion'
 import Image from 'next/image'
 import { FC, MouseEventHandler, useState } from 'react'
@@ -160,11 +160,7 @@ export const WelcomeSlide: FC<SlideProps> = ({
         </h1>
         <p className="text-2xl sm:text-3xl lg:text-4xl leading-10">
           The deflationary meme token of the{' '}
-          <a
-            href={AEROSOL_URL}
-            target="_blank"
-            className="underline decoration-yellow-300 decoration-[8px] underline-offset-8"
-          >
+          <a href={AEROSOL_URL} target="_blank" className="text-yellow-300 ">
             Aerosol platform
           </a>
           {'.'}
@@ -199,10 +195,9 @@ export const WelcomeSlide: FC<SlideProps> = ({
         </div>
         <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
           Buy a memecoin,{' '}
-          <span className="underline decoration-yellow-300 decoration-[8px] underline-offset-8">
-            own a company.
-          </span>
+          <span className="text-yellow-300">own a company.</span>
         </p>
+        <Spacer y={8} />
       </motion.div>
     </section>
   )

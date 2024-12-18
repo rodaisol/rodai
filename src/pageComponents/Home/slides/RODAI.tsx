@@ -30,28 +30,19 @@ export const RodaiSlide = ({ visibilityRatio }: SlideProps) => {
           <p className="leading-relaxed">
             <span className="text-yellow-300">$RODAI</span> is the AI meme token
             of the{' '}
-            <a
-              href={AEROSOL_URL}
-              target="_blank"
-              className="underline decoration-yellow-300 decoration-[8px] underline-offset-8"
-            >
+            <a href={AEROSOL_URL} target="_blank" className="text-yellow-300">
               Aerosol platform
             </a>
             .
           </p>
           <p className="leading-relaxed mt-6">
-            It is a{' '}
-            <span className="underline decoration-yellow-300 decoration-[8px] underline-offset-8">
-              deflationary
-            </span>{' '}
-            token that is burned with each transaction done within Aerosol.
+            It is a <span className="text-yellow-300">deflationary</span> token
+            that is burned with each transaction done within Aerosol.
           </p>
           <p className="leading-relaxed mt-6">
             $RODAI is also the{' '}
-            <span className="underline decoration-yellow-300 decoration-[8px] underline-offset-8">
-              first AI meme token
-            </span>{' '}
-            of Solana.
+            <span className="text-yellow-300">first AI meme token</span> of
+            Solana.
           </p>
         </motion.div>
       </div>
