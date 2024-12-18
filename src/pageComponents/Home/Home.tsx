@@ -10,7 +10,6 @@ import { slides } from './slidesConfig'
 export const HomePage = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [prevScrollPos, setPrevScrollPos] = useState(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -44,34 +43,35 @@ export const HomePage = () => {
     restDelta: 0.001,
   })
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const container = scrollContainerRef.current
-      if (!container) return
+  const intersectionObserverCallback = (
+    entries: IntersectionObserverEntry[]
+  ) => {
+    const updatedRatios = entries.map((entry) => ({
+      index: slides.findIndex((slide) => slide.id === entry.target.id),
+      isActive: entry.isIntersecting,
+    }))
 
-      const scrollPosition = container.scrollLeft
-      const slideWidth = container.clientWidth
-
-      const direction = scrollPosition > prevScrollPos ? 'right' : 'left'
-
-      const newActiveIndex =
-        direction === 'right'
-          ? Math.ceil(scrollPosition / slideWidth)
-          : Math.floor(scrollPosition / slideWidth)
-
-      setPrevScrollPos(scrollPosition)
-
-      if (newActiveIndex !== activeIndex) {
-        setActiveIndex(newActiveIndex)
-      }
+    const activeSlide = updatedRatios.find((entry) => entry.isActive)
+    if (activeSlide) {
+      setActiveIndex(activeSlide.index)
     }
+  }
 
-    const container = scrollContainerRef.current
-    if (!container) return
+  useEffect(() => {
+    const observer = new IntersectionObserver(intersectionObserverCallback, {
+      root: scrollContainerRef.current,
+      threshold: 0.5,
+    })
 
-    container.addEventListener('scroll', handleScroll)
-    return () => container.removeEventListener('scroll', handleScroll)
-  }, [activeIndex, prevScrollPos])
+    slides.forEach((slide) => {
+      const element = document.getElementById(slide.id)
+      if (element) {
+        observer.observe(element)
+      }
+    })
+
+    return () => observer.disconnect()
+  }, [])
 
   const activeSlide = slides[activeIndex]
 
