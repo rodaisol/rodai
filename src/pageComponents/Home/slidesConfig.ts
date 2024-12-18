@@ -6,6 +6,7 @@ import {
   RoadmapSlide,
   RodaiSlide,
   TeamSlide,
+  TokenOverviewSlide,
   TokenomicsSlide,
   WelcomeSlide,
 } from './slides'
@@ -30,6 +31,12 @@ export const slides: Slide[] = [
     background: 'bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-500',
   },
   {
+    id: 'rodai-overview',
+    label: 'Token Overview',
+    Component: TokenOverviewSlide,
+    background: 'bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600',
+  },
+  {
     id: 'tokenomics',
     label: 'Tokenomics',
     Component: TokenomicsSlide,
@@ -40,13 +47,13 @@ export const slides: Slide[] = [
     id: 'roadmap',
     label: 'Roadmap',
     Component: RoadmapSlide,
-    background: 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500',
+    background: 'bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700',
   },
   {
     id: 'how-to-buy',
     label: 'How to Buy',
     Component: HowToBuySlide,
-    background: 'bg-gradient-to-r from-blue-500 via-blue-400 to-sky-400',
+    background: 'bg-gradient-to-r from-blue-700 via-blue-600 to-sky-600',
   },
   {
     id: 'team',

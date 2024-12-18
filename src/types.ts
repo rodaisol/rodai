@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 export interface SlideProps {
   isActive: boolean
@@ -32,4 +32,10 @@ export type TeamMember = {
     twitter: string
     telegram: string
   }
+}
+
+export interface TokenOverviewItem {
+  icon: ReactNode
+  title: ReactNode
+  items: ReactNode[]
 }
