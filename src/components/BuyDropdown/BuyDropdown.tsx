@@ -12,8 +12,12 @@ import Image from 'next/image'
 import React, { FC } from 'react'
 
 import {
+  AEROSOL_BUY_URL,
   HOW_TO_BUY_YOUTUBE_URL,
+  JUPITER_BUY_URL,
   MEXC_BUY_URL,
+  PHOTON_BUY_URL,
+  RAYDIUM_BUY_URL,
   SOLCEX_BUY_URL,
 } from '../../constants'
 import { Button } from '../Button'
@@ -22,28 +26,28 @@ const buyLinks = [
   {
     key: 'aerosol',
     label: 'Aerosol',
-    href: 'https://www.aerosol.so/tokens/rod-ai',
+    href: AEROSOL_BUY_URL,
     icon: '/img/aerosol/aerosol-logo.png',
     className: 'w-8',
   },
   {
     key: 'jupiter',
     label: 'Jupiter',
-    href: 'https://jup.ag/swap/SOL-RODAI_GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
+    href: JUPITER_BUY_URL,
     icon: '/img/exchanges/jupiter.png',
     className: 'w-8',
   },
   {
     key: 'raydium',
     label: 'Raydium',
-    href: 'https://raydium.io/swap/?inputMint=sol&outputMint=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
+    href: RAYDIUM_BUY_URL,
     icon: '/img/exchanges/raydium.png',
     className: 'w-8',
   },
   {
     key: 'photon',
     label: 'Photon',
-    href: 'https://photon-sol.tinyastro.io/en/lp/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8',
+    href: PHOTON_BUY_URL,
     icon: '/img/exchanges/photon.svg',
     className: 'w-8',
   },
