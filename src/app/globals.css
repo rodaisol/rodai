@@ -4,6 +4,7 @@
 
 body {
   --swiper-navigation-color: white;
+  --swiper-navigation-size: 32px;
 }
 
 @media (max-width: 640px) {

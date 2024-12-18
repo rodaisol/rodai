@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper as SwiperType } from 'swiper/types'
 
 import { slides } from './slidesConfig'
 
@@ -15,6 +16,7 @@ import 'swiper/css/navigation'
 export const HomePage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [activeIndex, setActiveIndex] = useState(0)
+  const [swiper, setSwiper] = useState<SwiperType | undefined>()
 
   const handleMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e
@@ -87,7 +89,7 @@ export const HomePage = () => {
                     damping: 25,
                     duration: 0.8,
                   }}
-                  onClick={() => handleSlideChange(activeIndex)}
+                  onClick={() => swiper?.slideTo(i)}
                 >
                   <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
                     {section.label}
@@ -111,6 +113,7 @@ export const HomePage = () => {
         <Swiper
           navigation={true}
           modules={[Navigation]}
+          onSwiper={setSwiper}
           onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth"
         >
