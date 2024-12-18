@@ -75,7 +75,7 @@ export const HomePage = () => {
                 <motion.div
                   key={section.id}
                   className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
-                  initial={{ x: '-150vw' }} // Off-screen to the left initially
+                  initial={{ x: '-150vw' }}
                   animate={{
                     x: positionX,
                     y: positionY,
