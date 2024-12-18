@@ -160,7 +160,7 @@ export const HomePage = () => {
                 key={slide.id}
                 id={slide.id}
                 className={cn(
-                  'snap-start w-screen flex-shrink-0 flex justify-center items-center'
+                  'snap-center w-screen flex-shrink-0 flex justify-center items-center'
                 )}
               >
                 <SlideComponent isActive={isActive} />
