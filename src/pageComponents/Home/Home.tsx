@@ -112,7 +112,7 @@ export const HomePage = () => {
           navigation={true}
           modules={[Navigation]}
           onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
-          className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+          className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth"
         >
           {slides.map((slide, index) => {
             const isActive = activeIndex === index
@@ -120,7 +120,9 @@ export const HomePage = () => {
 
             return (
               <SwiperSlide key={slide.id}>
-                <SlideComponent isActive={isActive} />
+                <div className="w-full h-full overflow-auto">
+                  <SlideComponent isActive={isActive} />
+                </div>
               </SwiperSlide>
             )
           })}

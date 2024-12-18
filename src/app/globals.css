@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #000000;
+  --swiper-navigation-color: white;
 }
 
 @media (max-width: 640px) {
@@ -15,10 +15,3 @@ body {
   }
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
