@@ -27,6 +27,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-player": "^2.15.1",
     "react-use": "^17.5.0",
+    "swiper": "^11.1.15",
     "tailwind-merge": "^2.2.2",
     "url-join": "^5.0.0",
     "usehooks-ts": "^3.0.1"

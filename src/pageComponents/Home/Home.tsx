@@ -2,28 +2,25 @@
 
 import { sendGAEvent } from '@next/third-parties/google'
 import { cn } from '@nextui-org/react'
-import { motion, useScroll, useSpring } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { slides } from './slidesConfig'
 
+import 'swiper/css'
+import 'swiper/css/navigation'
+
 export const HomePage = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleMouseMove = (e: MouseEvent) => {
     const { clientX, clientY } = e
     setMousePosition({
       x: -(clientX / window.innerWidth - 0.5) * 30,
       y: -(clientY / window.innerHeight - 0.5) * 30,
-    })
-  }
-
-  const handleTabClick = (index: number) => {
-    scrollContainerRef.current?.scrollTo({
-      left: index * window.innerWidth,
-      behavior: 'smooth',
     })
   }
 
@@ -36,48 +33,9 @@ export const HomePage = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const { scrollXProgress } = useScroll({ container: scrollContainerRef })
-  const scaleX = useSpring(scrollXProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
-
-  useEffect(() => {
-    const intersectionObserverCallback = (
-      entries: IntersectionObserverEntry[]
-    ) => {
-      const updatedRatios = entries.map((entry) => ({
-        index: slides.findIndex((slide) => slide.id === entry.target.id),
-        intersectionRatio: entry.intersectionRatio,
-      }))
-
-      const mostIntersectingSlide = updatedRatios.reduce(
-        (max, entry) => {
-          return entry.intersectionRatio > max.intersectionRatio ? entry : max
-        },
-        { index: -1, intersectionRatio: 0 }
-      )
-
-      if (mostIntersectingSlide.index !== -1) {
-        setActiveIndex(mostIntersectingSlide.index)
-      }
-    }
-
-    const observer = new IntersectionObserver(intersectionObserverCallback, {
-      root: scrollContainerRef.current,
-      threshold: 0.5,
-    })
-
-    slides.forEach((slide) => {
-      const element = document.getElementById(slide.id)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    return () => observer.disconnect()
-  }, [])
+  const handleSlideChange = (newIndex: number) => {
+    setActiveIndex(newIndex)
+  }
 
   const activeSlide = slides[activeIndex]
 
@@ -89,7 +47,6 @@ export const HomePage = () => {
       )}
     >
       <div className="w-full h-full flex flex-col">
-        {/* Header section */}
         <div className="relative h-[100px]">
           <motion.div
             className="absolute top-10 w-full flex justify-center items-center pointer-events-auto"
@@ -118,7 +75,7 @@ export const HomePage = () => {
                 <motion.div
                   key={section.id}
                   className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
-                  initial={{ x: '150vw' }}
+                  initial={{ x: '-150vw' }} // Off-screen to the left initially
                   animate={{
                     x: positionX,
                     y: positionY,
@@ -130,7 +87,7 @@ export const HomePage = () => {
                     damping: 25,
                     duration: 0.8,
                   }}
-                  onClick={() => handleTabClick(i)}
+                  onClick={() => handleSlideChange(activeIndex)}
                 >
                   <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
                     {section.label}
@@ -141,20 +98,20 @@ export const HomePage = () => {
           </motion.div>
         </div>
 
-        {/* Progress Bar */}
         <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
           <motion.div
             className="h-full bg-white rounded-full"
             style={{
-              scaleX,
+              scaleX: activeIndex / slides.length,
               transformOrigin: 'left center',
             }}
           />
         </div>
 
-        {/* Main Body */}
-        <div
-          ref={scrollContainerRef}
+        <Swiper
+          navigation={true}
+          modules={[Navigation]}
+          onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
         >
           {slides.map((slide, index) => {
@@ -162,36 +119,12 @@ export const HomePage = () => {
             const SlideComponent = slide.Component
 
             return (
-              <div
-                key={slide.id}
-                id={slide.id}
-                className={cn(
-                  'snap-center w-screen flex-shrink-0 flex justify-center items-center'
-                )}
-              >
+              <SwiperSlide key={slide.id}>
                 <SlideComponent isActive={isActive} />
-              </div>
+              </SwiperSlide>
             )
           })}
-        </div>
-
-        <div className="md:hidden">
-          {/* Left Arrow Button */}
-          <div className="absolute top-0 left-0 w-[10%] h-full bg-transparent cursor-pointer">
-            <motion.div
-              className="h-full w-full bg-transparent"
-              onClick={() => handleTabClick(activeIndex - 1)}
-            />
-          </div>
-
-          {/* Right Arrow Button */}
-          <div className="absolute top-0 right-0 w-[10%] h-full bg-transparent cursor-pointer">
-            <motion.div
-              className="h-full w-full bg-transparent"
-              onClick={() => handleTabClick(activeIndex + 1)}
-            />
-          </div>
-        </div>
+        </Swiper>
       </div>
     </div>
   )
