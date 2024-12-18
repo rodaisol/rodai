@@ -43,21 +43,27 @@ export const HomePage = () => {
     restDelta: 0.001,
   })
 
-  const intersectionObserverCallback = (
-    entries: IntersectionObserverEntry[]
-  ) => {
-    const updatedRatios = entries.map((entry) => ({
-      index: slides.findIndex((slide) => slide.id === entry.target.id),
-      isActive: entry.isIntersecting,
-    }))
-
-    const activeSlide = updatedRatios.find((entry) => entry.isActive)
-    if (activeSlide) {
-      setActiveIndex(activeSlide.index)
-    }
-  }
-
   useEffect(() => {
+    const intersectionObserverCallback = (
+      entries: IntersectionObserverEntry[]
+    ) => {
+      const updatedRatios = entries.map((entry) => ({
+        index: slides.findIndex((slide) => slide.id === entry.target.id),
+        intersectionRatio: entry.intersectionRatio,
+      }))
+
+      const mostIntersectingSlide = updatedRatios.reduce(
+        (max, entry) => {
+          return entry.intersectionRatio > max.intersectionRatio ? entry : max
+        },
+        { index: -1, intersectionRatio: 0 }
+      )
+
+      if (mostIntersectingSlide.index !== -1) {
+        setActiveIndex(mostIntersectingSlide.index)
+      }
+    }
+
     const observer = new IntersectionObserver(intersectionObserverCallback, {
       root: scrollContainerRef.current,
       threshold: 0.5,
