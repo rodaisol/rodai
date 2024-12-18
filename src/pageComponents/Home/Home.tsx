@@ -95,7 +95,7 @@ export const HomePage = () => {
   return (
     <motion.main
       className={cn(
-        'relative h-screen w-screen overflow-hidden pb-8',
+        'relative h-screen w-screen overflow-hidden',
         activeSlide.background
       )}
       initial={{ opacity: 0, backgroundColor: '#000000' }}
