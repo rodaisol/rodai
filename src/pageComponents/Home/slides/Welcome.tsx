@@ -1,6 +1,6 @@
 'use client'
 
-import { Snippet, Spacer } from '@nextui-org/react'
+import { Snippet } from '@nextui-org/react'
 import { motion, useAnimationFrame } from 'framer-motion'
 import Image from 'next/image'
 import { FC, MouseEventHandler, useState } from 'react'
@@ -187,14 +187,13 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
           </div>
           <SocialLinks className="justify-center lg:justify-start" />
         </div>
-        <div className="md:hidden mt-8">
-          <SwipeIndicator label="Swipe to learn more" />
-        </div>
         <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
           Buy a memecoin,{' '}
           <span className="text-yellow-300">own a company.</span>
         </p>
-        <Spacer y={8} />
+        <div className="md:hidden mt-8">
+          <SwipeIndicator label="Swipe to learn more" />
+        </div>
       </motion.div>
     </section>
   )
