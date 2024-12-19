@@ -54,8 +54,9 @@ export const HomePage = () => {
   return (
     <div
       className={cn(
-        'relative h-dvh w-screen overflow-hidden transition-all duration-1000 ease-out',
-        activeSlide.background
+        'relative h-dvh w-screen overflow-hidden',
+        activeSlide.background,
+        'bg-center bg-fixed bg-no-repeat bg-cover pb-0 overflow-hidden'
       )}
     >
       <div className="w-full h-full flex flex-col">

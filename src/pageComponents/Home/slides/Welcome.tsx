@@ -156,9 +156,9 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
           ROD<span className="text-yellow-300">AI</span>
         </h1>
         <p className="text-2xl sm:text-3xl lg:text-4xl leading-10">
-          The deflationary meme token of the{' '}
+          The deflationary meme token of{' '}
           <a href={AEROSOL_URL} target="_blank" className="text-yellow-300 ">
-            Aerosol platform
+            Aerosol
           </a>
           {'.'}
         </p>
@@ -187,10 +187,6 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
           </div>
           <SocialLinks className="justify-center lg:justify-start" />
         </div>
-        <p className="text-2xl sm:text-3xl lg:text-4xl mt-8">
-          Buy a memecoin,{' '}
-          <span className="text-yellow-300">own a company.</span>
-        </p>
         <div className="md:hidden mt-8">
           <SwipeIndicator label="Swipe to learn more" />
         </div>
