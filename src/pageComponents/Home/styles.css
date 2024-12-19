@@ -6,8 +6,11 @@
 .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
+  background: #fff;
+  opacity: 0.5;
 }
 
 .swiper-pagination-bullet-active {
   background: #fff;
+  opacity: 1;
 }
