@@ -1,7 +1,7 @@
 'use client'
 
 import { sendGAEvent } from '@next/third-parties/google'
-import { Progress, cn } from '@nextui-org/react'
+import { cn } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Navigation, Pagination } from 'swiper/modules'
@@ -105,22 +105,6 @@ export const HomePage = () => {
               )
             })}
           </motion.div>
-        </div>
-
-        <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
-          <Progress
-            aria-label="Slide Progress"
-            value={((activeIndex + 1) / slides.length) * 100}
-            classNames={{
-              track: 'bg-white/5',
-              indicator: 'bg-white',
-              label: 'tracking-wider font-medium text-white',
-              value: 'text-white/60',
-            }}
-            radius="sm"
-            showValueLabel={false}
-            size="sm"
-          />
         </div>
 
         <Swiper
