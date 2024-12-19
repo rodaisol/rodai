@@ -16,13 +16,13 @@ export const slides: Slide[] = [
     id: 'hero',
     label: 'Welcome',
     Component: WelcomeSlide,
-    background: "bg-[url('/img/backgrounds/dancing-horizon-main.svg')]",
+    background: "bg-[url('/img/backgrounds/main.svg')]",
   },
   {
     id: 'rodai',
     label: "What's RODAI?",
     Component: RodaiSlide,
-    background: "bg-[url('/img/backgrounds/blue-waves.svg')]",
+    background: "bg-[url('/img/backgrounds/meshing-around.svg')]",
   },
   {
     id: 'aerosol',
@@ -40,7 +40,7 @@ export const slides: Slide[] = [
     id: 'tokenomics',
     label: 'Tokenomics',
     Component: TokenomicsSlide,
-    background: "bg-[url('/img/backgrounds/wickedbackground.svg')]",
+    background: "bg-[url('/img/backgrounds/tokenomics-bg.svg')]",
   },
   {
     id: 'roadmap',

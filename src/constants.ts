@@ -34,11 +34,11 @@ export const RODAI_TRACKS = [
 ]
 
 export const PRELOAD_IMAGES = [
-  '/img/backgrounds/dancing-horizon-main.svg',
-  '/img/backgrounds/blue-waves.svg',
+  '/img/backgrounds/main.svg',
+  '/img/backgrounds/meshing-around.svg',
   '/img/backgrounds/roaming-perspective.svg',
   '/img/backgrounds/clouds.svg',
-  '/img/backgrounds/wickedbackground.svg',
+  '/img/backgrounds/tokenomics-bg.svg',
   '/img/backgrounds/wobbling-particles.svg',
   '/img/backgrounds/blackmagic-triangles.svg',
   '/img/backgrounds/pulsing-ripples.svg',
