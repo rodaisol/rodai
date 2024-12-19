@@ -32,3 +32,14 @@ export const RODAI_TRACKS = [
   '/music/the-meme-god.mp3',
   '/music/aerosol-ai.mp3',
 ]
+
+export const PRELOAD_IMAGES = [
+  '/img/backgrounds/dancing-horizon-main.svg',
+  '/img/backgrounds/blue-waves.svg',
+  '/img/backgrounds/roaming-perspective.svg',
+  '/img/backgrounds/clouds.svg',
+  '/img/backgrounds/wickedbackground.svg',
+  '/img/backgrounds/wobbling-particles.svg',
+  '/img/backgrounds/dancing-horizon.svg',
+  '/img/backgrounds/pulsing-ripples.svg',
+]

@@ -4,7 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Lalezar as Font } from 'next/font/google'
 
-import { SEO_DESCRIPTION, X_HANDLE } from '../constants'
+import { PRELOAD_IMAGES, SEO_DESCRIPTION, X_HANDLE } from '../constants'
 
 import AppProviders from './providers'
 
@@ -65,6 +65,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics gaId="AW-16587738152" />
+        {PRELOAD_IMAGES.map((src, index) => (
+          <link key={index} rel="preload" href={src} as="image" />
+        ))}
       </head>
       <body className={font.className}>
         <AppProviders>{children}</AppProviders>
