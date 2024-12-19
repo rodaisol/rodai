@@ -40,6 +40,6 @@ export const PRELOAD_IMAGES = [
   '/img/backgrounds/clouds.svg',
   '/img/backgrounds/wickedbackground.svg',
   '/img/backgrounds/wobbling-particles.svg',
-  '/img/backgrounds/dancing-horizon.svg',
+  '/img/backgrounds/blackmagic-triangles.svg',
   '/img/backgrounds/pulsing-ripples.svg',
 ]

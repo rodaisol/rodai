@@ -52,7 +52,7 @@ export const slides: Slide[] = [
     id: 'how-to-buy',
     label: 'How to Buy',
     Component: HowToBuySlide,
-    background: "bg-[url('/img/backgrounds/dancing-horizon.svg')]",
+    background: "bg-[url('/img/backgrounds/blackmagic-triangles.svg')]",
   },
   {
     id: 'team',
