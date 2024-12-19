@@ -3,7 +3,10 @@
 import { motion } from 'framer-motion'
 
 import { Button } from '../../../components/Button'
-import { AEROSOL_URL } from '../../../constants'
+import {
+  AEROSOL_URL,
+  TOLY_COMPRESSION_RECOGNITION_POST,
+} from '../../../constants'
 import { SlideProps } from '../../../types'
 
 export const AerosolSlide = ({ isActive }: SlideProps) => {
@@ -37,7 +40,7 @@ export const AerosolSlide = ({ isActive }: SlideProps) => {
             Aerosol has gained a lot of traction since its launch, with
             thousands of weekly users. It has even{' '}
             <a
-              href="https://x.com/aeyakovenko/status/1857938273920070005"
+              href={TOLY_COMPRESSION_RECOGNITION_POST}
               target="_blank"
               className="underline decoration-yellow-300 decoration-[6px] underline-offset-8"
             >
