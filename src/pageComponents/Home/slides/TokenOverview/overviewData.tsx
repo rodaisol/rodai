@@ -20,6 +20,40 @@ export const overviewData: TokenOverviewItem[] = [
     ],
   },
   {
+    icon: '💻',
+    title: 'AI Utility',
+    items: [
+      <>
+        Launched{' '}
+        <a href={AEROSOL_URL} target="_blank" className="text-blue-500">
+          Aerosol
+        </a>{' '}
+        in May 2024.
+      </>,
+      'Helps Solana communities monetize and build sustainable ecosystems.',
+      'Thousands of transactions processed, with rapid growth.',
+    ],
+  },
+
+  {
+    icon: '🏦',
+    title: 'Central Exchange (CEX) Listings',
+    items: [
+      <>
+        <a href={MEXC_URL} target="_blank" className="text-blue-500">
+          MEXC
+        </a>{' '}
+        (March 30, 2024)
+      </>,
+      <>
+        <a href={SOLCEX_URL} target="_blank" className="text-blue-500">
+          SolCex
+        </a>{' '}
+        (December 11, 2024)
+      </>,
+    ],
+  },
+  {
     icon: '🔒',
     title: 'Secure',
     items: [
@@ -79,24 +113,6 @@ export const overviewData: TokenOverviewItem[] = [
     ],
   },
   {
-    icon: '🏦',
-    title: 'Central Exchange (CEX) Listings',
-    items: [
-      <>
-        <a href={MEXC_URL} target="_blank" className="text-blue-500">
-          MEXC
-        </a>{' '}
-        (March 30, 2024)
-      </>,
-      <>
-        <a href={SOLCEX_URL} target="_blank" className="text-blue-500">
-          SolCex
-        </a>{' '}
-        (December 11, 2024)
-      </>,
-    ],
-  },
-  {
     icon: '🧑‍🤝‍🧑',
     title: 'Well-Distributed',
     items: ['Thousands of holders'],
@@ -109,24 +125,10 @@ export const overviewData: TokenOverviewItem[] = [
       'Actively engages with the community and focuses on long-term growth.',
     ],
   },
-  {
-    icon: '💻',
-    title: 'AI Utility',
-    items: [
-      <>
-        Launched{' '}
-        <a href={AEROSOL_URL} target="_blank" className="text-blue-500">
-          Aerosol
-        </a>{' '}
-        in May 2024.
-      </>,
-      'Helps Solana communities monetize and build sustainable ecosystems.',
-      'Thousands of transactions processed, with rapid growth.',
-    ],
-  },
+
   {
     icon: '🔥',
-    title: 'Deflationary Token',
+    title: 'Deflationary',
     items: [
       'Powered by the Rodcinerator, which automatically burns $RODAI.',
       <>
