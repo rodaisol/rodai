@@ -70,7 +70,7 @@ export const TeamSlide = ({ isActive }: SlideProps) => {
                   className="transform hover:scale-110 transition-transform"
                 >
                   <img
-                    src="/img/social/telegram.png"
+                    src="/img/socials/telegram.png"
                     alt="telegram"
                     className="w-6 sm:w-7 md:w-8"
                   />
@@ -84,7 +84,7 @@ export const TeamSlide = ({ isActive }: SlideProps) => {
                   className="transform hover:scale-110 transition-transform"
                 >
                   <img
-                    src="/img/social/x.png"
+                    src="/img/socials/x.png"
                     alt="twitter"
                     className="w-6 sm:w-7 md:w-8"
                   />

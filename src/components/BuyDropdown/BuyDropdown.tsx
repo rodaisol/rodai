@@ -69,7 +69,7 @@ const buyLinks = [
     key: 'youtube',
     label: 'Watch Tutorial',
     href: HOW_TO_BUY_YOUTUBE_URL,
-    icon: '/img/social/youtube-color.png',
+    icon: '/img/socials/youtube-color.png',
     className: 'w-8',
   },
 ]

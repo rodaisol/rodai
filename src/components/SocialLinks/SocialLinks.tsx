@@ -10,38 +10,38 @@ export interface SocialLinksProps {
 const socialLinks = [
   {
     href: 'https://t.me/rodaisol',
-    src: '/img/social/telegram.png',
+    src: '/img/socials/telegram.png',
     alt: 'telegram',
   },
   {
     href: 'https://x.com/rodaimeme',
-    src: '/img/social/x.png',
+    src: '/img/socials/x.png',
     alt: 'x',
     className: 'w-6 md:w-8',
   },
   {
     href: 'https://discord.gg/rodai',
-    src: '/img/social/discord.png',
+    src: '/img/socials/discord.png',
     alt: 'discord',
   },
   {
     href: 'https://youtube.com/@RodAISol',
-    src: '/img/social/youtube.png',
+    src: '/img/socials/youtube.png',
     alt: 'youtube',
   },
   {
     href: 'https://www.instagram.com/rodai.meme',
-    src: '/img/social/instagram.png',
+    src: '/img/socials/instagram.png',
     alt: 'instagram',
   },
   {
     href: 'https://www.tiktok.com/@rodai.meme',
-    src: '/img/social/tiktok.png',
+    src: '/img/socials/tiktok.png',
     alt: 'tiktok',
   },
   {
     href: 'https://medium.com/rodai',
-    src: '/img/social/medium.png',
+    src: '/img/socials/medium.png',
     alt: 'medium',
   },
 ]
