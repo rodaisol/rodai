@@ -1,6 +1,6 @@
 :root {
   --swiper-pagination-bottom: auto;
-  --swiper-pagination-top: 4px;
+  --swiper-pagination-top: 0px;
 }
 
 .swiper-pagination-bullet {

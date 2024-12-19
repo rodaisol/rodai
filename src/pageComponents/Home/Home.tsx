@@ -71,12 +71,13 @@ export const HomePage = () => {
             }}
           >
             {slides.map((section, i) => {
+              const isActive = i === activeIndex
               let positionX = '0vw'
               const positionY = i === activeIndex ? '1rem' : '-1rem'
 
               if (i < activeIndex - 1) positionX = '-150vw'
               if (i === activeIndex - 1) positionX = '-50vw'
-              if (i === activeIndex) positionX = '0vw'
+              if (isActive) positionX = '0vw'
               if (i === activeIndex + 1) positionX = '50vw'
               if (i > activeIndex + 1) positionX = '150vw'
 
@@ -88,7 +89,7 @@ export const HomePage = () => {
                   animate={{
                     x: positionX,
                     y: positionY,
-                    opacity: i === activeIndex ? 1 : 0.4,
+                    opacity: isActive ? 1 : 0.4,
                   }}
                   transition={{
                     type: 'spring',
@@ -98,7 +99,16 @@ export const HomePage = () => {
                   }}
                   onClick={() => swiper?.slideTo(i)}
                 >
-                  <span className="text-4xl md:text-5xl lg:text-6xl max-w-3xl">
+                  <span
+                    className={cn('max-w-3xl', {
+                      'text-3xl': !isActive,
+                      'md:text-4xl': !isActive,
+                      'lg:text-5xl': !isActive,
+                      'text-4xl': isActive,
+                      'md:text-5xl': isActive,
+                      'lg:text-6xl': isActive,
+                    })}
+                  >
                     {section.label}
                   </span>
                 </motion.div>

@@ -44,7 +44,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
           >
             {`Phase ${index + 1}`}
           </motion.button>
@@ -71,8 +71,8 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
               roadmapData[activePhaseIndex].items.length
             ).backgroundImage,
             transition: {
-              opacity: { duration: 0.3 },
-              backgroundImage: { duration: 1, ease: 'easeInOut' },
+              opacity: { duration: 0.2 },
+              backgroundImage: { duration: 0.5, ease: 'easeInOut' },
             },
           }}
           exit={{
@@ -83,7 +83,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
               type: 'spring',
               stiffness: 800,
               damping: 40,
-              duration: 0.5,
+              duration: 0.4,
             },
           }}
         >
@@ -94,7 +94,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
               opacity: isActive ? 1 : 0,
               y: isActive ? 10 : -20,
             }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             {roadmapData[activePhaseIndex].name}
           </motion.h3>
@@ -105,7 +105,7 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
             animate={{
               opacity: isActive ? 1 : 0,
             }}
-            transition={{ duration: 0.2, delay: 0.3 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
           >
             {roadmapData[activePhaseIndex].items.map((item, itemIndex) => {
               const formattedDate = item.completedDate
@@ -129,8 +129,8 @@ export const RoadmapSlide: FC<SlideProps> = ({ isActive }) => {
                     y: isActive ? 0 : 20,
                   }}
                   transition={{
-                    delay: itemIndex * 0.2 + 0.5,
-                    duration: 0.5,
+                    delay: itemIndex * 0.1 + 0.3,
+                    duration: 0.3,
                     type: 'spring',
                     stiffness: 100,
                     damping: 15,
