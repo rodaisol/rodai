@@ -69,7 +69,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
       {/* Music Notes GIF Above the Player */}
       {isPlaying && (
         <motion.img
-          src="/img/music-notes.gif"
+          src="/img/musical-notes.gif"
           alt="Music Notes"
           className="absolute top-[-60px] w-[60px] sm:w-[80px] opacity-75"
           initial={{ opacity: 0, y: -20 }}
