@@ -26,3 +26,9 @@ export const RAYDIUM_BUY_URL =
   'https://raydium.io/swap/?inputMint=sol&outputMint=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'
 export const PHOTON_BUY_URL =
   'https://photon-sol.tinyastro.io/en/lp/CzWqL4M1CzQiw45djF1xdrWHQmuJbJoZPY38ezKGb6q8'
+
+export const RODAI_TRACKS = [
+  '/music/buy-more-rodai.mp3',
+  '/music/the-meme-god.mp3',
+  '/music/aerosol-ai.mp3',
+]

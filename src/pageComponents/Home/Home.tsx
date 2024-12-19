@@ -8,6 +8,9 @@ import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { PaginationOptions, Swiper as SwiperType } from 'swiper/types'
 
+import { AudioPlayer } from '../../components/AudioPlayer'
+import { RODAI_TRACKS } from '../../constants'
+
 import { slides } from './slidesConfig'
 
 import 'swiper/css'
@@ -138,6 +141,9 @@ export const HomePage = () => {
             )
           })}
         </Swiper>
+      </div>
+      <div className="fixed bottom-2 right-2 z-50">
+        <AudioPlayer tracks={RODAI_TRACKS} />
       </div>
     </div>
   )
