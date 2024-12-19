@@ -62,7 +62,8 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
 
   return (
     <div
-      className="relative w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] cursor-pointer flex justify-center items-center"
+      className="relative w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] cursor-pointer flex justify-center items-center 
+        rounded-full bg-white/30 p-2"
       onClick={togglePlay}
     >
       {/* Music Notes GIF Above the Player */}
