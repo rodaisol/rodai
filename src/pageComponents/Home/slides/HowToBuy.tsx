@@ -13,7 +13,7 @@ export const HowToBuySlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="how-to-buy"
-      className="w-full h-full overflow-hidden py-8 flex flex-col gap-6 items-center justify-start"
+      className="w-full h-full py-8 flex flex-col gap-6 items-center justify-start"
     >
       <motion.div
         initial={{ opacity: 0, y: -50 }}
