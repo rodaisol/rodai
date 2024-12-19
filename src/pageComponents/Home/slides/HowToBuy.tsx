@@ -13,7 +13,7 @@ export const HowToBuySlide = ({ isActive }: SlideProps) => {
   return (
     <section
       id="how-to-buy"
-      className="w-full h-full overflow-hidden py-8 flex flex-col gap-8 items-center justify-start"
+      className="w-full h-full overflow-hidden py-8 flex flex-col gap-6 items-center justify-start"
     >
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -58,7 +58,7 @@ export const HowToBuySlide = ({ isActive }: SlideProps) => {
           stiffness: 150,
           damping: 15,
         }}
-        className="w-full flex justify-center items-center mt-8"
+        className="w-full flex justify-center items-center"
       >
         <div className="flex justify-center gap-4 w-full">
           <motion.div

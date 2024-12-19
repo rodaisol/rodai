@@ -4,14 +4,17 @@ import { sendGAEvent } from '@next/third-parties/google'
 import { Progress, cn } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Swiper as SwiperType } from 'swiper/types'
+import { PaginationOptions, Swiper as SwiperType } from 'swiper/types'
 
 import { slides } from './slidesConfig'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+import './styles.css'
 
 export const HomePage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -40,6 +43,10 @@ export const HomePage = () => {
   }
 
   const activeSlide = slides[activeIndex]
+
+  const pagination: PaginationOptions = {
+    clickable: true,
+  }
 
   return (
     <div
@@ -118,7 +125,8 @@ export const HomePage = () => {
 
         <Swiper
           navigation={true}
-          modules={[Navigation]}
+          pagination={pagination}
+          modules={[Navigation, Pagination]}
           onSwiper={setSwiper}
           onSlideChange={(s) => handleSlideChange(s.activeIndex)}
           className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth"

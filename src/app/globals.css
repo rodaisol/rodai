@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+:root {
   --swiper-navigation-color: white;
   --swiper-navigation-size: 32px;
 }
@@ -15,4 +15,6 @@ body {
     white-space: nowrap;
   }
 }
+
+
 
