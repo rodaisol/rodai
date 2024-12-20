@@ -30,6 +30,8 @@ export const TOLY_COMPRESSION_RECOGNITION_POST =
   'https://x.com/aeyakovenko/status/1857938273920070005'
 export const PHANTOM_EMBEDDED_WALLET_COLLAB_POST =
   'https://x.com/aerosol_ai/status/1859489176770531758'
+export const BRIAN_PHANTOM_RECOGNITION_POST =
+  'https://x.com/bfriel_/status/1859629812278853896'
 
 export const RODAI_TRACKS = [
   '/music/buy-more-rodai.mp3',

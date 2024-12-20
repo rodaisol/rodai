@@ -3,6 +3,7 @@ import { Slide } from '../../types'
 import {
   AerosolSlide,
   HowToBuySlide,
+  RecognitionSlide,
   RoadmapSlide,
   RodaiSlide,
   TeamSlide,
@@ -29,6 +30,12 @@ export const slides: Slide[] = [
     label: "What's Aerosol?",
     Component: AerosolSlide,
     background: "bg-[url('/img/backgrounds/roaming-perspective.svg')]",
+  },
+  {
+    id: 'recognition',
+    label: 'Recognition',
+    Component: RecognitionSlide,
+    background: "bg-[url('/img/backgrounds/launch-day.svg')]",
   },
   {
     id: 'rodai-overview',

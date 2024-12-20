@@ -4,11 +4,9 @@ import {
   COINGECKO_URL,
   JUPITER_BUY_URL,
   MEXC_URL,
-  PHANTOM_EMBEDDED_WALLET_COLLAB_POST,
   RODCINERATOR_ARTICLE_URL,
   RUGCHECK_URL,
   SOLCEX_URL,
-  TOLY_COMPRESSION_RECOGNITION_POST,
 } from '../../../../constants'
 import { TokenOverviewItem } from '../../../../types'
 
@@ -34,27 +32,6 @@ export const overviewData: TokenOverviewItem[] = [
       </>,
       'Helps Solana communities monetize and build sustainable ecosystems.',
       'Thousands of transactions processed, with rapid growth.',
-      <>
-        <a
-          href={TOLY_COMPRESSION_RECOGNITION_POST}
-          target="_blank"
-          className="text-blue-500"
-        >
-          Recognized by Toly
-        </a>
-        , the co-founder of Solana.
-      </>,
-      <>
-        One of the first dapps{' '}
-        <a
-          href={PHANTOM_EMBEDDED_WALLET_COLLAB_POST}
-          target="_blank"
-          className="text-blue-500"
-        >
-          to integrate with Phantom embedded wallets
-        </a>
-        .
-      </>,
     ],
   },
 

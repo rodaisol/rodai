@@ -1,6 +1,7 @@
 export * from './Aerosol'
 export * from './HowToBuy'
 export * from './RODAI'
+export * from './Recognition'
 export * from './Roadmap'
 export * from './Team'
 export * from './TokenOverview'
