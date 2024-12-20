@@ -48,4 +48,5 @@ export const PRELOAD_IMAGES = [
   '/img/backgrounds/wobbling-particles.svg',
   '/img/backgrounds/blackmagic-triangles.svg',
   '/img/backgrounds/pulsing-ripples.svg',
+  '/img/backgrounds/launch-day.svg',
 ]
