@@ -71,7 +71,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
         <motion.img
           src="/img/musical-notes.gif"
           alt="Music Notes"
-          className="absolute top-[-60px] w-[60px] sm:w-[80px] opacity-75"
+          className="absolute top-[-60px] w-[60px] sm:w-[80px] opacity-75 z-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
