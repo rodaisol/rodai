@@ -89,7 +89,7 @@ export const AerosolSlide = ({ isActive }: SlideProps) => {
               }}
             >
               <Button className="flex bg-gradient-to-tr from-teal-400 via-blue-500 to-indigo-600 shadow-lg">
-                Experience Aerosol
+                Go to Aerosol
               </Button>
             </motion.div>
           </a>

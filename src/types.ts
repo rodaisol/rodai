@@ -18,7 +18,7 @@ export interface Media extends MediaConfig {
 
 export interface Slide {
   id: string
-  label: string
+  label: ReactNode
   Component: FC<SlideProps>
   background: string
 }

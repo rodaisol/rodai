@@ -27,7 +27,18 @@ export const slides: Slide[] = [
   },
   {
     id: 'aerosol',
-    label: "What's Aerosol?",
+    label: (
+      <div className="flex items-center">
+        <span>What&apos;s Aerosol</span>
+        <img
+          src="/img/aerosol/aerosol-logo-no-shadow.png"
+          alt="Aerosol logo"
+          draggable={false}
+          className="w-12 sm:w-16 relative top-[-4px]"
+        />
+        <span>?</span>
+      </div>
+    ),
     Component: AerosolSlide,
     background: "bg-[url('/img/backgrounds/roaming-perspective.svg')]",
   },
