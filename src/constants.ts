@@ -6,6 +6,7 @@ export const MEXC_BUY_URL = 'https://www.mexc.com/exchange/RODAI_USDT'
 export const SOLCEX_BUY_URL =
   'https://www.solcex.cc/en_US/trade/RODAI_USDT?type=spot'
 export const AEROSOL_URL = 'https://www.aerosol.so'
+export const AEROSOL_BURNER_URL = 'https://www.aerosol.so/burn'
 export const MEDIA_CDN = 'https://d160vfih6b82hl.cloudfront.net'
 export const X_HANDLE = '@rodaimeme'
 export const SEO_DESCRIPTION =

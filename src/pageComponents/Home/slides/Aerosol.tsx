@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import { Button } from '../../../components/Button'
 import {
+  AEROSOL_BURNER_URL,
   AEROSOL_URL,
   TOLY_COMPRESSION_RECOGNITION_POST,
 } from '../../../constants'
@@ -32,9 +33,17 @@ export const AerosolSlide = ({ isActive }: SlideProps) => {
           <p className="leading-relaxed">
             Aerosol is a platform that empowers Solana communities with a wide
             range of utilities. It features an AI-powered launchpad, a fully
-            featured marketplace, and a burner tool that allows users to reclaim
-            their <span className="text-yellow-300">$SOL</span> by cleaning up
-            their wallets.
+            featured marketplace, and a{' '}
+            <a
+              href={AEROSOL_BURNER_URL}
+              target="_blank"
+              className="text-yellow-300 underline decoration-yellow-300 decoration-[6px] underline-offset-8"
+            >
+              burner tool
+            </a>{' '}
+            that allows users to reclaim their{' '}
+            <span className="text-yellow-300">$SOL</span> by cleaning up their
+            wallets.
           </p>
           <p className="leading-relaxed mt-6">
             Aerosol has gained a lot of traction since its launch, with
@@ -42,7 +51,7 @@ export const AerosolSlide = ({ isActive }: SlideProps) => {
             <a
               href={TOLY_COMPRESSION_RECOGNITION_POST}
               target="_blank"
-              className="underline decoration-yellow-300 decoration-[6px] underline-offset-8"
+              className="text-yellow-300 underline decoration-yellow-300 decoration-[6px] underline-offset-8"
             >
               earned recognition
             </a>{' '}
