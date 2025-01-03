@@ -43,8 +43,8 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
         }}
         transition={{
           type: 'spring',
-          stiffness: 150,
-          damping: 25,
+          stiffness: 300,
+          damping: 20,
         }}
         className="px-8 max-w-4xl text-2xl md:text-3xl text-center"
       >
@@ -63,8 +63,8 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
         }}
         transition={{
           type: 'spring',
-          stiffness: 150,
-          damping: 25,
+          stiffness: 300,
+          damping: 20,
         }}
       >
         {recognitions.map((rec, index) => (
@@ -72,29 +72,27 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
             key={index}
             href={rec.url}
             target="_blank"
-            className="flex flex-col items-center text-center group transition-transform will-change-transform"
+            className="flex flex-col items-center text-center group transition-transform rounded-lg shadow-lg overflow-hidden bg-white"
             initial={{ opacity: 0, y: 40 }}
             animate={{
               opacity: isActive ? 1 : 0,
               y: isActive ? 0 : 40,
             }}
+            whileHover={{
+              scale: 1.12,
+              rotate: 2,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
             transition={{
               type: 'spring',
-              stiffness: 200,
-              damping: 25,
-              delay: 0.2 * index,
-            }}
-            whileHover={{
-              scale: 1.15, // Bubbly effect
-              transition: {
-                type: 'spring',
-                stiffness: 300,
-                damping: 12,
-              },
+              stiffness: 400,
+              damping: 14,
             }}
           >
             <motion.div
-              className="bg-white px-4 py-2 rounded-t-lg w-full shadow-md will-change-transform"
+              className="px-4 py-2 w-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{
                 opacity: isActive ? 1 : 0,
@@ -102,9 +100,9 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
               }}
               transition={{
                 type: 'spring',
-                stiffness: 150,
-                damping: 20,
-                delay: 0.1 * index,
+                stiffness: 300,
+                damping: 18,
+                delay: 0.05 * index,
               }}
             >
               <p className="text-base font-medium text-gray-800 leading-snug">
@@ -112,21 +110,10 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
               </p>
             </motion.div>
 
-            <motion.img
+            <img
               src={rec.img}
               alt={rec.caption}
-              className="rounded-b-lg shadow-md w-full will-change-transform"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: isActive ? 1 : 0,
-                y: isActive ? 0 : 20,
-              }}
-              transition={{
-                type: 'spring',
-                stiffness: 150,
-                damping: 25,
-                delay: 0.15 * index,
-              }}
+              className="rounded-b-lg w-full"
             />
           </motion.a>
         ))}
