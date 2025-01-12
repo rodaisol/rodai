@@ -78,7 +78,7 @@ export const roadmapData: RoadmapPhase[] = [
       {
         task: 'Reach 1 million market cap',
         major: true,
-        completedDate: new Date(2024, 2, 11),
+        completedDate: new Date(2024, 2, 9),
       },
       {
         task: 'Reach 5 million market cap',
