@@ -391,6 +391,69 @@ export const roadmapData: RoadmapRelease[] = [
   },
   {
     version: '1.7.0',
+    codeName: 'Marketing Site',
+    icon: 'mdi:web',
+    items: [
+      {
+        description: 'Marketing Home',
+        fullDescription:
+          "Create a beautiful landing page that explains Aerosol's product offerings and value proposition.",
+        icon: 'mdi:home-outline',
+        complete: false,
+      },
+      {
+        description: 'Products - Aerosol Burner',
+        fullDescription:
+          'Develop a dedicated page to highlight the Aerosol Burner, its features, and benefits for users.',
+        icon: 'mdi:fire',
+        complete: false,
+      },
+      {
+        description: 'Products - Marketplace',
+        fullDescription:
+          'Create a page to showcase the Aerosol Marketplace, emphasizing its capabilities for buying, selling, and discovering tokens.',
+        icon: 'mdi:shopping-outline',
+        complete: false,
+      },
+      {
+        description: 'Products - AI Powered Token Launcher',
+        fullDescription:
+          'Add a page to explain the AI-powered token launch process and its advantages for creators.',
+        icon: 'fluent:bot-add-20-regular',
+        complete: false,
+      },
+      {
+        description: 'Tokens - RODAI',
+        fullDescription:
+          "Build a page to explain what RODAI is, its purpose, and how it integrates with Aerosol's product offerings.",
+        icon: 'mdi:currency-usd-circle-outline',
+        complete: false,
+      },
+      {
+        description: 'Company',
+        fullDescription:
+          'Create a page about Aerosol as a company, including its mission, vision, and team information.',
+        icon: 'mdi:office-building-outline',
+        complete: false,
+      },
+      {
+        description: 'Investors',
+        fullDescription:
+          "Develop a page for potential investors, detailing Aerosol's growth strategy, financial performance, and opportunities to support the platform.",
+        icon: 'mingcute:angel-line',
+        complete: false,
+      },
+      {
+        description: 'Contact Us',
+        fullDescription:
+          'Add a page with contact details, including email addresses, social media links, and a contact form for inquiries.',
+        icon: 'mdi:email-outline',
+        complete: false,
+      },
+    ],
+  },
+  {
+    version: '1.8.0',
     codeName: 'Aerosol Rewards',
     icon: 'mdi:gift-outline',
     items: [
@@ -425,7 +488,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.8.0',
+    version: '1.9.0',
     codeName: 'Ads',
     icon: 'mdi:advertisements',
     items: [
@@ -460,7 +523,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.9.0',
+    version: '1.10.0',
     codeName: 'Transfer Fees',
     icon: 'heroicons-outline:receipt-tax',
     items: [
@@ -502,7 +565,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.10.0',
+    version: '1.11.0',
     codeName: 'AI Agent Token Launches',
     icon: 'fluent:bot-add-20-regular',
     items: [
@@ -537,9 +600,9 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.11.0',
-    codeName: 'Aeroterminal',
+    codeName: 'Improved Marketplace',
     icon: 'ri:swap-2-fill',
+    version: '1.12.0',
     items: [
       {
         description: 'Aeroterminal',
@@ -549,23 +612,37 @@ export const roadmapData: RoadmapRelease[] = [
         complete: false,
       },
       {
-        description: 'Token Gifting',
-        fullDescription:
-          'Allow users to gift tokens directly to others, making it easier to share and promote tokens within the community.',
-        icon: 'mdi:gift',
-        complete: false,
-      },
-      {
         description: 'Rewards for Swapping',
         fullDescription:
           'Allow users to earn rewards while swapping tokens, incentivizing participation and increasing platform activity.',
         icon: 'mdi:cash-plus',
         complete: false,
       },
+      {
+        description: 'Near Real-Time New Token Pool Detection',
+        fullDescription:
+          'Introduce functionality to detect new token pools in near real-time, ensuring users can act quickly on new opportunities.',
+        icon: 'mdi:radar',
+        complete: false,
+      },
+      {
+        description: 'AI Agent Powered Buys',
+        fullDescription:
+          'Enable AI-powered buying strategies that help users optimize token purchases based on market data and trends.',
+        icon: 'fluent:bot-add-20-regular',
+        complete: false,
+      },
+      {
+        description: 'Aerosol Risk Analysis',
+        fullDescription:
+          'Provide a risk analysis tool powered by Aerosol to assess token safety and reliability without relying on third-party tools like Rugcheck.',
+        icon: 'mdi:shield-check',
+        complete: false,
+      },
     ],
   },
   {
-    version: '1.12.0',
+    version: '1.13.0',
     codeName: 'Token Creator Engagement Tools',
     icon: 'mdi:toolbox-outline',
     items: [
@@ -614,7 +691,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.13.0',
+    version: '1.14.0',
     codeName: 'Aerosocial',
     icon: 'mynaui:funny-circle',
     items: [
@@ -638,6 +715,13 @@ export const roadmapData: RoadmapRelease[] = [
           'Release a Telegram bot to enhance community engagement and provide updates directly through Telegram.',
         icon: 'ic:baseline-telegram',
         complete: true,
+      },
+      {
+        description: 'Token Gifting',
+        fullDescription:
+          'Allow users to gift tokens directly to others, making it easier to share and promote tokens within the community.',
+        icon: 'mdi:gift',
+        complete: false,
       },
       {
         description: 'Views',
@@ -684,7 +768,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.14.0',
+    version: '1.15.0',
     codeName: 'NFTs',
     icon: 'mdi:image-multiple-outline',
     items: [
@@ -712,7 +796,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.15.0',
+    version: '1.16.0',
     codeName: 'Liquidity Pool Management',
     icon: 'material-symbols:pool-rounded',
     active: false,
@@ -740,7 +824,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.16.0',
+    version: '1.17.0',
     codeName: 'Professional Services',
     icon: 'ph:suitcase-bold',
     items: [
@@ -782,7 +866,7 @@ export const roadmapData: RoadmapRelease[] = [
     ],
   },
   {
-    version: '1.17.0',
+    version: '1.18.0',
     codeName: 'Listing Support',
     icon: 'clarity:bank-solid',
     items: [
