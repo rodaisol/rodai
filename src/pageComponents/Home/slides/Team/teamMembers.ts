@@ -33,11 +33,11 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: 'M2Dev',
-    avatar: '/img/team/m2dev.jpg',
+    avatar: '/img/team/m2dev.jpeg',
     role: 'Ambassador',
     bio: "M2 is our ambassador and project evangelist; an expert on all things RODAI and Aerosol related. Also, one of the nicest people you'll ever meet.",
     social: {
-      twitter: 'JdH1476234',
+      twitter: 'M2devOfficial',
       telegram: 'M2devil',
     },
   },
