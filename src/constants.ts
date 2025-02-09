@@ -35,6 +35,8 @@ export const BRIAN_PHANTOM_RECOGNITION_POST =
   'https://x.com/bfriel_/status/1859629812278853896'
 
 export const RODAI_TRACKS = [
+  '/music/rod-100-milli-2.mp3',
+  '/music/rod-100-milli.mp3',
   '/music/buy-more-rodai.mp3',
   '/music/the-meme-god.mp3',
   '/music/aerosol-ai.mp3',
