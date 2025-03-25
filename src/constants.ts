@@ -3,8 +3,6 @@ export const TOTAL_SUPPLY = '69356059317315.30'
 export const CIRCULATING_SUPPLY = '54799095330128.30'
 export const HOW_TO_BUY_YOUTUBE_URL = 'https://youtube.com/shorts/LoTcrRzJie4'
 export const MEXC_BUY_URL = 'https://www.mexc.com/exchange/RODAI_USDT'
-export const SOLCEX_BUY_URL =
-  'https://www.solcex.cc/en_US/trade/RODAI_USDT?type=spot'
 export const AEROSOL_URL = 'https://www.aerosol.so'
 export const AEROSOL_BURNER_URL = 'https://www.aerosol.so/burn'
 export const MEDIA_CDN = 'https://d160vfih6b82hl.cloudfront.net'
@@ -18,8 +16,6 @@ export const JUPITER_BUY_URL =
 export const RUGCHECK_URL =
   'https://rugcheck.xyz/tokens/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'
 export const MEXC_URL = 'https://www.mexc.com/exchange/RODAI_USDT'
-export const SOLCEX_URL =
-  'https://www.solcex.cc/en_US/trade/RODAI_USDT?type=spot'
 export const RODCINERATOR_ARTICLE_URL =
   'https://medium.com/rodai/rodai-token-is-now-deflationary-e464e54d9bf6'
 export const AEROSOL_BUY_URL = 'https://www.aerosol.so/tokens/rod-ai'

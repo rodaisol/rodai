@@ -38,14 +38,9 @@ export const HowToBuySlide = ({ isActive }: SlideProps) => {
           your existing tokens for RODAI.
         </p>
         <p className="leading-relaxed mt-6">
-          RODAI is also listed on centralized exchanges like{' '}
-          <span className="font-bold text-yellow-400">MEXC</span> and{' '}
-          <span className="font-bold text-yellow-400">SolCex</span>, where it
-          can be bought directly.
-        </p>
-        <p className="leading-relaxed mt-6">
-          We have prepared a step-by-step video guide to help you through the
-          process.
+          RODAI is also listed on centralized exchange{' '}
+          <span className="font-bold text-yellow-400">MEXC</span>, where it can
+          be bought directly.
         </p>
       </motion.div>
 

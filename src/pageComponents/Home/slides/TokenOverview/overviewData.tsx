@@ -6,7 +6,6 @@ import {
   MEXC_URL,
   RODCINERATOR_ARTICLE_URL,
   RUGCHECK_URL,
-  SOLCEX_URL,
 } from '../../../../constants'
 import { TokenOverviewItem } from '../../../../types'
 
@@ -44,12 +43,6 @@ export const overviewData: TokenOverviewItem[] = [
           MEXC
         </a>{' '}
         (March 30, 2024)
-      </>,
-      <>
-        <a href={SOLCEX_URL} target="_blank" className="text-blue-500">
-          SolCex
-        </a>{' '}
-        (December 11, 2024)
       </>,
     ],
   },

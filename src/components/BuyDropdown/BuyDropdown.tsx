@@ -18,7 +18,6 @@ import {
   MEXC_BUY_URL,
   PHOTON_BUY_URL,
   RAYDIUM_BUY_URL,
-  SOLCEX_BUY_URL,
 } from '../../constants'
 import { Button } from '../Button'
 
@@ -56,13 +55,6 @@ const buyLinks = [
     label: 'MEXC',
     href: MEXC_BUY_URL,
     icon: '/img/exchanges/mexc.png',
-    className: 'w-8',
-  },
-  {
-    key: 'mexc',
-    label: 'Solcex',
-    href: SOLCEX_BUY_URL,
-    icon: '/img/exchanges/solcex.png',
     className: 'w-8',
   },
   {
