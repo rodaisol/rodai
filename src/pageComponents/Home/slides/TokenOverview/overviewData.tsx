@@ -3,7 +3,6 @@ import {
   CMC_URL,
   COINGECKO_URL,
   JUPITER_BUY_URL,
-  MEXC_URL,
   RODCINERATOR_ARTICLE_URL,
   RUGCHECK_URL,
 } from '../../../../constants'
@@ -37,14 +36,7 @@ export const overviewData: TokenOverviewItem[] = [
   {
     icon: '🏦',
     title: 'Central Exchange (CEX) Listings',
-    items: [
-      <>
-        <a href={MEXC_URL} target="_blank" className="text-blue-500">
-          MEXC
-        </a>{' '}
-        (March 30, 2024)
-      </>,
-    ],
+    items: [<>MEXC (March 30, 2024)</>],
   },
   {
     icon: '🔒',

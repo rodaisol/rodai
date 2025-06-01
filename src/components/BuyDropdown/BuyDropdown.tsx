@@ -15,7 +15,6 @@ import {
   AEROSOL_BUY_URL,
   HOW_TO_BUY_YOUTUBE_URL,
   JUPITER_BUY_URL,
-  MEXC_BUY_URL,
   PHOTON_BUY_URL,
   RAYDIUM_BUY_URL,
 } from '../../constants'
@@ -48,13 +47,6 @@ const buyLinks = [
     label: 'Photon',
     href: PHOTON_BUY_URL,
     icon: '/img/exchanges/photon.svg',
-    className: 'w-8',
-  },
-  {
-    key: 'mexc',
-    label: 'MEXC',
-    href: MEXC_BUY_URL,
-    icon: '/img/exchanges/mexc.png',
     className: 'w-8',
   },
   {

@@ -37,11 +37,6 @@ export const HowToBuySlide = ({ isActive }: SlideProps) => {
           <span className="font-bold text-yellow-400">Raydium</span> to swap
           your existing tokens for RODAI.
         </p>
-        <p className="leading-relaxed mt-6">
-          RODAI is also listed on centralized exchange{' '}
-          <span className="font-bold text-yellow-400">MEXC</span>, where it can
-          be bought directly.
-        </p>
       </motion.div>
 
       <motion.div
