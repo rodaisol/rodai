@@ -22,20 +22,10 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: 'Adam',
-    avatar: '/img/team/adam.jpg',
-    role: 'Community Manager',
-    bio: 'A decade of experience in various fields of commerce, always exploring to raise the bar even higher.',
-    social: {
-      twitter: 'adamgoldcrypto',
-      telegram: 'adamgoldcrypto',
-    },
-  },
-  {
     name: 'M2Dev',
     avatar: '/img/team/m2dev.jpeg',
-    role: 'Ambassador',
-    bio: "M2 is our ambassador and project evangelist; an expert on all things RODAI and Aerosol related. Also, one of the nicest people you'll ever meet.",
+    role: 'Community Manager',
+    bio: "M2 is our community manager, ambassador and project evangelist; an expert on all things RODAI and Aerosol related. Also, one of the nicest people you'll ever meet.",
     social: {
       twitter: 'M2devOfficial',
       telegram: 'M2devil',
