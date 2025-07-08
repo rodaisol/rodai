@@ -97,17 +97,10 @@ export const AerosolRoadmapPage = () => {
             </h1>
             <div className="flex items-center mt-2">
               <Image
-                src="/img/aerosol/aerosol-logo.png"
+                src="/img/aerosol/logo-horizontal-dark.png"
                 alt="Aerosol logo"
-                width={64}
-                height={64}
-              />
-              <Image
-                src="/img/aerosol/aerosol-logo-text.png"
-                alt="logo"
-                draggable={false}
-                width={152}
-                height={50}
+                width={216}
+                height={54}
               />
             </div>
           </div>

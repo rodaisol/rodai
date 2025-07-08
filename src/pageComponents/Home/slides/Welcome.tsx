@@ -125,7 +125,7 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
           >
             <a href={AEROSOL_URL} target="_blank">
               <Image
-                src="/img/aerosol/aerosol-logo-no-shadow.png"
+                src="/img/aerosol/logo-icon.png"
                 alt="Aerosol logo"
                 width={500}
                 height={500}

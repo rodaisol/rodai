@@ -31,7 +31,7 @@ export const slides: Slide[] = [
       <div className="flex items-center">
         <span>What&apos;s Aerosol</span>
         <img
-          src="/img/aerosol/aerosol-logo-no-shadow.png"
+          src="/img/aerosol/logo-icon.png"
           alt="Aerosol logo"
           draggable={false}
           className="w-12 sm:w-16 relative top-[-4px]"

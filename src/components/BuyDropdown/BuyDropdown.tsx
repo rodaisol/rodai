@@ -25,7 +25,7 @@ const buyLinks = [
     key: 'aerosol',
     label: 'Aerosol',
     href: AEROSOL_BUY_URL,
-    icon: '/img/aerosol/aerosol-logo.png',
+    icon: '/img/aerosol/logo-icon.png',
     className: 'w-8',
   },
   {

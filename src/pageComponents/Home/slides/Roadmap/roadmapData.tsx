@@ -130,17 +130,10 @@ export const roadmapData: RoadmapPhase[] = [
             <div className="flex items-center w-full">
               <div className="flex items-center">
                 <Image
-                  src="/img/aerosol/aerosol-logo.png"
+                  src="/img/aerosol/logo-horizontal-dark.png"
                   alt="Aerosol logo"
-                  width={32}
-                  height={32}
-                />
-                <Image
-                  src="/img/aerosol/aerosol-logo-text.png"
-                  alt="logo"
-                  draggable={false}
-                  width={76}
-                  height={25}
+                  width={108}
+                  height={27}
                 />
               </div>
               <ArrowTopRightOnSquareIcon className="ml-2 w-4 h-4" />

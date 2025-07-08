@@ -51,17 +51,10 @@ export const Header: FC<HeaderProps> = ({ className }) => {
         >
           <div className="flex items-center">
             <Image
-              src="/img/aerosol/aerosol-logo.png"
+              src="/img/aerosol/logo-horizontal-dark.png"
               alt="Aerosol logo"
-              width={42}
-              height={42}
-            />
-            <Image
-              src="/img/aerosol/aerosol-logo-text.png"
-              alt="logo"
-              draggable={false}
-              width={91}
-              height={30}
+              width={133}
+              height={33}
             />
           </div>
         </NavbarItem>
@@ -124,7 +117,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
           className="sm:hidden cursor-pointer w-auto"
         >
           <Image
-            src="/img/aerosol/aerosol-logo.png"
+            src="/img/aerosol/logo-icon.png"
             alt="Aerosol logo"
             width={42}
             height={42}
