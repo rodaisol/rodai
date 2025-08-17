@@ -3,7 +3,7 @@ export const TOTAL_SUPPLY = '69356059317315.30'
 export const CIRCULATING_SUPPLY = '54799095330128.30'
 export const HOW_TO_BUY_YOUTUBE_URL = 'https://youtube.com/shorts/LoTcrRzJie4'
 export const AEROSOL_URL = 'https://www.aerosol.so'
-export const AEROSOL_BURNER_URL = 'https://www.burnandclaim.com'
+export const AEROSOL_BURNER_URL = 'https://www.burnandclaim.com?s=rod-ai'
 export const MEDIA_CDN = 'https://d160vfih6b82hl.cloudfront.net'
 export const X_HANDLE = '@rodaimeme'
 export const SEO_DESCRIPTION =
