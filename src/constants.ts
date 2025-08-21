@@ -11,7 +11,7 @@ export const SEO_DESCRIPTION =
 export const CMC_URL = 'https://coinmarketcap.com/currencies/rod-ai/'
 export const COINGECKO_URL = 'https://www.coingecko.com/en/coins/rod-ai'
 export const JUPITER_BUY_URL =
-  'https://jup.ag/swap/SOL-GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'
+  'https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'
 export const RUGCHECK_URL =
   'https://rugcheck.xyz/tokens/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC'
 export const RODCINERATOR_ARTICLE_URL =
