@@ -1,6 +1,5 @@
 'use client'
 
-import { sendGAEvent } from '@next/third-parties/google'
 import { cn } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -33,10 +32,6 @@ export const HomePage = () => {
   }
 
   useEffect(() => {
-    sendGAEvent('event', 'conversion', {
-      send_to: 'AW-16587738152/Y02ZCI71prgZEKiY0-U9',
-    })
-
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])

@@ -1,6 +1,6 @@
 'use client'
 
-import { sendGAEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from '@next/third-parties/google'
 import { Button, Checkbox } from '@nextui-org/react'
 import { motion } from 'motion/react'
 import { useEffect, useState } from 'react'
@@ -29,7 +29,9 @@ export const CookieConsentBanner = () => {
   }
 
   const setDefaultConsent = () => {
-    sendGAEvent('consent', 'default', {
+    sendGTMEvent({
+      event: 'consent',
+      action: 'default',
       ad_storage: 'denied',
       ad_user_data: 'denied',
       ad_personalization: 'denied',
@@ -38,7 +40,9 @@ export const CookieConsentBanner = () => {
   }
 
   const acceptAll = () => {
-    sendGAEvent('consent', 'update', {
+    sendGTMEvent({
+      event: 'consent',
+      action: 'update',
       ad_storage: 'granted',
       ad_user_data: 'granted',
       ad_personalization: 'granted',
@@ -48,7 +52,9 @@ export const CookieConsentBanner = () => {
   }
 
   const acceptSelection = () => {
-    sendGAEvent('consent', 'update', {
+    sendGTMEvent({
+      event: 'consent',
+      action: 'update',
       ad_storage: allowNecessary ? 'granted' : 'denied',
       ad_user_data: allowNecessary ? 'granted' : 'denied',
       ad_personalization: allowNecessary ? 'granted' : 'denied',
