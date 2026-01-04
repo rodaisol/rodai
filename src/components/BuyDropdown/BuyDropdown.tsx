@@ -6,7 +6,6 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Link,
 } from '@nextui-org/react'
 import Image from 'next/image'
 import React, { FC } from 'react'
@@ -84,9 +83,6 @@ export const BuyDropdown: FC<ButtonProps> = (buttonProps) => {
           <DropdownItem
             key={item.key}
             className="text-white"
-            as={Link}
-            target="_blank"
-            href={item.href}
             startContent={
               <Image
                 draggable={false}
@@ -97,6 +93,9 @@ export const BuyDropdown: FC<ButtonProps> = (buttonProps) => {
                 className={item.className}
               />
             }
+            onPress={() => {
+              window.open(item.href, '_blank', 'noopener,noreferrer')
+            }}
           >
             {item.label}
           </DropdownItem>

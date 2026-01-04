@@ -3,7 +3,6 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-  Link,
 } from '@nextui-org/react'
 import Image from 'next/image' // Import Image from next/image
 import React from 'react'
@@ -76,9 +75,6 @@ export const ChartSelector = () => {
           <DropdownItem
             key={item.key}
             className="text-white"
-            as={Link}
-            target="_blank"
-            href={item.href}
             startContent={
               <Image
                 draggable={false}
@@ -89,6 +85,9 @@ export const ChartSelector = () => {
                 className={item.className}
               />
             }
+            onPress={() => {
+              window.open(item.href, '_blank', 'noopener,noreferrer')
+            }}
           >
             {item.label}
           </DropdownItem>
