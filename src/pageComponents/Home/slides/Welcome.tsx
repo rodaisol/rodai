@@ -5,13 +5,23 @@ import { motion, useAnimationFrame } from 'framer-motion'
 import Image from 'next/image'
 import { FC, MouseEventHandler, useState } from 'react'
 
+import Link from 'next/link'
+
 import { RODAI_MINT_ADDRESS } from '../../../app/contants'
+import { BurnerIconAnimated } from '../../../components/BurnerIconAnimated'
 import { Button } from '../../../components/Button'
 import { BuyDropdown } from '../../../components/BuyDropdown'
 import { ChartSelector } from '../../../components/ChartSelector'
 import { SocialLinks } from '../../../components/SocialLinks'
 import { SwipeIndicator } from '../../../components/SwipeIndicator'
-import { AEROSOL_URL } from '../../../constants'
+import {
+  AEROSOL_BURNER_URL,
+  AEROSOL_URL,
+  BURNER_CTA_UTM_CAMPAIGN,
+  RODAI_APP_URL,
+  UTM_SOURCE,
+} from '../../../constants'
+import { buildReferralUrl } from '../../../utils/urls'
 import { SlideProps } from '../../../types'
 
 export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
@@ -56,89 +66,119 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
 
   return (
     <section
-      className="w-full h-full flex flex-col lg:flex-row gap-8 justify-start items-center p-4 py-12 lg:p-8 mx-auto"
+      className="w-full h-full flex flex-col p-4 py-12 lg:p-8 mx-auto"
       onMouseMove={handleMouseMove}
     >
-      <div className="flex gap-8 justify-center items-center w-full">
-        {/* RODAI Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{
-            opacity: isActive ? 1 : 0,
-            scale: isActive ? 1 : 0.8,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 300,
-            damping: 30,
-          }}
-          className="w-[120px] sm:w-[160px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
+      <div className="w-full flex justify-center mb-4">
+        <Link
+          href={buildReferralUrl(AEROSOL_BURNER_URL, {
+            utm_source: UTM_SOURCE,
+            utm_medium: 'link',
+            utm_campaign: BURNER_CTA_UTM_CAMPAIGN,
+            utm_content: 'cta_button',
+            source: UTM_SOURCE,
+            ref: RODAI_APP_URL,
+          })}
+          target="_blank"
+          className="animate-pulse"
         >
+          <Button
+            variant="solid"
+            color="warning"
+            size="lg"
+            className="sm:text-xl !py-2 overflow-hidden"
+          >
+            <div className="relative h-full min-w-16 w-16 -top-1">
+              <BurnerIconAnimated
+                size="sm"
+                className="absolute -top-8 -left-1"
+              />
+            </div>
+            <div className="relative -left-4 top-0.5">Burn & Claim SOL</div>
+          </Button>
+        </Link>
+      </div>
+      <div className="flex flex-col lg:flex-row gap-8 justify-start items-center w-full flex-1">
+        <div className="flex gap-8 justify-center items-center w-full">
+          {/* RODAI Image */}
           <motion.div
-            style={{
-              x: rodPosition.x + levitationRod.x,
-              y: rodPosition.y + levitationRod.y,
-              rotate: levitationRod.rotate,
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{
+              opacity: isActive ? 1 : 0,
+              scale: isActive ? 1 : 0.8,
             }}
             transition={{
               type: 'spring',
-              stiffness: 120,
-              damping: 15,
+              stiffness: 300,
+              damping: 30,
             }}
+            className="w-[120px] sm:w-[160px] md:w-[220px] lg:w-[280px] xl:w-[340px]"
           >
-            <Image
-              src="/img/rod/hero-rod.png"
-              alt="RODAI logo"
-              width={600}
-              height={600}
-              className="w-full rounded-full border-4 bg-[#fbc063] border-white"
-              draggable={false}
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Aerosol Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{
-            opacity: isActive ? 1 : 0,
-            scale: isActive ? 1 : 0.8,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 300,
-            damping: 30,
-          }}
-          className="w-[100px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
-        >
-          <motion.div
-            style={{
-              x: aerosolPosition.x + levitationAerosol.x,
-              y: aerosolPosition.y + levitationAerosol.y,
-              rotate: levitationAerosol.rotate,
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 120,
-              damping: 15,
-            }}
-          >
-            <a href={AEROSOL_URL} target="_blank">
+            <motion.div
+              style={{
+                x: rodPosition.x + levitationRod.x,
+                y: rodPosition.y + levitationRod.y,
+                rotate: levitationRod.rotate,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 120,
+                damping: 15,
+              }}
+            >
               <Image
-                src="/img/aerosol/logo-icon.png"
-                alt="Aerosol logo"
-                width={500}
-                height={500}
-                className="w-full"
+                src="/img/rod/hero-rod.png"
+                alt="RODAI logo"
+                width={600}
+                height={600}
+                className="w-full rounded-full border-4 bg-[#fbc063] border-white"
                 draggable={false}
               />
-            </a>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
 
-      {/* Text and Content */}
-      <motion.div
+          {/* Aerosol Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{
+              opacity: isActive ? 1 : 0,
+              scale: isActive ? 1 : 0.8,
+            }}
+            transition={{
+              type: 'spring',
+              stiffness: 300,
+              damping: 30,
+            }}
+            className="w-[100px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]"
+          >
+            <motion.div
+              style={{
+                x: aerosolPosition.x + levitationAerosol.x,
+                y: aerosolPosition.y + levitationAerosol.y,
+                rotate: levitationAerosol.rotate,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 120,
+                damping: 15,
+              }}
+            >
+              <a href={AEROSOL_URL} target="_blank">
+                <Image
+                  src="/img/aerosol/logo-icon.png"
+                  alt="Aerosol logo"
+                  width={500}
+                  height={500}
+                  className="w-full"
+                  draggable={false}
+                />
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Text and Content */}
+        <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{
           opacity: isActive ? 1 : 0,
@@ -191,6 +231,7 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
           <SwipeIndicator label="Swipe to learn more" />
         </div>
       </motion.div>
+      </div>
     </section>
   )
 }

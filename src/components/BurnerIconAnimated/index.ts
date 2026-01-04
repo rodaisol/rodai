@@ -1,0 +1,2 @@
+export { BurnerIconAnimated } from './BurnerIconAnimated'
+
