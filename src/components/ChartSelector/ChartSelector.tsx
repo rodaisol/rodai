@@ -28,7 +28,7 @@ const chartLinks = [
   {
     key: 'birdeye',
     label: 'Birdeye',
-    href: 'https://birdeye.so/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
+    href: 'https://birdeye.so/solana/token/GdbyLsNKHKLXTZVEo8QrGKVmrexEeZUYvhpSfuZ9TdkC',
     icon: '/img/charts/birdeye.png',
     className: 'w-8',
   },
