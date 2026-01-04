@@ -38,4 +38,3 @@ export function buildReferralUrl(
     return urlObj.toString()
   }
 }
-

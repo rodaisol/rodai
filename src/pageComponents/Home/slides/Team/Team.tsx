@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import { SlideProps } from '../../../../types'
 
@@ -45,9 +46,11 @@ export const TeamSlide = ({ isActive }: SlideProps) => {
                 ease: 'easeOut',
               }}
             >
-              <img
+              <Image
                 src={member.avatar}
                 alt={member.name}
+                width={112}
+                height={112}
                 className="object-cover w-full h-full"
               />
             </motion.div>
@@ -69,9 +72,11 @@ export const TeamSlide = ({ isActive }: SlideProps) => {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-transform"
                 >
-                  <img
+                  <Image
                     src="/img/socials/telegram.png"
                     alt="telegram"
+                    width={32}
+                    height={32}
                     className="w-6 sm:w-7 md:w-8"
                   />
                 </a>
@@ -83,9 +88,11 @@ export const TeamSlide = ({ isActive }: SlideProps) => {
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition-transform"
                 >
-                  <img
+                  <Image
                     src="/img/socials/x.png"
                     alt="twitter"
+                    width={32}
+                    height={32}
                     className="w-6 sm:w-7 md:w-8"
                   />
                 </a>

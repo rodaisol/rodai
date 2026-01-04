@@ -3,9 +3,8 @@
 import { Snippet } from '@nextui-org/react'
 import { motion, useAnimationFrame } from 'framer-motion'
 import Image from 'next/image'
-import { FC, MouseEventHandler, useState } from 'react'
-
 import Link from 'next/link'
+import { FC, MouseEventHandler, useState } from 'react'
 
 import { RODAI_MINT_ADDRESS } from '../../../app/contants'
 import { BurnerIconAnimated } from '../../../components/BurnerIconAnimated'
@@ -21,8 +20,8 @@ import {
   RODAI_APP_URL,
   UTM_SOURCE,
 } from '../../../constants'
-import { buildReferralUrl } from '../../../utils/urls'
 import { SlideProps } from '../../../types'
+import { buildReferralUrl } from '../../../utils/urls'
 
 export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
   const [rodPosition, setRodPosition] = useState({ x: 0, y: 0 })
@@ -179,58 +178,58 @@ export const WelcomeSlide: FC<SlideProps> = ({ isActive }) => {
 
         {/* Text and Content */}
         <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{
-          opacity: isActive ? 1 : 0,
-          y: isActive ? 0 : 50,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 200,
-          damping: 20,
-        }}
-        className="flex flex-col items-center lg:items-start text-center lg:text-left w-full"
-      >
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl">Meet</h2>
-        <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold">
-          ROD<span className="text-yellow-300">AI</span>
-        </h1>
-        <p className="text-2xl sm:text-3xl lg:text-4xl leading-10">
-          The deflationary meme token of{' '}
-          <a href={AEROSOL_URL} target="_blank" className="text-yellow-300 ">
-            Aerosol
-          </a>
-          {'.'}
-        </p>
-        <div className="text-xl italic px-3 mt-2">
-          Launched on January 13th, 2024
-        </div>
-        <div className="w-full overflow-hidden mt-2 px-8 sm:px-0">
-          <Snippet
-            id="token-address-snippet"
-            size="md"
-            hideSymbol
-            className="w-full max-w-[500px]"
-          >
-            {RODAI_MINT_ADDRESS}
-          </Snippet>
-        </div>
-        <div className="flex flex-col gap-4 mt-6 lg:mt-8">
-          <div className="flex flex-wrap gap-2 justify-center">
-            <BuyDropdown />
-            <a target="_blank" href="https://t.me/rodaisol">
-              <Button color="primary" className="text-white">
-                Join Us
-              </Button>
+          initial={{ opacity: 0, y: 50 }}
+          animate={{
+            opacity: isActive ? 1 : 0,
+            y: isActive ? 0 : 50,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 200,
+            damping: 20,
+          }}
+          className="flex flex-col items-center lg:items-start text-center lg:text-left w-full"
+        >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl">Meet</h2>
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold">
+            ROD<span className="text-yellow-300">AI</span>
+          </h1>
+          <p className="text-2xl sm:text-3xl lg:text-4xl leading-10">
+            The deflationary meme token of{' '}
+            <a href={AEROSOL_URL} target="_blank" className="text-yellow-300 ">
+              Aerosol
             </a>
-            <ChartSelector />
+            {'.'}
+          </p>
+          <div className="text-xl italic px-3 mt-2">
+            Launched on January 13th, 2024
           </div>
-          <SocialLinks className="justify-center lg:justify-start" />
-        </div>
-        <div className="md:hidden mt-8">
-          <SwipeIndicator label="Swipe to learn more" />
-        </div>
-      </motion.div>
+          <div className="w-full overflow-hidden mt-2 px-8 sm:px-0">
+            <Snippet
+              id="token-address-snippet"
+              size="md"
+              hideSymbol
+              className="w-full max-w-[500px]"
+            >
+              {RODAI_MINT_ADDRESS}
+            </Snippet>
+          </div>
+          <div className="flex flex-col gap-4 mt-6 lg:mt-8">
+            <div className="flex flex-wrap gap-2 justify-center">
+              <BuyDropdown />
+              <a target="_blank" href="https://t.me/rodaisol">
+                <Button color="primary" className="text-white">
+                  Join Us
+                </Button>
+              </a>
+              <ChartSelector />
+            </div>
+            <SocialLinks className="justify-center lg:justify-start" />
+          </div>
+          <div className="md:hidden mt-8">
+            <SwipeIndicator label="Swipe to learn more" />
+          </div>
+        </motion.div>
       </div>
     </section>
   )

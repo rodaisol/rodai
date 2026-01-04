@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { Slide } from '../../types'
 
 import {
@@ -30,10 +32,12 @@ export const slides: Slide[] = [
     label: (
       <div className="flex items-center">
         <span>What&apos;s Aerosol</span>
-        <img
+        <Image
           src="/img/aerosol/logo-icon.png"
           alt="Aerosol logo"
           draggable={false}
+          width={64}
+          height={64}
           className="w-12 sm:w-16 relative top-[-4px]"
         />
         <span>?</span>

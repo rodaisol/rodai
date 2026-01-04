@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import Image from 'next/image'
 import React from 'react'
 
 import {
@@ -110,9 +111,11 @@ export const RecognitionSlide: React.FC<SlideProps> = ({ isActive }) => {
               </p>
             </motion.div>
 
-            <img
+            <Image
               src={rec.img}
               alt={rec.caption}
+              width={800}
+              height={600}
               className="rounded-b-lg w-full"
             />
           </motion.a>

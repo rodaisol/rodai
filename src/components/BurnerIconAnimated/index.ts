@@ -1,2 +1,1 @@
 export { BurnerIconAnimated } from './BurnerIconAnimated'
-
