@@ -1,12 +1,13 @@
 'use client'
 
 import {
+  Button,
   ButtonProps,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/react'
+} from '@heroui/react'
 import Image from 'next/image'
 import React, { FC } from 'react'
 
@@ -17,7 +18,6 @@ import {
   PHOTON_BUY_URL,
   RAYDIUM_BUY_URL,
 } from '../../constants'
-import { Button } from '../Button'
 
 const buyLinks = [
   {
@@ -65,9 +65,7 @@ export const BuyDropdown: FC<ButtonProps> = (buttonProps) => {
       <DropdownTrigger>
         <div>
           <Button
-            variant="shadow"
-            className="border-white bg-pink-600 text-white"
-            size="md"
+            className="bg-[#3DDAD8] hover:bg-[#2AC8C6] text-black font-bold px-3 py-2 sm:px-4 sm:py-2 text-sm border-2 border-transparent hover:border-white/20 transition-all shadow-lg min-w-0"
             {...buttonProps}
           >
             Buy Now

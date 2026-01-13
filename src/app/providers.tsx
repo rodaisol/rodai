@@ -1,6 +1,6 @@
 'use client'
 
-import { NextUIProvider } from '@nextui-org/react'
+import { HeroUIProvider } from '@heroui/react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
 import { CookieConsentBanner } from '../components/CookieConsentBanner'
@@ -11,7 +11,7 @@ export default function AppProviders({
   children: React.ReactNode
 }) {
   return (
-    <NextUIProvider>
+    <HeroUIProvider>
       <NextThemesProvider
         attribute="class"
         defaultTheme="dark"
@@ -20,6 +20,6 @@ export default function AppProviders({
         <CookieConsentBanner />
         {children}
       </NextThemesProvider>
-    </NextUIProvider>
+    </HeroUIProvider>
   )
 }

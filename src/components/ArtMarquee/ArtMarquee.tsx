@@ -1,5 +1,5 @@
-import { Card, Image } from '@nextui-org/react'
-import { motion, useAnimationFrame } from 'framer-motion'
+import { Card, Image } from '@heroui/react'
+import { motion, useAnimationFrame } from 'motion/react'
 import React, { useState } from 'react'
 import Marquee from 'react-fast-marquee'
 

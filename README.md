@@ -27,11 +27,9 @@ RODAI personifies a rod-shaped character named Rod, symbolizing community empowe
 
 ## Roadmap
 
-RODAI's roadmap is divided into phases including Setup & Launch, Community Growth, and Utility. Each phase includes specific milestones like reaching social media followers, market cap goals, and developing utility features. Please see our whitepaper at https://www.rodai.meme/whitepaper.pdf.
+RODAI's roadmap is divided into phases including Setup & Launch, Community Growth, and Utility. Each phase includes specific milestones like reaching social media followers, market cap goals, and developing utility features.
 
 ## Why Invest in RODAI
-
-RODAI isn't just any meme coin—it's a meme-making powerhouse, bringing a unique and evolving vision to the Solana blockchain. Crafted by a team of seasoned developers, our aim stretches beyond individual benefits, focusing on enriching the entire Solana ecosystem. By launching the Aerosol, a premier community token platform, we're setting the stage for unparalleled meme creation and sharing, offering utilities and advantages that reverberate across the whole network.
 
 ## Join Our Community
 
