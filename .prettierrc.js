@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   $schema: 'http://json.schemastore.org/prettierrc',
   semi: false,
   singleQuote: true,

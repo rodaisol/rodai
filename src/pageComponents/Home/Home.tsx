@@ -1,145 +1,81 @@
 'use client'
 
-import { cn } from '@nextui-org/react'
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
-import { Navigation, Pagination } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { PaginationOptions, Swiper as SwiperType } from 'swiper/types'
-
 import { AudioPlayer } from '../../components/AudioPlayer'
+import { Footer } from '../../components/Footer'
+import { Header } from '../../components/Header'
 import { RODAI_TRACKS } from '../../constants'
 
-import { slides } from './slidesConfig'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-import './styles.css'
+import {
+  AerosolSection,
+  FAQSection,
+  HeroSection,
+  HowToBuySection,
+  RoadmapSection,
+  RodaiSection,
+  TeamSection,
+  TokenDetailsSection,
+  TokenomicsSection,
+  TopBanner,
+} from './sections'
 
 export const HomePage = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [swiper, setSwiper] = useState<SwiperType | undefined>()
-
-  const handleMouseMove = (e: MouseEvent) => {
-    const { clientX, clientY } = e
-    setMousePosition({
-      x: -(clientX / window.innerWidth - 0.5) * 30,
-      y: -(clientY / window.innerHeight - 0.5) * 30,
-    })
-  }
-
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  const handleSlideChange = (newIndex: number) => {
-    setActiveIndex(newIndex)
-  }
-
-  const activeSlide = slides[activeIndex]
-
-  const pagination: PaginationOptions = {
-    clickable: true,
-  }
-
   return (
-    <div
-      className={cn(
-        'relative h-dvh w-screen overflow-hidden',
-        activeSlide.background,
-        'bg-center bg-fixed bg-no-repeat bg-cover pb-0 overflow-hidden'
-      )}
-    >
-      <div className="w-full h-full flex flex-col">
-        <div className="relative h-[100px]">
-          <motion.div
-            className="absolute top-10 w-full flex justify-center items-center pointer-events-auto"
-            animate={{
-              x: mousePosition.x,
-              y: mousePosition.y,
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 200,
-              damping: 25,
-              duration: 0.8,
-            }}
-          >
-            {slides.map((section, i) => {
-              const isActive = i === activeIndex
-              let positionX = '0vw'
-              const positionY = i === activeIndex ? '1rem' : '-1rem'
+    <div className="min-h-screen text-white w-full overflow-x-hidden">
+      <Header />
 
-              if (i < activeIndex - 1) positionX = '-150vw'
-              if (i === activeIndex - 1) positionX = '-50vw'
-              if (isActive) positionX = '0vw'
-              if (i === activeIndex + 1) positionX = '50vw'
-              if (i > activeIndex + 1) positionX = '150vw'
-
-              return (
-                <motion.div
-                  key={section.id}
-                  className="absolute font-bold text-white whitespace-nowrap cursor-pointer"
-                  initial={{ x: '-150vw' }}
-                  animate={{
-                    x: positionX,
-                    y: positionY,
-                    opacity: isActive ? 1 : 0.4,
-                  }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 200,
-                    damping: 25,
-                    duration: 0.8,
-                  }}
-                  onClick={() => swiper?.slideTo(i)}
-                >
-                  <span
-                    className={cn('max-w-3xl', {
-                      'text-3xl': !isActive,
-                      'md:text-4xl': !isActive,
-                      'lg:text-5xl': !isActive,
-                      'text-4xl': isActive,
-                      'md:text-5xl': isActive,
-                      'lg:text-6xl': isActive,
-                    })}
-                  >
-                    {section.label}
-                  </span>
-                </motion.div>
-              )
-            })}
-          </motion.div>
-        </div>
-
-        <Swiper
-          navigation={true}
-          pagination={pagination}
-          modules={[Navigation, Pagination]}
-          onSwiper={setSwiper}
-          onSlideChange={(s) => handleSlideChange(s.activeIndex)}
-          simulateTouch={false}
-          className="flex-1 flex h-full w-full overflow-auto snap-x snap-mandatory scroll-smooth"
+      <main className="relative">
+        {/* Hero Section - Purple Background with Top Banner */}
+        <section
+          id="hero"
+          className="relative min-h-screen flex flex-col items-center justify-center pt-0 pb-20 overflow-hidden bg-[#3c1154]"
         >
-          {slides.map((slide, index) => {
-            const isActive = activeIndex === index
-            const SlideComponent = slide.Component
+          <div className="w-full pt-0 sm:pt-4">
+            <TopBanner />
+          </div>
+          <HeroSection />
+        </section>
 
-            return (
-              <SwiperSlide key={slide.id}>
-                <div className="w-full h-full overflow-auto">
-                  <SlideComponent isActive={isActive} />
-                </div>
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
-      </div>
-      <div className="fixed bottom-4 right-4 z-50">
+        {/* What's RODAI & Token Details Section - Blue Background */}
+        <section id="rodai" className="relative bg-[#3DDAD8]">
+          <RodaiSection />
+          <TokenDetailsSection />
+        </section>
+
+        {/* What's Aerosol Section - Orange Background */}
+        <section id="aerosol" className="relative bg-[#F06943]">
+          <AerosolSection />
+        </section>
+
+        {/* Tokenomics Section - Blue Background */}
+        <section id="tokenomics" className="relative bg-[#3DDAD8]">
+          <TokenomicsSection />
+        </section>
+
+        {/* Roadmap Section - Orange Background */}
+        <section id="roadmap" className="relative bg-[#F06943]">
+          <RoadmapSection />
+        </section>
+
+        {/* How to Buy Section - Orange Background */}
+        <section id="how-to-buy" className="relative bg-[#F06943]">
+          <HowToBuySection />
+        </section>
+
+        {/* Team Section - Blue Background */}
+        <section id="team" className="relative bg-[#3DDAD8]">
+          <TeamSection />
+        </section>
+
+        {/* FAQ Section - Purple Background */}
+        <section id="faq" className="relative bg-[#3c1154]">
+          <FAQSection />
+        </section>
+      </main>
+
+      <Footer />
+
+      {/* Audio Player - Fixed Position */}
+      <div className="fixed bottom-6 right-6 z-10">
         <AudioPlayer tracks={RODAI_TRACKS} />
       </div>
     </div>

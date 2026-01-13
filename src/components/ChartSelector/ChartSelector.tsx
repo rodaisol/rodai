@@ -1,13 +1,12 @@
 import {
+  Button,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
-} from '@nextui-org/react'
+} from '@heroui/react'
 import Image from 'next/image' // Import Image from next/image
 import React from 'react'
-
-import { Button } from '../Button'
 
 const chartLinks = [
   {
@@ -60,11 +59,9 @@ export const ChartSelector = () => {
   return (
     <Dropdown size="lg">
       <DropdownTrigger>
-        <div>
-          <Button variant="bordered" className="border-white text-white">
-            Chart
-          </Button>
-        </div>
+        <Button className="w-full bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold py-6 text-base border-2 border-white/30 hover:border-white/50 transition-all">
+          Chart
+        </Button>
       </DropdownTrigger>
       <DropdownMenu
         variant="bordered"

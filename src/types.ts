@@ -1,8 +1,4 @@
-import { FC, ReactNode } from 'react'
-
-export interface SlideProps {
-  isActive: boolean
-}
+import { ReactNode } from 'react'
 
 export interface MediaConfig {
   fileName: string
@@ -14,13 +10,6 @@ export interface MediaConfig {
 
 export interface Media extends MediaConfig {
   src: string
-}
-
-export interface Slide {
-  id: string
-  label: ReactNode
-  Component: FC<SlideProps>
-  background: string
 }
 
 export type TeamMember = {

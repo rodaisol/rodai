@@ -1,10 +1,104 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --swiper-navigation-color: white;
-  --swiper-navigation-size: 32px;
+@plugin './hero.ts';
+
+@source '../**/*.{js,ts,jsx,tsx,mdx}';
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* RODAI Logo Colors - Fresh & Vibrant */
+  --color-coral: #f97b55;
+  --color-coral-light: #FFA88C;
+  --color-coral-dark: #FF6B4A;
+  --color-cyan: #3DDAD8;
+  --color-cyan-light: #60E7E5;
+  --color-cyan-dark: #2AC8C6;
+  --color-purple: #3c1154;
+  --color-purple-light: #5a1a7a;
+  --color-purple-dark: #2a0a3a;
+
+  /* Animations - generates animate-levitate, animate-float-slow, etc. */
+  --animate-levitate: levitate 8s ease-in-out infinite;
+  --animate-major-milestone-icon-levitate: majorMilestoneIconLevitate 1.5s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+  --animate-float-medium: float 8s ease-in-out infinite;
+  --animate-float-fast: float 7s ease-in-out infinite;
+}
+
+/* Keyframes defined outside @theme */
+@keyframes levitate {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  50% { transform: translateY(4px); }
+  70% { transform: translateY(-15px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  50% { transform: translateY(4px); }
+  70% { transform: translateY(-15px); }
+}
+
+@keyframes majorMilestoneIconLevitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-[#3c1154] text-white antialiased;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-edgisp), sans-serif;
+}
+
+.font-edgisp {
+  font-family: var(--font-edgisp), sans-serif;
+}
+
+button,
+[role="button"],
+.Button {
+  font-weight: 700;
+}
+
+/* HeroUI Snippet components use Source Sans Pro */
+[data-slot="snippet"],
+[data-slot="snippet"] pre,
+[data-slot="snippet"] code,
+#token-address-snippet,
+#token-address-snippet pre,
+#token-address-snippet code {
+  font-family: inherit;
+}
+
+/* FAQ Accordion should use Source Sans Pro, not Edgisp */
+.faq-accordion h1,
+.faq-accordion h2,
+.faq-accordion h3,
+.faq-accordion h4,
+.faq-accordion h5,
+.faq-accordion h6 {
+  font-family: var(--font-source-sans-pro), sans-serif;
+}
+
+/* FAQ Accordion indicator icon should be white */
+.faq-accordion [data-slot="indicator"] {
+  color: white;
 }
 
 @media (max-width: 640px) {
@@ -15,6 +109,3 @@
     white-space: nowrap;
   }
 }
-
-
-

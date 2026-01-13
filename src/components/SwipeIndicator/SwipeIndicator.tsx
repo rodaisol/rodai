@@ -1,13 +1,11 @@
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
+import Image from 'next/image'
 
 export const SwipeIndicator = ({ label = 'Swipe' }) => {
   return (
     <div className="flex flex-col items-center space-y-2">
-      <motion.img
-        src="/img/icons/hand.png"
-        alt="Swipe Hand"
+      <motion.div
         className="w-10 h-10"
-        draggable={false}
         initial={{ rotate: 0, x: 0, y: 0 }}
         animate={{
           rotate: [25, 0, -25, 0],
@@ -21,7 +19,16 @@ export const SwipeIndicator = ({ label = 'Swipe' }) => {
           repeat: Infinity,
           repeatDelay: 1, // Pause for realism
         }}
-      />
+      >
+        <Image
+          src="/img/icons/hand.png"
+          alt="Swipe Hand"
+          width={40}
+          height={40}
+          className="w-full h-full"
+          draggable={false}
+        />
+      </motion.div>
       <span className="text-sm font-medium">{label}</span>
     </div>
   )
